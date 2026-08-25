@@ -46,6 +46,14 @@
       ]
     },
     {
+      "name": "xunit.runner.visualstudio",
+      "version": "3.1.5",
+      "consumers": [
+        "ControlServer test projects",
+        "OnboardHmi test projects"
+      ]
+    },
+    {
       "name": "Corvus.Json.Validator",
       "version": "4.6.7",
       "consumers": [

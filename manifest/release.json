@@ -7,7 +7,7 @@
   "generatedAt": "2026-08-25T09:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "0f5a394ff52c09bf6bb78256df773bbc8203b5e44dca726f0df84dbafa5a9348",
+  "fileTableSha256": "bb1db553a15817d97acdaba44e3b4883931a5ae13f9d617782c1a74e94c744b9",
   "schemaBundleSha256": "e964c976a8c64538b603d0d4d2365a213ff01c807fb47a02ec950ea56bd55342",
   "examplesSha256": "6dd8f086eec01f3c18c77158f84bbc5c9498cf88d2c84c06cf7482b98b07a669",
   "vectorsSha256": "25a4e900695f1f0b58e60330d7aeb0d5dc79958a5a8ad8d631c9fad18f13d387",
@@ -893,8 +893,8 @@
     {
       "path": "compatibility/implementation-version-matrix.json",
       "role": "compatibility",
-      "bytes": 1832,
-      "sha256": "7028e742ba040b3f2a9afdcacbfb40404c205db12e6ec2dd052b3f7db3a447a1"
+      "bytes": 2017,
+      "sha256": "1ea68c536a4ee62191e37b665c05c20dbf0194f38eef3db10875916f5e95e6c6"
     },
     {
       "path": "compatibility/report.json",

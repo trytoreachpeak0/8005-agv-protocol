@@ -1,7 +1,7 @@
 {
   "gate": "G1",
   "status": "PASS",
-  "candidateManifestSha256": "6de871e3b6e2b912d439bf2b99bac30766ec5451f9fa259fbd46bf2b6d7fec85",
+  "candidateManifestSha256": "e878d89e820535fe1eb64b85681b9c2994fb98646309e6ba768219c5c8735f2e",
   "schemaCount": 57,
   "messageTypeCount": 54,
   "validExampleCount": 54,
