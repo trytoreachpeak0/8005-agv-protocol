@@ -1,0 +1,13 @@
+{
+  "gate": "G1",
+  "status": "PASS",
+  "candidateManifestSha256": "6de871e3b6e2b912d439bf2b99bac30766ec5451f9fa259fbd46bf2b6d7fec85",
+  "schemaCount": 57,
+  "messageTypeCount": 54,
+  "validExampleCount": 54,
+  "invalidExampleCount": 1341,
+  "trajectoryCount": 19,
+  "integrationSliceCount": 8,
+  "checkedAt": "2026-08-25T09:00:00Z",
+  "failures": []
+}

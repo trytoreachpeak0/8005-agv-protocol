@@ -1,0 +1,21 @@
+{
+  "vectorId": "I-PROFILE-OnboardCapabilitySnapshot-001",
+  "message": {
+    "protocolVersion": 1,
+    "profileId": "WIRE_TO_GATE_MVP",
+    "protocolReleaseVersion": "0.1.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "OnboardCapabilitySnapshot",
+    "messageId": "00000000-0000-4000-8000-000000000130",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {}
+  },
+  "expected": {
+    "code": "PROFILE_MESSAGE_NOT_ALLOWED",
+    "fieldPath": "/messageType",
+    "rule": "profile-denylist"
+  }
+}

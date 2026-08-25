@@ -1,0 +1,4 @@
+{"action":"send","atMs":0,"messageType":"SublotSubmitted","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"SlotOperationCommand","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"SublotSubmitted","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"SlotOperationCommand","step":4,"virtualTimeOnly":true}

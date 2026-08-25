@@ -1,0 +1,71 @@
+{
+  "status": "CANDIDATE",
+  "sharedDevelopmentBaseline": {
+    "dotnetSdk": "8.0.424",
+    "dotnetRuntime": "8.0.30",
+    "targetFrameworks": {
+      "controlServer": "net8.0",
+      "onboardHmi": "net8.0-windows"
+    },
+    "runtimeIdentifiers": [
+      "win-x64"
+    ],
+    "packageCompatibilityRule": "All Microsoft.Extensions and EF Core packages remain on the 8.x major line and are locked by each implementation repository; protocol wire compatibility is defined only by the materialized ProtocolReleaseIdentity."
+  },
+  "onboardObservedDevelopmentMachine": {
+    "os": "Windows 11 Home zh-CN",
+    "version": "10.0.26200",
+    "build": "26200",
+    "architecture": "x64",
+    "installedRuntime": "8.0.29",
+    "installedDesktopRuntime": "8.0.29",
+    "qualification": "DEVELOPMENT_MACHINE_ONLY"
+  },
+  "pinnedPackages": [
+    {
+      "name": "Microsoft.EntityFrameworkCore.Sqlite",
+      "version": "8.0.30",
+      "consumers": [
+        "ControlServer",
+        "OnboardHmi journal"
+      ]
+    },
+    {
+      "name": "Microsoft.Extensions.Http.Resilience",
+      "version": "8.10.0",
+      "consumers": [
+        "ControlServer"
+      ]
+    },
+    {
+      "name": "xunit.v3",
+      "version": "3.2.2",
+      "consumers": [
+        "ControlServer",
+        "OnboardHmi"
+      ]
+    },
+    {
+      "name": "Corvus.Json.Validator",
+      "version": "4.6.7",
+      "consumers": [
+        "isolated .NET conformance process"
+      ]
+    },
+    {
+      "name": "ajv",
+      "version": "8.20.0",
+      "consumers": [
+        "protocol G1"
+      ]
+    },
+    {
+      "name": "ajv-formats",
+      "version": "3.0.1",
+      "consumers": [
+        "protocol G1"
+      ]
+    }
+  ],
+  "requiredAction": "Install or pin SDK 8.0.424 before reproducible product builds; do not treat the observed 8.0.29 runtime as equivalent evidence."
+}

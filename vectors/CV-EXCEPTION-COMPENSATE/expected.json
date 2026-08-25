@@ -1,0 +1,32 @@
+{
+  "vectorId": "CV-EXCEPTION-COMPENSATE",
+  "orderedExpectedMessages": [
+    "ExceptionRecoverySessionRequested",
+    "ExceptionRecoverySessionOpened",
+    "RecoveryActionSubmitted",
+    "RecoveryActionAccepted",
+    "LoadCompensationRequested",
+    "LoadCompensationCommand",
+    "LoadCompensationResult"
+  ],
+  "persistenceCheckpoints": [
+    "durable-before-send",
+    "durable-before-ack",
+    "journal-before-irreversible-io",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success"
+  ],
+  "finalState": {
+    "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
+    "business": "NO_DUPLICATE_COMMIT",
+    "physical": "NO_UNPROVEN_STATE"
+  },
+  "stableErrorCode": null
+}

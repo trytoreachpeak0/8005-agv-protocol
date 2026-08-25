@@ -1,0 +1,7 @@
+{"action":"send","atMs":0,"messageType":"SessionHello","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"SessionAccepted","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"RecoveryStateReport","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"SessionHello","step":4,"virtualTimeOnly":true}
+{"action":"expect","atMs":400,"messageType":"SessionAccepted","step":5,"virtualTimeOnly":true}
+{"action":"expect","atMs":500,"messageType":"RecoveryStateReport","step":6,"virtualTimeOnly":true}
+{"action":"expect","atMs":600,"messageType":"SessionReadiness","step":7,"virtualTimeOnly":true}

@@ -1,0 +1,29 @@
+{
+  "vectorId": "I-SublotRejected-REQUIRED-ENVELOPE-messageType",
+  "message": {
+    "protocolVersion": 1,
+    "profileId": "WIRE_TO_GATE_MVP",
+    "protocolReleaseVersion": "0.1.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageId": "00000000-0000-4000-8000-000000000039",
+    "correlationId": "00000000-0000-4000-8000-000000000040",
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "demandId": "00000000-0000-4000-8000-000000000001",
+      "operationSessionId": "00000000-0000-4000-8000-000000000001",
+      "problem": {
+        "reasonCode": "ACTION_NOT_ALLOWED_IN_STATE",
+        "fieldPath": "fieldPath-test",
+        "displayMessage": "displayMessage-test"
+      },
+      "currentWorklistRevision": 1
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/messageType",
+    "rule": "required"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "vectorId": "I-ExceptionRecoverySessionRequested-TYPE-reason",
+  "message": {
+    "protocolVersion": 1,
+    "profileId": "WIRE_TO_GATE_MVP",
+    "protocolReleaseVersion": "0.1.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "ExceptionRecoverySessionRequested",
+    "messageId": "00000000-0000-4000-8000-000000000075",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "requestId": "00000000-0000-4000-8000-000000000001",
+      "administrator": {
+        "operatorId": "operatorId-test",
+        "verificationMethod": "BADGE",
+        "verifiedAt": "2026-08-25T09:00:00Z"
+      },
+      "administratorRole": "MAINTENANCE_ADMINISTRATOR",
+      "eventId": "00000000-0000-4000-8000-000000000001",
+      "demandId": "00000000-0000-4000-8000-000000000001",
+      "slots": [
+        1
+      ],
+      "reason": 123,
+      "authenticationProof": "INVALID-PLACEHOLDER-NOT-A-SECRET"
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/payload/reason",
+    "rule": "type"
+  }
+}

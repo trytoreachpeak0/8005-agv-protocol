@@ -1,0 +1,4 @@
+{"action":"send","atMs":0,"messageType":"PreDepartureSafetyCheck","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"PreDepartureSafetyCheckResult","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"SafetyStateChanged","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"ProtocolProblem","step":4,"virtualTimeOnly":true}

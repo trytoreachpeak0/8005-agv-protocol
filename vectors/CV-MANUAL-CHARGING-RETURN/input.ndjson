@@ -1,0 +1,2 @@
+{"action":"send","atMs":0,"messageType":"ManualChargingReturnToServiceRequested","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"ManualChargingReturnToServiceResult","step":2,"virtualTimeOnly":true}

@@ -1,0 +1,36 @@
+{
+  "vectorId": "I-ForcedMechanicalRecoveryResult-REQUIRED-ENVELOPE-protocolVersion",
+  "message": {
+    "profileId": "WIRE_TO_GATE_MVP",
+    "protocolReleaseVersion": "0.1.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "ForcedMechanicalRecoveryResult",
+    "messageId": "00000000-0000-4000-8000-000000000101",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "exceptionRecoverySessionId": "00000000-0000-4000-8000-000000000001",
+      "recoveryActionId": "00000000-0000-4000-8000-000000000001",
+      "forcedRecoveryGeneration": 1,
+      "outcome": "MECHANICALLY_ISOLATED",
+      "slots": [
+        1
+      ],
+      "operator": {
+        "operatorId": "operatorId-test",
+        "verificationMethod": "BADGE",
+        "verifiedAt": "2026-08-25T09:00:00Z"
+      },
+      "observedAt": "2026-08-25T09:00:00Z",
+      "electronicEmptyProven": false,
+      "vehicleReadyProven": false
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/protocolVersion",
+    "rule": "required"
+  }
+}

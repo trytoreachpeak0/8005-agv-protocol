@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.8005-agv.local/wire-to-gate/v1/runner/runner-contract.schema.json",
+  "title": "Language-neutral conformance runner input",
+  "type": "object",
+  "properties": {
+    "vectorId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "integrationSliceId": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^W2G-IS-0[0-7]$"
+    },
+    "virtualClockStart": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "atMs": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "action": {
+            "type": "string",
+            "enum": [
+              "send",
+              "expect",
+              "advance",
+              "drop",
+              "delay",
+              "duplicate",
+              "disconnect",
+              "reconnect",
+              "crash",
+              "restart",
+              "adapter-result"
+            ]
+          },
+          "messageType": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "payloadRef": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "step",
+          "atMs",
+          "action",
+          "messageType",
+          "payloadRef"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "initialPersistentFacts": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "forbiddenSideEffects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "vectorId",
+    "integrationSliceId",
+    "virtualClockStart",
+    "steps",
+    "initialPersistentFacts",
+    "forbiddenSideEffects"
+  ],
+  "additionalProperties": false
+}

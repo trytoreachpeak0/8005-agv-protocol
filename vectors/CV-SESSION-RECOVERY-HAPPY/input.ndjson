@@ -1,0 +1,6 @@
+{"action":"send","atMs":0,"messageType":"SessionHello","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"SessionAccepted","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"CapabilitySnapshot","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"SafetyStateSnapshot","step":4,"virtualTimeOnly":true}
+{"action":"expect","atMs":400,"messageType":"RecoveryStateReport","step":5,"virtualTimeOnly":true}
+{"action":"expect","atMs":500,"messageType":"SessionReadiness","step":6,"virtualTimeOnly":true}

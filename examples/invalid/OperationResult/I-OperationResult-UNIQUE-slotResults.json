@@ -1,0 +1,51 @@
+{
+  "vectorId": "I-OperationResult-UNIQUE-slotResults",
+  "message": {
+    "protocolVersion": 1,
+    "profileId": "WIRE_TO_GATE_MVP",
+    "protocolReleaseVersion": "0.1.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "OperationResult",
+    "messageId": "00000000-0000-4000-8000-000000000047",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "demandId": "00000000-0000-4000-8000-000000000001",
+      "slotOperationAttemptId": "00000000-0000-4000-8000-000000000001",
+      "operationType": "LOAD",
+      "overallOutcome": "COMPLETED",
+      "slotResults": [
+        {
+          "slotNo": 1,
+          "outcome": "COMPLETED",
+          "finalPhysicalState": "EMPTY",
+          "lockState": "LOCKED",
+          "unlockOutputState": "RESET",
+          "reasonCodes": [
+            "ACTION_NOT_ALLOWED_IN_STATE"
+          ]
+        },
+        {
+          "slotNo": 1,
+          "outcome": "COMPLETED",
+          "finalPhysicalState": "EMPTY",
+          "lockState": "LOCKED",
+          "unlockOutputState": "RESET",
+          "reasonCodes": [
+            "ACTION_NOT_ALLOWED_IN_STATE"
+          ]
+        }
+      ],
+      "observedAt": "2026-08-25T09:00:00Z",
+      "journalCheckpoint": "RESULT_RECORDED",
+      "resultContentSha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/payload/slotResults",
+    "rule": "uniqueItems"
+  }
+}

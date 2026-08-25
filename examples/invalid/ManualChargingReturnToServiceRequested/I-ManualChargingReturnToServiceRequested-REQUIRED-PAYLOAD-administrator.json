@@ -1,0 +1,26 @@
+{
+  "vectorId": "I-ManualChargingReturnToServiceRequested-REQUIRED-PAYLOAD-administrator",
+  "message": {
+    "protocolVersion": 1,
+    "profileId": "WIRE_TO_GATE_MVP",
+    "protocolReleaseVersion": "0.1.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "ManualChargingReturnToServiceRequested",
+    "messageId": "00000000-0000-4000-8000-000000000049",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "requestId": "00000000-0000-4000-8000-000000000001",
+      "administratorRole": "MAINTENANCE_ADMINISTRATOR",
+      "reason": "reason-test",
+      "observedBatteryPercent": 0
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/payload/administrator",
+    "rule": "required"
+  }
+}

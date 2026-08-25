@@ -1,0 +1,4 @@
+{"action":"send","atMs":0,"messageType":"LoadCorrectionRequested","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"LoadCorrectionCommand","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"LoadCorrectionResult","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"DurableAck","step":4,"virtualTimeOnly":true}

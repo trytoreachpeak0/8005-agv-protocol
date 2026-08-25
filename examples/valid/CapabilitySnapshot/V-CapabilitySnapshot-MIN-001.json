@@ -1,0 +1,94 @@
+{
+  "protocolVersion": 1,
+  "profileId": "WIRE_TO_GATE_MVP",
+  "protocolReleaseVersion": "0.1.0",
+  "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "messageType": "CapabilitySnapshot",
+  "messageId": "00000000-0000-4000-8000-000000000013",
+  "correlationId": null,
+  "agvId": "AGV-8005-01",
+  "sessionGeneration": 1,
+  "sentAt": "2026-08-25T09:00:00Z",
+  "payload": {
+    "capabilityVersion": 1,
+    "observedAt": "2026-08-25T09:00:00Z",
+    "slotModelVersion": "slotModelVersion-test",
+    "activeSlotConfigurationVersion": "activeSlotConfigurationVersion-test",
+    "slotStates": [
+      {
+        "slotNo": 1,
+        "operability": "OPERABLE",
+        "administrativeAvailability": "ENABLED",
+        "physicalState": "EMPTY",
+        "lockState": "LOCKED",
+        "unlockOutputState": "RESET",
+        "reasonCodes": []
+      },
+      {
+        "slotNo": 2,
+        "operability": "OPERABLE",
+        "administrativeAvailability": "ENABLED",
+        "physicalState": "EMPTY",
+        "lockState": "LOCKED",
+        "unlockOutputState": "RESET",
+        "reasonCodes": []
+      },
+      {
+        "slotNo": 3,
+        "operability": "OPERABLE",
+        "administrativeAvailability": "ENABLED",
+        "physicalState": "EMPTY",
+        "lockState": "LOCKED",
+        "unlockOutputState": "RESET",
+        "reasonCodes": []
+      },
+      {
+        "slotNo": 4,
+        "operability": "OPERABLE",
+        "administrativeAvailability": "ENABLED",
+        "physicalState": "EMPTY",
+        "lockState": "LOCKED",
+        "unlockOutputState": "RESET",
+        "reasonCodes": []
+      },
+      {
+        "slotNo": 5,
+        "operability": "OPERABLE",
+        "administrativeAvailability": "ENABLED",
+        "physicalState": "EMPTY",
+        "lockState": "LOCKED",
+        "unlockOutputState": "RESET",
+        "reasonCodes": []
+      },
+      {
+        "slotNo": 6,
+        "operability": "OPERABLE",
+        "administrativeAvailability": "ENABLED",
+        "physicalState": "EMPTY",
+        "lockState": "LOCKED",
+        "unlockOutputState": "RESET",
+        "reasonCodes": []
+      },
+      {
+        "slotNo": 7,
+        "operability": "OPERABLE",
+        "administrativeAvailability": "ENABLED",
+        "physicalState": "EMPTY",
+        "lockState": "LOCKED",
+        "unlockOutputState": "RESET",
+        "reasonCodes": []
+      },
+      {
+        "slotNo": 8,
+        "operability": "OPERABLE",
+        "administrativeAvailability": "ENABLED",
+        "physicalState": "EMPTY",
+        "lockState": "LOCKED",
+        "unlockOutputState": "RESET",
+        "reasonCodes": []
+      }
+    ],
+    "supportsBatchUnlock": false,
+    "onboardJournalFormatVersion": 1
+  }
+}

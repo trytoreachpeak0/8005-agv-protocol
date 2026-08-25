@@ -1,0 +1,3 @@
+{"action":"send","atMs":0,"messageType":"SlotOperationCommand","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"SlotOperationCommand","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"DurableAck","step":3,"virtualTimeOnly":true}

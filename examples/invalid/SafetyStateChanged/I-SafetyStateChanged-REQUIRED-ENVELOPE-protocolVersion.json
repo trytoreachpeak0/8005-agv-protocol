@@ -1,0 +1,36 @@
+{
+  "vectorId": "I-SafetyStateChanged-REQUIRED-ENVELOPE-protocolVersion",
+  "message": {
+    "profileId": "WIRE_TO_GATE_MVP",
+    "protocolReleaseVersion": "0.1.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "SafetyStateChanged",
+    "messageId": "00000000-0000-4000-8000-000000000019",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "safetyStateVersion": 1,
+      "observedAt": "2026-08-25T09:00:00Z",
+      "safety": {
+        "departureSafe": false,
+        "vehicleStopped": false,
+        "allTargetSlotsLocked": false,
+        "allUnlockOutputsReset": false,
+        "unknownPresent": false,
+        "reasonCodes": [
+          "ACTION_NOT_ALLOWED_IN_STATE"
+        ]
+      },
+      "affectedSlots": [
+        1
+      ]
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/protocolVersion",
+    "rule": "required"
+  }
+}

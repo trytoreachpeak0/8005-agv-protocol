@@ -1,0 +1,155 @@
+{
+  "schemaVersion": "1.0.0",
+  "slices": [
+    {
+      "integrationSliceId": "W2G-IS-00",
+      "sequence": 0,
+      "prerequisites": [],
+      "vectorIds": [
+        "CV-SESSION-RECOVERY-HAPPY",
+        "CV-SESSION-RECONNECT-DURING-RECOVERY",
+        "CV-SNAPSHOT-REPLACE-AND-ACK",
+        "CV-SNAPSHOT-SAME-REVISION-CONFLICT"
+      ],
+      "gates": [
+        "G1",
+        "CONTROL_SERVER_G2",
+        "ONBOARD_HMI_G2",
+        "G3"
+      ],
+      "forbidUnclosedFailOrInconclusive": true
+    },
+    {
+      "integrationSliceId": "W2G-IS-01",
+      "sequence": 1,
+      "prerequisites": [
+        "W2G-IS-00"
+      ],
+      "vectorIds": [
+        "CV-RELIABLE-RETRY-SAME-CONTENT",
+        "CV-REQUEST-FIRST-RESULT-REPLAY"
+      ],
+      "gates": [
+        "G1",
+        "CONTROL_SERVER_G2",
+        "ONBOARD_HMI_G2",
+        "G3"
+      ],
+      "forbidUnclosedFailOrInconclusive": true
+    },
+    {
+      "integrationSliceId": "W2G-IS-02",
+      "sequence": 2,
+      "prerequisites": [
+        "W2G-IS-01"
+      ],
+      "vectorIds": [
+        "CV-PICKUP-SUBLOT-LOAD",
+        "CV-LOAD-CORRECTION",
+        "CV-LOAD-CANCELLATION-ALL-EMPTY"
+      ],
+      "gates": [
+        "G1",
+        "CONTROL_SERVER_G2",
+        "ONBOARD_HMI_G2",
+        "G3"
+      ],
+      "forbidUnclosedFailOrInconclusive": true
+    },
+    {
+      "integrationSliceId": "W2G-IS-03",
+      "sequence": 3,
+      "prerequisites": [
+        "W2G-IS-02"
+      ],
+      "vectorIds": [
+        "CV-PREDEPARTURE-SAFETY-EXPIRES",
+        "CV-OPERATION-RESULT-UNKNOWN-RECONCILE"
+      ],
+      "gates": [
+        "G1",
+        "CONTROL_SERVER_G2",
+        "ONBOARD_HMI_G2",
+        "G3"
+      ],
+      "forbidUnclosedFailOrInconclusive": true
+    },
+    {
+      "integrationSliceId": "W2G-IS-04",
+      "sequence": 4,
+      "prerequisites": [
+        "W2G-IS-03"
+      ],
+      "vectorIds": [
+        "CV-GATE-UNLOAD-ALL-EMPTY"
+      ],
+      "gates": [
+        "G1",
+        "CONTROL_SERVER_G2",
+        "ONBOARD_HMI_G2",
+        "G3"
+      ],
+      "forbidUnclosedFailOrInconclusive": true
+    },
+    {
+      "integrationSliceId": "W2G-IS-05",
+      "sequence": 5,
+      "prerequisites": [
+        "W2G-IS-00"
+      ],
+      "vectorIds": [
+        "CV-CONNECTION-LOSS-SAFE-FINISH",
+        "CV-SESSION-RECONNECT-DURING-RECOVERY"
+      ],
+      "gates": [
+        "G1",
+        "CONTROL_SERVER_G2",
+        "ONBOARD_HMI_G2",
+        "G3"
+      ],
+      "forbidUnclosedFailOrInconclusive": true
+    },
+    {
+      "integrationSliceId": "W2G-IS-06",
+      "sequence": 6,
+      "prerequisites": [
+        "W2G-IS-00"
+      ],
+      "vectorIds": [
+        "CV-RELIABLE-RETRY-SAME-CONTENT",
+        "CV-RELIABLE-RETRY-DIFFERENT-CONTENT",
+        "CV-REQUEST-FIRST-RESULT-REPLAY",
+        "CV-OPERATION-RESULT-UNKNOWN-RECONCILE"
+      ],
+      "gates": [
+        "G1",
+        "CONTROL_SERVER_G2",
+        "ONBOARD_HMI_G2",
+        "G3"
+      ],
+      "forbidUnclosedFailOrInconclusive": true
+    },
+    {
+      "integrationSliceId": "W2G-IS-07",
+      "sequence": 7,
+      "prerequisites": [
+        "W2G-IS-00"
+      ],
+      "vectorIds": [
+        "CV-OPERATION-RESULT-UNKNOWN-RECONCILE",
+        "CV-EXCEPTION-RESUME",
+        "CV-EXCEPTION-COMPENSATE",
+        "CV-FAULT-CARGO-HANDOFF",
+        "CV-FORCED-MECHANICAL-RECOVERY",
+        "CV-MANUAL-CHARGING-RETURN"
+      ],
+      "gates": [
+        "G1",
+        "CONTROL_SERVER_G2",
+        "ONBOARD_HMI_G2",
+        "G3"
+      ],
+      "forbidUnclosedFailOrInconclusive": true
+    }
+  ]
+}

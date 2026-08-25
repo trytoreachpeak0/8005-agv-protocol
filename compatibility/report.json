@@ -1,0 +1,10 @@
+{
+  "candidateVersion": "0.1.0",
+  "protocolVersion": 1,
+  "profileId": "WIRE_TO_GATE_MVP",
+  "status": "INITIAL_CANDIDATE_NO_BASE_RELEASE",
+  "classification": "BREAKING_INITIAL_BASELINE",
+  "runtimeRule": "Exact ProtocolVersion and exact materialized ProtocolReleaseIdentity required; no negotiation.",
+  "optionalFieldPolicy": "No optional payload fields exist in this candidate. Future optional fields require proof that omission and ignore preserve safety and business conclusions.",
+  "historyPolicy": "Published tags, commits, manifests, schemas, vectors and approvals are immutable; defects require a superseding release."
+}

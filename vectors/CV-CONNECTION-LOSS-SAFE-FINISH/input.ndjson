@@ -1,0 +1,4 @@
+{"action":"send","atMs":0,"messageType":"SlotOperationCommand","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"OperationProgress","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"RecoveryStateReport","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"SessionReadiness","step":4,"virtualTimeOnly":true}
