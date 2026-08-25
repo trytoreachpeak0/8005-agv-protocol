@@ -1,5 +1,5 @@
 {
-  "status": "CANDIDATE_UNAPPROVED",
+  "status": "CONTENT_SNAPSHOT",
   "releaseVersion": "0.1.0",
   "protocolVersion": 1,
   "profileId": "WIRE_TO_GATE_MVP",
@@ -7,13 +7,12 @@
   "generatedAt": "2026-08-25T09:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "bb1db553a15817d97acdaba44e3b4883931a5ae13f9d617782c1a74e94c744b9",
-  "schemaBundleSha256": "e964c976a8c64538b603d0d4d2365a213ff01c807fb47a02ec950ea56bd55342",
+  "fileTableSha256": "abcf2e9ae8ec41e94a2b04f2812f783b49ce7d2d9da5708377f9620f674a0ec1",
+  "schemaBundleSha256": "de29647ab356cebb946bf559e5ba4f322f08ea7f354a844c9b84c8a3f29246a0",
   "examplesSha256": "6dd8f086eec01f3c18c77158f84bbc5c9498cf88d2c84c06cf7482b98b07a669",
   "vectorsSha256": "25a4e900695f1f0b58e60330d7aeb0d5dc79958a5a8ad8d631c9fad18f13d387",
   "errorRegistrySha256": "11eb056c4db188335414483d107e57a1fd7748e99584a7562abbf289a2536f5d",
   "runnerContractsSha256": "3575a7b15821579cced6b90f519971c8e212e9258b79611445233fdeeb03f50b",
-  "approvalStatus": "PENDING",
   "messages": {
     "SessionHello": {
       "sender": "ONBOARD_HMI",
@@ -875,20 +874,14 @@
     {
       "path": "README.md",
       "role": "README.md",
-      "bytes": 1221,
-      "sha256": "cfafcd34a025902710c714118600eb5787de1bbfb986539b4387644ed240f400"
+      "bytes": 1478,
+      "sha256": "2d3006645db8d03ac5fb3de85548d5d315d80ca2f48048b1174ef9e2fb82932f"
     },
     {
       "path": "THIRD-PARTY-NOTICES.md",
       "role": "THIRD-PARTY-NOTICES.md",
       "bytes": 579,
       "sha256": "f1b18d633fb3a8da3da9d5bf2243f90ea76165cc87de579d980458e405863b5b"
-    },
-    {
-      "path": "approvals/release-approval.json",
-      "role": "approvals",
-      "bytes": 198,
-      "sha256": "e304c360631ef41bd1ebb711abad89067485fdbd151d1421d05cf1d03a19c3ef"
     },
     {
       "path": "compatibility/implementation-version-matrix.json",
@@ -905,20 +898,20 @@
     {
       "path": "docs/README.md",
       "role": "docs",
-      "bytes": 528,
-      "sha256": "7124eb79e3b09a3dcfdfe57856de3e2bb1c3008ea6e538b2c91b54a54da9de73"
+      "bytes": 694,
+      "sha256": "458a1e00211a84dcfdc66f717cebccce63f419e79e380411df355f90e99603af"
     },
     {
       "path": "docs/candidate-limitations.md",
       "role": "docs",
-      "bytes": 909,
-      "sha256": "a68f9f8ef70b9c4f034b98ec1f771fb78cd3456dcb23c33f25aec175d2228c1b"
+      "bytes": 1083,
+      "sha256": "75ba416b8a73190ab44c0fcfea983fbf4055c923cee7cadd739f856d612d6f00"
     },
     {
       "path": "docs/release-governance.md",
       "role": "docs",
-      "bytes": 644,
-      "sha256": "2b691da982e2c7fcadb80650af36887974924c68f85c39e8dad088826261f144"
+      "bytes": 2191,
+      "sha256": "fb5887f30da448cd616a697c4f58a1e6ad9cd8fb112b735510471bb65b802fc8"
     },
     {
       "path": "errors/error-codes.json",
@@ -9345,6 +9338,18 @@
       "sha256": "566572c33fcd92651219d626436366ae9afdd6aa850c07f700d01b5f90d90062"
     },
     {
+      "path": "schemas/governance/content-manifest.schema.json",
+      "role": "schemas",
+      "bytes": 2174,
+      "sha256": "cb633a1cae902517d7b10b2ae4863460ac8ead9c271ccdd7df913bcd618feac4"
+    },
+    {
+      "path": "schemas/governance/release-approval-attestation.schema.json",
+      "role": "schemas",
+      "bytes": 2059,
+      "sha256": "7bafe1ca81b5d67b7998140b121121cc54c6f01e2befcca36d535235dec42d43"
+    },
+    {
       "path": "schemas/messages/CapabilitySnapshot.schema.json",
       "role": "schemas",
       "bytes": 3007,
@@ -9671,14 +9676,14 @@
     {
       "path": "tools/finalize-manifest.mjs",
       "role": "tools",
-      "bytes": 2184,
-      "sha256": "e608ede250fe2e2f0009583c4c77531d0d03f56fcaa1a5e86a67d2f5f855e933"
+      "bytes": 2186,
+      "sha256": "06af47bbc092dc4f09b114793214a8be5ee9a8af5e3ec72dea0eb74e4c813703"
     },
     {
       "path": "tools/g1-validate.mjs",
       "role": "tools",
-      "bytes": 7399,
-      "sha256": "e598bc60f805423adcd301ee6b8366268cec7998ceed53421620eaba21d67ec3"
+      "bytes": 8556,
+      "sha256": "c53e621c61e8a9ae82bc732a613c00ab1e4b70fac883f63c696d2689d06715df"
     },
     {
       "path": "vectors/CV-CONNECTION-LOSS-SAFE-FINISH/expected.json",

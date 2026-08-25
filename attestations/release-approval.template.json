@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "1.0.0",
+  "candidateVersion": "0.1.0",
+  "status": "PENDING",
+  "protocolCommit": null,
+  "contentManifestSha256": null,
+  "approvals": [],
+  "statement": "This tracked approval template is excluded from the content manifest. PENDING is not a ProtocolRelease approval. A completed copy must remain external and be uploaded as a GitHub Release Asset."
+}

@@ -1,5 +1,7 @@
-# Candidate limitations and release-finalization blocker
+# Candidate limitations and release finalization
 
 The candidate intentionally uses structurally valid synthetic zero hashes inside envelope examples. Examples are schema fixtures, not evidence of a materialized release identity.
 
-The accepted governance currently creates a circular finalization dependency: the manifest is required to hash every file except itself, while the approval record is required to contain manifestSha256 and is itself included in the manifest file table. Filling the approval changes the manifest, which changes manifestSha256 again. Formal release must resolve this by an explicit human-approved governance amendment (for example, exclude the external approval attestation from the content manifest while binding it to the immutable candidate commit and manifest hash). G1 may pass the unapproved candidate; no tag/release may be created until the circularity is resolved.
+The manifest/approval circularity is resolved by the owner-approved governance separation recorded on 2026-08-25. `manifest/release.json` is an approval-neutral content snapshot and excludes `attestations/`; a completed external `release-approval.json` GitHub Release Asset binds the final immutable candidate commit and content manifest hash. The repository tracks only its blank Schema-governed template. G1 validates both artifacts and reports both hashes for the annotated tag and GitHub release metadata.
+
+The current attestation remains `PENDING`. The two owners approved the governance amendment and the pre-amendment candidate commit `72ddde595165468520d9f3a46b25e4aa4eec0c3`; after this amendment is committed and the new content manifest hash is stable, both owners must approve that new exact commit/hash before `protocol-v0.1.0` is created.

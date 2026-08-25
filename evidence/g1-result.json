@@ -1,8 +1,11 @@
 {
   "gate": "G1",
   "status": "PASS",
-  "candidateManifestSha256": "e878d89e820535fe1eb64b85681b9c2994fb98646309e6ba768219c5c8735f2e",
-  "schemaCount": 57,
+  "candidateManifestSha256": "92c19e74affe876902e1c64aa5cdbca845f5dbc93a8c82014a16627a26deb8d3",
+  "approvalAttestationStatus": "PENDING",
+  "approvalAttestationSha256": "805d2932c43f3ac3a286aa4093ef7855eb96c7fbf22851b8920556eb3c70b755",
+  "approvalAttestationSource": "TRACKED_TEMPLATE",
+  "schemaCount": 59,
   "messageTypeCount": 54,
   "validExampleCount": 54,
   "invalidExampleCount": 1341,
