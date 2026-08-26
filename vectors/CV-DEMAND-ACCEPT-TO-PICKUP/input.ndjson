@@ -1,0 +1,9 @@
+{"action":"adapter-result","adapter":"MES_INGEST","atMs":0,"result":"FINAL_REREAD_ONE_EXTERNALLY_READABLE_DEMAND","step":1,"virtualTimeOnly":true}
+{"action":"adapter-result","adapter":"RIOT","atMs":100,"result":"TO_PICKUP_ORDER_CREATED","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"UpcomingStopPlanSnapshot","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"SnapshotAppliedAck","step":4,"virtualTimeOnly":true}
+{"action":"adapter-result","adapter":"RIOT","atMs":400,"result":"PICKUP_ARRIVED","step":5,"virtualTimeOnly":true}
+{"action":"expect","atMs":500,"messageType":"CurrentStopWorklistSnapshot","step":6,"virtualTimeOnly":true}
+{"action":"expect","atMs":600,"messageType":"SnapshotAppliedAck","step":7,"virtualTimeOnly":true}
+{"action":"expect","atMs":700,"messageType":"UpcomingStopPlanSnapshot","step":8,"virtualTimeOnly":true}
+{"action":"expect","atMs":800,"messageType":"SnapshotAppliedAck","step":9,"virtualTimeOnly":true}

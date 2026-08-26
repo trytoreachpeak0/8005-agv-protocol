@@ -1,16 +1,16 @@
 {
   "status": "CONTENT_SNAPSHOT",
-  "releaseVersion": "0.1.0",
+  "releaseVersion": "0.1.1",
   "protocolVersion": 1,
   "profileId": "WIRE_TO_GATE_MVP",
   "repository": "8005-agv-protocol",
-  "generatedAt": "2026-08-25T09:00:00Z",
+  "generatedAt": "2026-08-26T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "abcf2e9ae8ec41e94a2b04f2812f783b49ce7d2d9da5708377f9620f674a0ec1",
-  "schemaBundleSha256": "de29647ab356cebb946bf559e5ba4f322f08ea7f354a844c9b84c8a3f29246a0",
+  "fileTableSha256": "3af98a8027acf79401756ef26a9e76497adad8fd2ba54434ebe9a81dba8d3fb4",
+  "schemaBundleSha256": "e04296e9bcf48c341bc91fef5731f6f465a5ecdbb9adedc17f3bac58e193d30c",
   "examplesSha256": "6dd8f086eec01f3c18c77158f84bbc5c9498cf88d2c84c06cf7482b98b07a669",
-  "vectorsSha256": "25a4e900695f1f0b58e60330d7aeb0d5dc79958a5a8ad8d631c9fad18f13d387",
+  "vectorsSha256": "fc5902b71d1b276c674f8a21c738d27193ddcbaf9b352951deffbaf1488d356e",
   "errorRegistrySha256": "11eb056c4db188335414483d107e57a1fd7748e99584a7562abbf289a2536f5d",
   "runnerContractsSha256": "3575a7b15821579cced6b90f519971c8e212e9258b79611445233fdeeb03f50b",
   "messages": {
@@ -874,8 +874,8 @@
     {
       "path": "README.md",
       "role": "README.md",
-      "bytes": 1478,
-      "sha256": "2d3006645db8d03ac5fb3de85548d5d315d80ca2f48048b1174ef9e2fb82932f"
+      "bytes": 1532,
+      "sha256": "014b014d218ea195e0c5277a40efd214f263ada47e61a50a3150f1199064a01b"
     },
     {
       "path": "THIRD-PARTY-NOTICES.md",
@@ -892,8 +892,8 @@
     {
       "path": "compatibility/report.json",
       "role": "compatibility",
-      "bytes": 633,
-      "sha256": "208b80fb9ff6c20486cd4a351ae390e1a06926bcb00ab62b9703a3defd9321c5"
+      "bytes": 926,
+      "sha256": "f520b89737196af6b52c3c555325b54edfbeade9bd18f5e6a191db8ec950bea9"
     },
     {
       "path": "docs/README.md",
@@ -904,14 +904,14 @@
     {
       "path": "docs/candidate-limitations.md",
       "role": "docs",
-      "bytes": 1083,
-      "sha256": "75ba416b8a73190ab44c0fcfea983fbf4055c923cee7cadd739f856d612d6f00"
+      "bytes": 1113,
+      "sha256": "77a1816f0a15021ceda86ba5734b1f9b9749cb9db37bb9a929ed82bee2d56042"
     },
     {
       "path": "docs/release-governance.md",
       "role": "docs",
-      "bytes": 2191,
-      "sha256": "fb5887f30da448cd616a697c4f58a1e6ad9cd8fb112b735510471bb65b802fc8"
+      "bytes": 2531,
+      "sha256": "e920d54263674c9c2f64f8c755b55e7276b8f5e7f623d45a07488979421ce4d6"
     },
     {
       "path": "errors/error-codes.json",
@@ -9292,14 +9292,14 @@
     {
       "path": "integration-slices/index.json",
       "role": "integration-slices",
-      "bytes": 3509,
-      "sha256": "d27643dc441342049b8ffc3b72702ed5dac889537a4e9d57370538531963b5e3"
+      "bytes": 4551,
+      "sha256": "718da0b3bdaf696f4604fd3c17b4c62df9cf8e519a2abedc701b71a3c1d74c79"
     },
     {
       "path": "package.json",
       "role": "package.json",
       "bytes": 357,
-      "sha256": "f9bab37e2568ea3edbf0c1a59ea1d131baa12b2c27d7232bf9357278a6a084e1"
+      "sha256": "eb5fe0622f4342dea0843831fe76ab3b6e51c1acebff6cc772d3491c7fa2359d"
     },
     {
       "path": "pnpm-lock.yaml",
@@ -9342,6 +9342,12 @@
       "role": "schemas",
       "bytes": 2174,
       "sha256": "cb633a1cae902517d7b10b2ae4863460ac8ead9c271ccdd7df913bcd618feac4"
+    },
+    {
+      "path": "schemas/governance/integration-slice-index.schema.json",
+      "role": "schemas",
+      "bytes": 3389,
+      "sha256": "df8078244427f0a186a18e46c001a6b6ae7fc9e050ea87d5ec53e080769f1fb3"
     },
     {
       "path": "schemas/governance/release-approval-attestation.schema.json",
@@ -9677,13 +9683,13 @@
       "path": "tools/finalize-manifest.mjs",
       "role": "tools",
       "bytes": 2186,
-      "sha256": "06af47bbc092dc4f09b114793214a8be5ee9a8af5e3ec72dea0eb74e4c813703"
+      "sha256": "996eb15f26dc46d28e57a36150548c1796c8797ccff8365205f13836babceed1"
     },
     {
       "path": "tools/g1-validate.mjs",
       "role": "tools",
-      "bytes": 8556,
-      "sha256": "c53e621c61e8a9ae82bc732a613c00ab1e4b70fac883f63c696d2689d06715df"
+      "bytes": 12402,
+      "sha256": "687516925ae55f65fae3bbb16661e25e6c53525e77d9b8ba7c10218ff69fa444"
     },
     {
       "path": "vectors/CV-CONNECTION-LOSS-SAFE-FINISH/expected.json",
@@ -9696,6 +9702,18 @@
       "role": "vectors",
       "bytes": 388,
       "sha256": "f8abd0e478f86fc9c239c417f185f804196fc8d8dec2ded4557e21bd88d11f02"
+    },
+    {
+      "path": "vectors/CV-DEMAND-ACCEPT-TO-PICKUP/expected.json",
+      "role": "vectors",
+      "bytes": 1263,
+      "sha256": "39477a901fe17415904c0dfac4d2596f7f89bfd2ebd1a32d7c2b3500f4ddde38"
+    },
+    {
+      "path": "vectors/CV-DEMAND-ACCEPT-TO-PICKUP/input.ndjson",
+      "role": "vectors",
+      "bytes": 993,
+      "sha256": "6fc18287bc051a4881eac2457dda69d162d9023a52883cb278ec621413a8b09c"
     },
     {
       "path": "vectors/CV-EXCEPTION-COMPENSATE/expected.json",

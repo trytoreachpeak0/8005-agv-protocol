@@ -1,0 +1,45 @@
+{
+  "vectorId": "CV-DEMAND-ACCEPT-TO-PICKUP",
+  "orderedExpectedMessages": [
+    "UpcomingStopPlanSnapshot",
+    "SnapshotAppliedAck",
+    "CurrentStopWorklistSnapshot",
+    "SnapshotAppliedAck",
+    "UpcomingStopPlanSnapshot",
+    "SnapshotAppliedAck"
+  ],
+  "persistenceCheckpoints": [
+    "accepted-demand-snapshot-before-to-pickup-intent",
+    "to-pickup-intent-before-riot-call",
+    "projection-revision-before-send",
+    "snapshot-before-ack"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-demand-acceptance",
+    "duplicate-riot-order",
+    "onboard-mesingest-read",
+    "onboard-demand-selection",
+    "onboard-demand-binding",
+    "uncommitted-demand-projection",
+    "slot-operation-before-pickup-arrival"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "EXACTLY_ONE_ACCEPTED_DEMAND_SNAPSHOT",
+      "EXACTLY_ONE_TO_PICKUP_INTENT",
+      "EXACTLY_ONE_RIOT_ORDER",
+      "TRUSTED_PICKUP_ARRIVAL"
+    ],
+    "onboardHmi": [
+      "DISPLAY_COMMITTED_DEMAND_JOURNEY",
+      "DISPLAY_CURRENT_STOP",
+      "NEVER_DISCOVER_SELECT_OR_BIND_DEMAND"
+    ]
+  },
+  "finalState": {
+    "readiness": "READY",
+    "business": "ONE_ACCEPTED_DEMAND_ONE_TO_PICKUP_ORDER_AT_PICKUP",
+    "physical": "NO_SLOT_OPERATION_STARTED"
+  },
+  "stableErrorCode": null
+}

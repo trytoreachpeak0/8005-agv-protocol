@@ -4,11 +4,12 @@ Shared executable protocol contracts for the 8005 AGV WIRE_TO_GATE MVP.
 
 ## Current state
 
-The repository currently contains an **unapproved `0.1.0` content snapshot**
-for `ProtocolVersion = 1` and profile `WIRE_TO_GATE_MVP`. It is not a formal
-`ProtocolRelease` and has no immutable tag/release. The two product owners
-approved separating the content manifest from its external approval attestation;
-final approval of the post-amendment commit and manifest is still pending.
+The repository currently contains an **unapproved `0.1.1` superseding content
+snapshot** for `ProtocolVersion = 1` and profile `WIRE_TO_GATE_MVP`.
+`protocol-v0.1.0` remains immutable. This candidate corrects the W2G-IS-01
+conformance mapping without changing message Schema or wire semantics; it is
+not a formal `ProtocolRelease` until both product owners approve its exact
+commit, manifest, vectors hash and compatibility classification.
 
 Machine-readable JSON Schema, the message manifest, error registry, valid and
 invalid examples, deterministic trajectories, runner/result contracts, and the

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "slices": [
     {
       "integrationSliceId": "W2G-IS-00",
@@ -26,8 +26,7 @@
         "W2G-IS-00"
       ],
       "vectorIds": [
-        "CV-RELIABLE-RETRY-SAME-CONTENT",
-        "CV-REQUEST-FIRST-RESULT-REPLAY"
+        "CV-DEMAND-ACCEPT-TO-PICKUP"
       ],
       "gates": [
         "G1",
@@ -35,6 +34,38 @@
         "ONBOARD_HMI_G2",
         "G3"
       ],
+      "definition": {
+        "scope": "DEMAND_ACCEPTANCE_AND_TO_PICKUP",
+        "requiredOutcomes": [
+          "EXACTLY_ONE_ACCEPTED_DEMAND_SNAPSHOT",
+          "EXACTLY_ONE_TO_PICKUP_INTENT",
+          "EXACTLY_ONE_RIOT_ORDER",
+          "TRUSTED_PICKUP_ARRIVAL",
+          "COMMITTED_DEMAND_JOURNEY_PROJECTED"
+        ],
+        "demandRepresentation": {
+          "controlServerFact": "AcceptedDemandSnapshot",
+          "wireMessages": [
+            "UpcomingStopPlanSnapshot",
+            "CurrentStopWorklistSnapshot"
+          ],
+          "onboardMode": "READ_ONLY_COMMITTED_PROJECTION"
+        },
+        "ownerResponsibilities": {
+          "controlServer": [
+            "MESINGEST_FINAL_REREAD",
+            "ATOMIC_DEMAND_ACCEPTANCE",
+            "DEDUPLICATED_TO_PICKUP_INTENT",
+            "RIOT_ORDER_RECONCILIATION",
+            "TRUSTED_PICKUP_ARRIVAL_ADOPTION"
+          ],
+          "onboardHmi": [
+            "DISPLAY_COMMITTED_DEMAND_JOURNEY",
+            "DISPLAY_CURRENT_STOP",
+            "NEVER_DISCOVER_SELECT_OR_BIND_DEMAND"
+          ]
+        }
+      },
       "forbidUnclosedFailOrInconclusive": true
     },
     {

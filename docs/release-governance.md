@@ -9,4 +9,5 @@
 - The attestation never contains its own hash. Its SHA-256 is computed from its final bytes and bound externally by the annotated tag and release metadata, avoiding another self-reference.
 - Release order is fixed: freeze and push the content commit; generate the external attestation against that commit and manifest; run G1 with `PROTOCOL_APPROVAL_ATTESTATION`; create annotated `protocol-v<SemVer>` tag pointing at the frozen content commit with both hashes in its message; then publish the same attestation as a release asset.
 - Required/type/enum/meaning/direction/delivery/dedup/persistence/recovery/error/side-effect changes are breaking and require a ProtocolVersion and release-major increase.
+- A conformance-index or trajectory correction may use a patch release only when it restores an already approved responsibility boundary, changes no message Schema or wire semantics, and both product owners approve that compatibility classification. It still changes the manifest/vector identity and invalidates affected G1/G2/G3 evidence.
 - Historical red evidence and released identities are immutable.
