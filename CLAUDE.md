@@ -31,7 +31,7 @@ Two people drive this project. Kun Wang (GitHub `SocialKKKK`) owns
 `8005-agv-onboard-hmi` and `slots-simulator`; Zhengyu Shao owns
 `8005-agv-control-server`; this repository is jointly maintained. The full
 account, written for humans and in Chinese, lives at
-`8005---AGV/docs/collaboration-workflow.md` in Zhengyu Shao's governance
+`8005-agv-program/docs/collaboration-workflow.md` in Zhengyu Shao's governance
 repository.
 
 - **This repository is the centre of the collaboration.**
