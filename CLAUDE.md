@@ -1,86 +1,118 @@
 # 8005-agv-protocol
 
-WIRE_TO_GATE MVP 的共享可执行协议契约。本文是 agent 在本仓库工作时的指令。
+The shared executable protocol contract for the WIRE_TO_GATE MVP. This file is
+the agent's instructions for working here.
 
-## 改本仓库：不需要事先批准，但必须事后通知
+## Changing this repository: no advance approval, but a mandatory announcement
 
-**决定权归 Zhengyu Shao 一个人**（2026-09-02 定，此前要求 Zhengyu Shao 与 Kun Wang
-双人事先批准的门控已取消）。
+**Zhengyu Shao decides this repository's content alone.** The earlier gate
+requiring approval from both Zhengyu Shao and Kun Wang before any write was
+removed on 2026-09-02.
 
-代替事先批准的是**事后通知**。协议是 Kun Wang 那一端据以实现的契约，而改动会作废他的
-门禁证据，所以他必须知道每一次改动：
+What replaces it is an announcement after the fact. This protocol is the
+contract Kun Wang's side implements against, and a change can void his gate
+evidence, so he has to learn about every one:
 
-- **每次推送后，在本仓库开一个 issue @`SocialKKKK`**，写清三件事：改了什么、影响哪些
-  `W2G-IS-*` 切片、他的 `ONBOARD_HMI_G2` 证据是否作废。
-- **通知和推送要在同一次工作里完成**，不能拖到以后。这是本仓库唯一的硬性流程要求。
+- **After every push, open an issue here that `@SocialKKKK`**, stating three
+  things: what changed, which `W2G-IS-*` slices it touches, and whether his
+  `ONBOARD_HMI_G2` evidence is now void.
+- **Announce in the same task as the push**, not later. This is the only hard
+  process requirement in this repository.
 
-`main` 分支开了保护：**禁止 force push、禁止删除分支**，但不要求 PR，可以直接推。
+`main` is protected against force pushes and deletion, but does **not** require
+a pull request — direct pushes are fine.
 
-**发布（打 tag）是例外，仍然需要双人签名**——见下面「发布很贵」一节。
+**Tagging a release is the exception and still needs two signatures** — see
+"Releases are expensive" below.
 
-## 协作工作流
+## Collaboration workflow
 
-项目由两个人推进：Kun Wang（GitHub `SocialKKKK`）负责 `8005-agv-onboard-hmi` 与
-`slots-simulator`；Zhengyu Shao 负责 `8005-agv-control-server`；本仓库共同维护。
-完整说明在 `8005---AGV/docs/collaboration-workflow.md`（Zhengyu Shao 的治理仓库）。
+Two people drive this project. Kun Wang (GitHub `SocialKKKK`) owns
+`8005-agv-onboard-hmi` and `slots-simulator`; Zhengyu Shao owns
+`8005-agv-control-server`; this repository is jointly maintained. The full
+account, written for humans and in Chinese, lives at
+`8005---AGV/docs/collaboration-workflow.md` in Zhengyu Shao's governance
+repository.
 
-- **本仓库是协作节奏的中心。**`integration-slices/index.json` 定义了 `W2G-IS-00` 到
-  `W2G-IS-07`，每个带 `sequence` 与 `prerequisites`；每个切片的 `gates` 就是分工：
-  `G1` 双方共用、`CONTROL_SERVER_G2` Zhengyu Shao、`ONBOARD_HMI_G2` Kun Wang、
-  `G3` 两人一起。进度看板也在本仓库。
-- **契约的歧义和错误在这里提 issue**，附上触发它的 `vectorId` 和双方各自的理解。
-  实现不符合契约的问题**不在这里提**，去对方仓库并附 G3 证据。
-- **改动不需要事先批准，但推送后必须开 issue @`SocialKKKK` 通知**（见上一节）。
-- **发布需要双人签名。**完成的 attestation 不进 git，作为 GitHub Release Asset 上传。
-  **AI 和 CI 不能批准。**详见 `docs/release-governance.md`。
+- **This repository is the centre of the collaboration.**
+  `integration-slices/index.json` defines `W2G-IS-00` through `W2G-IS-07`, each
+  with a `sequence` and `prerequisites`; each slice's `gates` array *is* the
+  division of labour — `G1` shared, `CONTROL_SERVER_G2` Zhengyu Shao,
+  `ONBOARD_HMI_G2` Kun Wang, `G3` together. The progress board lives here too,
+  as the issue labelled `wayfinder:map`.
+- **Contract ambiguities and errors are raised here** as issues carrying the
+  `vectorId` that triggered them, plus each side's reading. An implementation
+  that fails the contract is **not** raised here — it goes to that side's
+  repository with G3 evidence attached.
 
-## 发布很贵，改动要攒批次
+## Releases are expensive, so batch changes
 
-`docs/release-governance.md`：补丁发布 *"invalidates affected G1/G2/G3 evidence"*。
+`docs/release-governance.md`: a patch release *"invalidates affected G1/G2/G3
+evidence"*.
 
-**本仓库一发新版，两边的 G2 证据全部作废，都要重跑。**已经发生过一次：`W2G-IS-01` 在
-`protocol-v0.1.1` 里被重新映射到 `CV-DEMAND-ACCEPT-TO-PICKUP`，旧 `v0.1.0` 的 G2 证据
-不能继承。
+**One release here voids the G2 evidence on both sides and forces a full re-run.**
+It has happened once already: `W2G-IS-01` was remapped to
+`CV-DEMAND-ACCEPT-TO-PICKUP` in `protocol-v0.1.1`, so the `v0.1.0` G2 evidence
+could not carry over.
 
-所以**协议改动必须攒批次发**，不要零敲碎打——每一次小改都在让两边重跑整套门禁。
+So **batch protocol changes** rather than shipping them one at a time — each
+small release costs both sides a full gate re-run.
 
-发布顺序是固定的，见 `docs/release-governance.md`：冻结并推送内容 commit → 针对该
-commit 和 manifest 生成外部 attestation → 带 `PROTOCOL_APPROVAL_ATTESTATION` 跑 G1 →
-建指向该 commit 的 annotated tag `protocol-v<SemVer>`（tag message 里记两个哈希）→
-把同一份 attestation 作为 release asset 发布。
+Releases need **two distinct product owners** in the approval attestation. The
+completed attestation stays out of git and is uploaded as a GitHub Release
+asset, so that it changes neither the manifest hash nor the commit it approves.
+**AI and CI cannot approve.** The order is fixed: freeze and push the content
+commit, generate the external attestation against that commit and manifest, run
+G1 with `PROTOCOL_APPROVAL_ATTESTATION`, create the annotated
+`protocol-v<SemVer>` tag carrying both hashes in its message, then publish the
+same attestation as a release asset.
 
-## 什么是 breaking
+## What counts as breaking
 
-required / type / enum / 含义 / 方向 / 投递 / 去重 / 持久化 / 恢复 / 错误 / 副作用的
-改动都是 breaking，要递增 ProtocolVersion 和 release major。
+Changes to required/type/enum/meaning/direction/delivery/dedup/persistence/
+recovery/error/side-effect are breaking and require a ProtocolVersion and
+release-major increase.
 
-一致性索引或轨迹的修正可以走 patch，**仅当**它恢复的是已批准的职责边界、不改任何消息
-Schema 或线上语义、且双方都批准这个兼容性分类。即便如此它仍然改变 manifest / vector
-身份，并作废受影响的 G1/G2/G3 证据。
+A conformance-index or trajectory correction may take a patch release **only**
+when it restores an already approved responsibility boundary, changes no message
+schema or wire semantics, and both product owners approve that compatibility
+classification. Even then it changes the manifest and vector identity and voids
+the affected G1/G2/G3 evidence.
 
-## 权威性
+## What is authoritative
 
-机器可读的部分是权威：JSON Schema、消息 manifest、错误注册表、有效与无效示例、
-确定性轨迹、runner / result 契约、集成切片索引。**Markdown 只是解释性的。**
+The machine-readable content is authoritative: JSON Schema, the message
+manifest, the error registry, valid and invalid examples, deterministic
+trajectories, the runner and result contracts, and the integration-slice index.
+**Markdown is explanatory only.**
 
-`manifest/release.json` 是审批中立的内容快照，它哈希除自身、`attestations/`、`.git/`、
-`node_modules/` 和生成的 `evidence/` 之外的全部受管内容。
+`manifest/release.json` is an approval-neutral content snapshot. It hashes all
+governed content except itself, `attestations/`, `.git/`, `node_modules/` and
+generated `evidence/`.
 
-历史红色证据和已发布的身份不可变。
+Historical red evidence and released identities are immutable.
 
-## 语言约定
+## Language
 
-写进 GitHub 的东西用中文：README、文档正文、issue 与 PR 的标题和正文、commit message
-正文。
+Agent instruction files — this one, and anything under `.claude/` — are written
+in **English**.
 
-保持英文：commit 的 conventional 前缀（`feat:` `fix:` `docs:` `chore:`）、标识符、
-路径、命令、环境变量、错误码、门禁与切片名（`G1`、`W2G-IS-00`）、**协议消息名、
-schema 字段、`vectorId`、错误码——它们是契约本身，绝对不能改**。引用报错和测试输出时
-先贴英文原文，再用中文解释。不回溯改旧的。
+Everything a human reads is written in **Chinese**: README files, documentation
+prose, issue and pull-request titles and bodies, and commit message bodies.
 
-本仓库是 public，将来若要对外，README 可能需要双语。
+Stay English inside Chinese text: conventional commit prefixes (`feat:`, `fix:`,
+`docs:`, `chore:`), identifiers, paths, commands, environment variables, gate and
+slice names (`G1`, `W2G-IS-00`), and — most importantly — **protocol message
+names, schema fields, `vectorId` values and error codes, which are the contract
+itself and must never be translated.** Quote an error or a test result in its
+original English first, then explain it in Chinese. Do not rewrite existing text
+to match; this governs new writing.
 
-## 脚本基线
+This repository is public. If it is ever presented externally, the README may
+need to be bilingual.
 
-PowerShell 7。不写 Windows PowerShell 5.1 兼容代码，不加版本探测或降级分支，不调
-`powershell.exe` —— 用 `pwsh`。新建 `.ps1` 以 `#Requires -Version 7` 开头。
+## Scripting baseline
+
+PowerShell 7. Do not write Windows PowerShell 5.1 compatible code, do not add
+version probes or fallbacks, and do not invoke `powershell.exe` — call `pwsh`.
+Every new `.ps1` opens with `#Requires -Version 7`.
