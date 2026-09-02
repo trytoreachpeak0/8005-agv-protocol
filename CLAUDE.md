@@ -108,8 +108,12 @@ itself and must never be translated.** Quote an error or a test result in its
 original English first, then explain it in Chinese. Do not rewrite existing text
 to match; this governs new writing.
 
-This repository is public. If it is ever presented externally, the README may
-need to be bilingual.
+This repository is private. It was public until 2026-09-02 and was switched
+because the workspace now runs a self-hosted GitHub Actions runner on the
+factory server, and a public repository would let anyone execute code on that
+machine through a pull request. **Do not switch it back to public.** If the
+protocol ever has to be presented externally, export the relevant documents
+rather than opening the repository.
 
 ## Scripting baseline
 
