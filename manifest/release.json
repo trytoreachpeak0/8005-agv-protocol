@@ -7,7 +7,7 @@
   "generatedAt": "2026-08-26T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "c3c1f189abcf52e4abb6c835a36e33cf50e5c1aa43a1ed8b0e4cebfc30008a7b",
+  "fileTableSha256": "b630057f3d7c75e97f418e63de12e59cbb3382f947f86badf852eedf4eea6019",
   "schemaBundleSha256": "e04296e9bcf48c341bc91fef5731f6f465a5ecdbb9adedc17f3bac58e193d30c",
   "examplesSha256": "6dd8f086eec01f3c18c77158f84bbc5c9498cf88d2c84c06cf7482b98b07a669",
   "vectorsSha256": "fc5902b71d1b276c674f8a21c738d27193ddcbaf9b352951deffbaf1488d356e",
@@ -9688,14 +9688,14 @@
     {
       "path": "tools/finalize-manifest.mjs",
       "role": "tools",
-      "bytes": 2186,
-      "sha256": "996eb15f26dc46d28e57a36150548c1796c8797ccff8365205f13836babceed1"
+      "bytes": 2212,
+      "sha256": "a374f677043eeb35465ae7ea3e919b448facd69f33d233c3f163641c2b547f30"
     },
     {
       "path": "tools/g1-validate.mjs",
       "role": "tools",
-      "bytes": 12402,
-      "sha256": "687516925ae55f65fae3bbb16661e25e6c53525e77d9b8ba7c10218ff69fa444"
+      "bytes": 12428,
+      "sha256": "e1238ff1076a0ada6d933a3dcf6a192ebe7fac1efa7e56c87d29ceeef1307aa8"
     },
     {
       "path": "vectors/CV-CONNECTION-LOSS-SAFE-FINISH/expected.json",

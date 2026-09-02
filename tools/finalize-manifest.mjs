@@ -4,7 +4,7 @@ import crypto from "node:crypto";
 const root=path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/,"$1")),"..");
 const sha=b=>crypto.createHash("sha256").update(b).digest("hex");
 const canon=v=>v===null||typeof v!=="object"?JSON.stringify(v):Array.isArray(v)?"["+v.map(canon).join(",")+"]":"{"+Object.keys(v).sort().map(k=>JSON.stringify(k)+":"+canon(v[k])).join(",")+"}";
-const excluded=p=>p==="manifest/release.json"||p.startsWith("attestations/")||p.startsWith(".git/")||p.startsWith("node_modules/")||p.startsWith("evidence/");
+const excluded=p=>p==="manifest/release.json"||p.startsWith("attestations/")||p.startsWith(".git/")||p.startsWith("node_modules/")||p.startsWith("evidence/")||p.startsWith(".github/");
 const walk=d=>fs.readdirSync(d,{withFileTypes:true}).flatMap(e=>{const p=path.join(d,e.name);return e.isDirectory()?walk(p):[p]});
 const files=walk(root).map(p=>path.relative(root,p).replaceAll("\\","/")).filter(p=>!excluded(p)).sort().map(p=>{const b=fs.readFileSync(path.join(root,p));return{path:p,role:p.split("/")[0],bytes:b.length,sha256:sha(b)}});
 const combine=prefix=>sha(Buffer.from(files.filter(f=>f.path.startsWith(prefix)).map(f=>f.path+":"+f.sha256).join("\n")+"\n"));
