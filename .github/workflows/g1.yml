@@ -1,0 +1,47 @@
+name: g1
+
+# The G1 gate on the self-hosted runner on win11-01. Until 2026-09-02 this gate
+# had no machine to run on at all: the control machine has no Node installed, so
+# `pnpm g1` had never actually executed here. It was red for a full day without
+# anyone knowing — CLAUDE.md was added to the repository on 2026-09-02 while the
+# manifest had last been regenerated on 2026-08-26, so the file-count check
+# failed from that moment.
+#
+# This workspace does not use GitHub-hosted runners; see the workspace root
+# CLAUDE.md. The 'headless' label matters — win11-01 also hosts an interactive
+# runner for WPF suites.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  g1:
+    runs-on: [self-hosted, headless]
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Toolchain
+        shell: pwsh
+        run: |
+          Write-Output "node  $(node --version)"
+          Write-Output "pnpm  $(pnpm --version)"
+
+      # --frozen-lockfile makes a stale pnpm-lock.yaml a failure rather than a
+      # silent resolution to different versions.
+      - name: Install
+        shell: pwsh
+        run: pnpm install --frozen-lockfile
+
+      # g1 exits non-zero on any gate failure and prints the failures as JSON.
+      # The exit code is the contract.
+      - name: G1
+        shell: pwsh
+        run: pnpm g1

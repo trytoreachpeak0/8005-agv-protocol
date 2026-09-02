@@ -7,7 +7,7 @@
   "generatedAt": "2026-08-26T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "3af98a8027acf79401756ef26a9e76497adad8fd2ba54434ebe9a81dba8d3fb4",
+  "fileTableSha256": "c3c1f189abcf52e4abb6c835a36e33cf50e5c1aa43a1ed8b0e4cebfc30008a7b",
   "schemaBundleSha256": "e04296e9bcf48c341bc91fef5731f6f465a5ecdbb9adedc17f3bac58e193d30c",
   "examplesSha256": "6dd8f086eec01f3c18c77158f84bbc5c9498cf88d2c84c06cf7482b98b07a669",
   "vectorsSha256": "fc5902b71d1b276c674f8a21c738d27193ddcbaf9b352951deffbaf1488d356e",
@@ -870,6 +870,12 @@
       "role": ".gitignore",
       "bytes": 14,
       "sha256": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
+    },
+    {
+      "path": "CLAUDE.md",
+      "role": "CLAUDE.md",
+      "bytes": 5808,
+      "sha256": "72eed63d9bbc414c2361b655bb9ca24df1146f017518f1c73cb0b6b6d99e8573"
     },
     {
       "path": "README.md",
