@@ -23,6 +23,16 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "SUPERSEDE_STALE_SESSION_GENERATION",
+      "NEVER_TWO_ACTIVE_SESSIONS"
+    ],
+    "onboardHmi": [
+      "RESUBMIT_RECOVERY_STATE_AFTER_RECONNECT",
+      "NEVER_ASSUME_PREVIOUS_SESSION_SURVIVED"
+    ]
+  },
   "finalState": {
     "readiness": "RECOVERY_REQUIRED_OR_UNIQUELY_RECONCILED",
     "business": "NO_DUPLICATE_COMMIT",

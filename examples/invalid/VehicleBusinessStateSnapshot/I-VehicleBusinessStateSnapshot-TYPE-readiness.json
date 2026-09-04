@@ -1,9 +1,9 @@
 {
   "vectorId": "I-VehicleBusinessStateSnapshot-TYPE-readiness",
   "message": {
-    "protocolVersion": 1,
-    "profileId": "WIRE_TO_GATE_MVP",
-    "protocolReleaseVersion": "0.1.0",
+    "protocolVersion": 2,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "1.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "VehicleBusinessStateSnapshot",
     "messageId": "00000000-0000-4000-8000-000000000029",
@@ -14,6 +14,7 @@
     "payload": {
       "vehicleBusinessStateRevision": 1,
       "readiness": 123,
+      "activePurpose": "TRANSPORT",
       "manualChargingHold": false,
       "batteryState": "SUFFICIENT",
       "blockingFacts": [

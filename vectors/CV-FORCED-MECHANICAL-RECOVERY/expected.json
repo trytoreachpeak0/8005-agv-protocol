@@ -20,6 +20,15 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "FENCE_FORCED_RECOVERY_BY_GENERATION"
+    ],
+    "onboardHmi": [
+      "REFUSE_STALE_FORCED_RECOVERY_GENERATION",
+      "REPORT_FORCED_RECOVERY_OUTCOME"
+    ]
+  },
   "finalState": {
     "readiness": "RECOVERY_REQUIRED_OR_UNIQUELY_RECONCILED",
     "business": "NO_DUPLICATE_COMMIT",

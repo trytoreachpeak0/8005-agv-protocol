@@ -1,0 +1,4 @@
+{"action":"send","atMs":0,"messageType":"UnableToChargeFieldConfirmationRequested","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"UnableToChargeFieldConfirmationResult","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"VehicleBusinessStateSnapshot","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"SnapshotAppliedAck","step":4,"virtualTimeOnly":true}

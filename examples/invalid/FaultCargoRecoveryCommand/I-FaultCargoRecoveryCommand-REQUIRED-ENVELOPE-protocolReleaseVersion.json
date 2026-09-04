@@ -1,8 +1,8 @@
 {
   "vectorId": "I-FaultCargoRecoveryCommand-REQUIRED-ENVELOPE-protocolReleaseVersion",
   "message": {
-    "protocolVersion": 1,
-    "profileId": "WIRE_TO_GATE_MVP",
+    "protocolVersion": 2,
+    "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "FaultCargoRecoveryCommand",
     "messageId": "00000000-0000-4000-8000-000000000095",

@@ -1,9 +1,9 @@
 {
   "vectorId": "I-SessionHello-REQUIRED-ENVELOPE-protocolReleaseManifestSha256",
   "message": {
-    "protocolVersion": 1,
-    "profileId": "WIRE_TO_GATE_MVP",
-    "protocolReleaseVersion": "0.1.0",
+    "protocolVersion": 2,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "1.0.0",
     "messageType": "SessionHello",
     "messageId": "00000000-0000-4000-8000-000000000001",
     "correlationId": null,
@@ -13,15 +13,15 @@
     "payload": {
       "onboardInstanceId": "00000000-0000-4000-8000-000000000001",
       "onboardBuildCommit": "0000000000000000000000000000000000000000",
-      "supportedProtocolVersion": 1,
-      "profileId": "WIRE_TO_GATE_MVP",
+      "supportedProtocolVersion": 2,
+      "profileId": "AGV_FULL_PRODUCT",
       "protocolReleaseIdentity": {
         "repository": "8005-agv-protocol",
-        "releaseVersion": "0.1.0",
-        "tag": "protocol-v0.1.0",
+        "releaseVersion": "1.0.0",
+        "tag": "protocol-v1.0.0",
         "commit": "0000000000000000000000000000000000000000",
-        "protocolVersion": 1,
-        "profileId": "WIRE_TO_GATE_MVP",
+        "protocolVersion": 2,
+        "profileId": "AGV_FULL_PRODUCT",
         "manifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "schemaBundleSha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "vectorsSha256": "0000000000000000000000000000000000000000000000000000000000000000"

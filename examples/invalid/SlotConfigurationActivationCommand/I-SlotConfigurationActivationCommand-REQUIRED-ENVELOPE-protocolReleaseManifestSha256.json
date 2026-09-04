@@ -1,0 +1,31 @@
+{
+  "vectorId": "I-SlotConfigurationActivationCommand-REQUIRED-ENVELOPE-protocolReleaseManifestSha256",
+  "message": {
+    "protocolVersion": 2,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "1.0.0",
+    "messageType": "SlotConfigurationActivationCommand",
+    "messageId": "00000000-0000-4000-8000-000000000121",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "activationId": "00000000-0000-4000-8000-000000000001",
+      "targetSlotConfigurationVersion": "targetSlotConfigurationVersion-test",
+      "targetSlotConfigurationFingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expectedActiveSlotConfigurationVersion": "expectedActiveSlotConfigurationVersion-test",
+      "administrator": {
+        "operatorId": "operatorId-test",
+        "verificationMethod": "BADGE",
+        "verifiedAt": "2026-08-25T09:00:00Z"
+      },
+      "issuedAt": "2026-08-25T09:00:00Z"
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/protocolReleaseManifestSha256",
+    "rule": "required"
+  }
+}

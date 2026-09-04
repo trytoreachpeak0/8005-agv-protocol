@@ -2,3 +2,4 @@
 {"action":"expect","atMs":100,"messageType":"SlotOperationCommand","step":2,"virtualTimeOnly":true}
 {"action":"expect","atMs":200,"messageType":"SublotSubmitted","step":3,"virtualTimeOnly":true}
 {"action":"expect","atMs":300,"messageType":"SlotOperationCommand","step":4,"virtualTimeOnly":true}
+{"action":"expect","atMs":400,"messageType":"OperationResult","step":5,"virtualTimeOnly":true}

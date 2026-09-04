@@ -22,6 +22,17 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "SESSION_ACCEPTED_ONCE",
+      "CAPABILITY_AND_SAFETY_ADOPTED",
+      "READINESS_DECIDED_FROM_REPORTED_STATE"
+    ],
+    "onboardHmi": [
+      "REPORT_UNSETTLED_STATE_BEFORE_READY",
+      "ADOPT_SERVER_READINESS_DECISION"
+    ]
+  },
   "finalState": {
     "readiness": "RECOVERY_REQUIRED_OR_UNIQUELY_RECONCILED",
     "business": "NO_DUPLICATE_COMMIT",

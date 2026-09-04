@@ -23,6 +23,15 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "AUTHORIZE_COMPENSATION_AGAINST_RECOVERY_SESSION"
+    ],
+    "onboardHmi": [
+      "EXECUTE_COMPENSATION_ONCE",
+      "REPORT_COMPENSATED_SLOT_STATE"
+    ]
+  },
   "finalState": {
     "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
     "business": "NO_DUPLICATE_COMMIT",

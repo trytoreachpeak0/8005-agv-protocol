@@ -19,6 +19,16 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "ACK_RETRY_WITHOUT_DUPLICATE_EFFECT",
+      "IDEMPOTENT_ON_BUSINESS_KEY"
+    ],
+    "onboardHmi": [
+      "RETRY_WITH_IDENTICAL_CONTENT",
+      "NEVER_MUTATE_MESSAGE_ID_CONTENT_PAIR"
+    ]
+  },
   "finalState": {
     "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
     "business": "NO_DUPLICATE_COMMIT",

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json",
-  "title": "WIRE_TO_GATE MVP common types",
+  "$id": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json",
+  "title": "AGV_FULL_PRODUCT common types",
   "$defs": {
     "Id": {
       "type": "string",
@@ -103,7 +103,18 @@
         "RECOVERY_SCOPE_MISMATCH",
         "RECOVERY_CHECKPOINT_NOT_UNIQUE",
         "RECOVERY_AUTHENTICATION_FAILED",
-        "FORCED_RECOVERY_GENERATION_STALE"
+        "FORCED_RECOVERY_GENERATION_STALE",
+        "SLOT_CONFIGURATION_VERIFICATION_FAILED",
+        "SLOT_CONFIGURATION_FINGERPRINT_MISMATCH",
+        "RECOVERY_DEMAND_NOT_BLOCKED",
+        "RECOVERY_EVENT_MISMATCH",
+        "RECOVERY_DEMAND_MISMATCH",
+        "RECOVERY_OPERATOR_MISMATCH",
+        "RECOVERY_ACTION_ALREADY_SELECTED",
+        "RECOVERY_OPERATION_NOT_FOUND",
+        "PROVEN_RECOVERY_CHECKPOINT_REQUIRED",
+        "RECOVERY_ACTION_REQUIRED",
+        "RECOVERY_RESULT_REQUIRED"
       ],
       "examples": [
         "ACTION_NOT_ALLOWED_IN_STATE"
@@ -122,7 +133,7 @@
           "minLength": 1,
           "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
           "examples": [
-            "0.1.0"
+            "1.0.0"
           ]
         },
         "tag": {
@@ -130,29 +141,29 @@
           "minLength": 1,
           "pattern": "^protocol-v",
           "examples": [
-            "protocol-v0.1.0"
+            "protocol-v1.0.0"
           ]
         },
         "commit": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/CommitSha"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/CommitSha"
         },
         "protocolVersion": {
           "type": "integer",
-          "const": 1
+          "const": 2
         },
         "profileId": {
           "type": "string",
           "minLength": 1,
-          "const": "WIRE_TO_GATE_MVP"
+          "const": "AGV_FULL_PRODUCT"
         },
         "manifestSha256": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Sha256"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Sha256"
         },
         "schemaBundleSha256": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Sha256"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Sha256"
         },
         "vectorsSha256": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Sha256"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Sha256"
         }
       },
       "required": [
@@ -172,7 +183,7 @@
       "type": "object",
       "properties": {
         "reasonCode": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/ErrorCode"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/ErrorCode"
         },
         "fieldPath": {
           "anyOf": [
@@ -208,7 +219,7 @@
       "type": "object",
       "properties": {
         "slotNo": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/SlotNo"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/SlotNo"
         },
         "operability": {
           "type": "string",
@@ -253,7 +264,7 @@
         "reasonCodes": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/ErrorCode"
+            "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/ErrorCode"
           },
           "uniqueItems": true
         }
@@ -273,7 +284,7 @@
       "type": "object",
       "properties": {
         "slotNo": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/SlotNo"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/SlotNo"
         },
         "outcome": {
           "type": "string",
@@ -311,7 +322,7 @@
         "reasonCodes": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/ErrorCode"
+            "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/ErrorCode"
           },
           "uniqueItems": true
         }
@@ -347,7 +358,7 @@
         "reasonCodes": {
           "type": "array",
           "items": {
-            "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/ErrorCode"
+            "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/ErrorCode"
           },
           "uniqueItems": true
         }
@@ -377,7 +388,7 @@
           ]
         },
         "verifiedAt": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Instant"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Instant"
         }
       },
       "required": [
@@ -395,14 +406,14 @@
           "minLength": 1
         },
         "messageId": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Id"
         },
         "businessId": {
           "type": "string",
           "minLength": 1
         },
         "contentSha256": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Sha256"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Sha256"
         }
       },
       "required": [
@@ -417,7 +428,7 @@
       "type": "object",
       "properties": {
         "reasonCode": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/ErrorCode"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/ErrorCode"
         },
         "subjectType": {
           "type": "string",
@@ -445,12 +456,100 @@
     "SlotNoArray": {
       "type": "array",
       "items": {
-        "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/SlotNo"
+        "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/SlotNo"
       },
       "minItems": 1,
       "maxItems": 8,
       "uniqueItems": true,
       "x-sortedAscending": true
+    },
+    "StopPurposeCategory": {
+      "type": "string",
+      "enum": [
+        "BUSINESS",
+        "WAITING_POINT",
+        "CHARGER"
+      ]
+    },
+    "PublicStationFunction": {
+      "type": "string",
+      "enum": [
+        "WIRE_STAGING",
+        "OVEN",
+        "GATE",
+        "OPTICAL",
+        "NITROGEN"
+      ]
+    },
+    "TransportTaskType": {
+      "type": "string",
+      "enum": [
+        "DIE_TO_WIRE_STAGING",
+        "DIE_TO_OVEN",
+        "WIRE_TO_GATE",
+        "WIRE_TO_OPTICAL",
+        "STAGING_TO_WIRE",
+        "WIRE_TO_NITROGEN"
+      ]
+    },
+    "AlarmEntry": {
+      "type": "object",
+      "properties": {
+        "alarmId": {
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Id"
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": "string",
+          "enum": [
+            "INFO",
+            "WARNING",
+            "CRITICAL"
+          ]
+        },
+        "raisedAt": {
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Instant"
+        },
+        "subjectType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subjectId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "displayMessage": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "alarmId",
+        "code",
+        "severity",
+        "raisedAt",
+        "subjectType",
+        "subjectId",
+        "displayMessage"
+      ],
+      "additionalProperties": false
     }
   }
 }

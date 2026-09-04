@@ -1,0 +1,40 @@
+{
+  "vectorId": "CV-MULTI-STOP-PLAN-NINE-LEGS",
+  "orderedExpectedMessages": [
+    "UpcomingStopPlanSnapshot",
+    "SnapshotAppliedAck",
+    "CurrentStopWorklistSnapshot",
+    "SnapshotAppliedAck"
+  ],
+  "persistenceCheckpoints": [
+    "durable-before-send",
+    "durable-before-ack",
+    "journal-before-irreversible-io",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "PLAN_UP_TO_NINE_LEGS",
+      "ORDER_LEGS_BY_SEQUENCE",
+      "CATEGORISE_EVERY_STOP_PURPOSE"
+    ],
+    "onboardHmi": [
+      "DISPLAY_FULL_JOURNEY_PLAN",
+      "NEVER_REORDER_LEGS_LOCALLY"
+    ]
+  },
+  "finalState": {
+    "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
+    "business": "NO_DUPLICATE_COMMIT",
+    "physical": "NO_UNPROVEN_STATE"
+  },
+  "stableErrorCode": null
+}

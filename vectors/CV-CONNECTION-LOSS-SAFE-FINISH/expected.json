@@ -20,6 +20,15 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "NEVER_READY_BEFORE_RECONCILIATION"
+    ],
+    "onboardHmi": [
+      "FINISH_IN_PROGRESS_OPERATION_SAFELY",
+      "JOURNAL_BEFORE_IRREVERSIBLE_IO"
+    ]
+  },
   "finalState": {
     "readiness": "RECOVERY_REQUIRED_OR_UNIQUELY_RECONCILED",
     "business": "NO_DUPLICATE_COMMIT",

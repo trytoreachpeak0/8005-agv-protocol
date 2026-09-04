@@ -20,6 +20,16 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "EXPIRE_CHECK_ON_SAFETY_STATE_CHANGE",
+      "NEVER_DEPART_ON_EXPIRED_CHECK"
+    ],
+    "onboardHmi": [
+      "REPORT_SAFETY_STATE_CHANGE_PROMPTLY",
+      "REREQUEST_CHECK_AFTER_EXPIRY"
+    ]
+  },
   "finalState": {
     "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
     "business": "NO_DUPLICATE_COMMIT",

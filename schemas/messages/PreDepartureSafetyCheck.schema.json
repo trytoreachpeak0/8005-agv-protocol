@@ -1,28 +1,28 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.8005-agv.local/wire-to-gate/v1/messages/PreDepartureSafetyCheck.schema.json",
+  "$id": "https://schemas.8005-agv.local/agv-full-product/v2/messages/PreDepartureSafetyCheck.schema.json",
   "title": "PreDepartureSafetyCheck",
   "type": "object",
   "properties": {
     "protocolVersion": {
       "type": "integer",
-      "const": 1
+      "const": 2
     },
     "profileId": {
       "type": "string",
       "minLength": 1,
-      "const": "WIRE_TO_GATE_MVP"
+      "const": "AGV_FULL_PRODUCT"
     },
     "protocolReleaseVersion": {
       "type": "string",
       "minLength": 1,
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
       "examples": [
-        "0.1.0"
+        "1.0.0"
       ]
     },
     "protocolReleaseManifestSha256": {
-      "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Sha256"
+      "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Sha256"
     },
     "messageType": {
       "type": "string",
@@ -30,7 +30,7 @@
       "const": "PreDepartureSafetyCheck"
     },
     "messageId": {
-      "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
+      "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Id"
     },
     "correlationId": {
       "type": "null"
@@ -43,25 +43,25 @@
       ]
     },
     "sessionGeneration": {
-      "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Generation"
+      "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Generation"
     },
     "sentAt": {
-      "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Instant"
+      "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Instant"
     },
     "payload": {
       "type": "object",
       "properties": {
         "preDepartureSafetyCheckId": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Id"
         },
         "demandId": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Id"
         },
         "movementLegId": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Id"
         },
         "expectedSafetyStateVersion": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Revision"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Revision"
         },
         "targetStationId": {
           "type": "string",

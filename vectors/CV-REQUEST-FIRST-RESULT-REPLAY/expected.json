@@ -4,7 +4,8 @@
     "SublotSubmitted",
     "SlotOperationCommand",
     "SublotSubmitted",
-    "SlotOperationCommand"
+    "SlotOperationCommand",
+    "OperationResult"
   ],
   "persistenceCheckpoints": [
     "durable-before-send",
@@ -20,6 +21,16 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "REPLAY_PENDING_RESULT_ON_REQUEST",
+      "NEVER_RECOMPUTE_SETTLED_RESULT"
+    ],
+    "onboardHmi": [
+      "REQUEST_BEFORE_ASSUMING_LOSS",
+      "ADOPT_REPLAYED_RESULT"
+    ]
+  },
   "finalState": {
     "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
     "business": "NO_DUPLICATE_COMMIT",

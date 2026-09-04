@@ -1,28 +1,28 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.8005-agv.local/wire-to-gate/v1/messages/CurrentStopWorklistSnapshot.schema.json",
+  "$id": "https://schemas.8005-agv.local/agv-full-product/v2/messages/CurrentStopWorklistSnapshot.schema.json",
   "title": "CurrentStopWorklistSnapshot",
   "type": "object",
   "properties": {
     "protocolVersion": {
       "type": "integer",
-      "const": 1
+      "const": 2
     },
     "profileId": {
       "type": "string",
       "minLength": 1,
-      "const": "WIRE_TO_GATE_MVP"
+      "const": "AGV_FULL_PRODUCT"
     },
     "protocolReleaseVersion": {
       "type": "string",
       "minLength": 1,
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
       "examples": [
-        "0.1.0"
+        "1.0.0"
       ]
     },
     "protocolReleaseManifestSha256": {
-      "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Sha256"
+      "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Sha256"
     },
     "messageType": {
       "type": "string",
@@ -30,7 +30,7 @@
       "const": "CurrentStopWorklistSnapshot"
     },
     "messageId": {
-      "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
+      "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Id"
     },
     "correlationId": {
       "type": "null"
@@ -43,10 +43,10 @@
       ]
     },
     "sessionGeneration": {
-      "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Generation"
+      "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Generation"
     },
     "sentAt": {
-      "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Instant"
+      "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Instant"
     },
     "payload": {
       "type": "object",
@@ -56,12 +56,12 @@
           "minLength": 1
         },
         "worklistRevision": {
-          "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Revision"
+          "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Revision"
         },
         "operationSessionId": {
           "anyOf": [
             {
-              "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
+              "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Id"
             },
             {
               "type": "null"
@@ -74,7 +74,7 @@
             "type": "object",
             "properties": {
               "demandId": {
-                "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
+                "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/Id"
               },
               "transportDemandKey": {
                 "type": "string",
@@ -85,15 +85,13 @@
                 "minLength": 1
               },
               "workType": {
-                "type": "string",
-                "minLength": 1,
-                "const": "WIRE_TO_GATE"
+                "$ref": "https://schemas.8005-agv.local/agv-full-product/v2/common/types.schema.json#/$defs/TransportTaskType"
               },
               "stopRole": {
                 "type": "string",
                 "enum": [
                   "PICKUP",
-                  "GATE"
+                  "DROPOFF"
                 ]
               },
               "expectedBasketCount": {
@@ -112,7 +110,7 @@
             ],
             "additionalProperties": false
           },
-          "maxItems": 1
+          "maxItems": 8
         }
       },
       "required": [

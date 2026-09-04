@@ -19,6 +19,16 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "REJECT_MESSAGE_ID_CONTENT_CONFLICT",
+      "NEVER_APPLY_CONFLICTING_RETRY"
+    ],
+    "onboardHmi": [
+      "SURFACE_PROTOCOL_PROBLEM",
+      "NEVER_SILENTLY_REPLACE_CONTENT"
+    ]
+  },
   "finalState": {
     "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
     "business": "NO_DUPLICATE_COMMIT",

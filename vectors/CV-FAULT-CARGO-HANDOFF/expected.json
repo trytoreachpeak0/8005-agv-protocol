@@ -20,6 +20,15 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "RECORD_FAULT_CARGO_HANDOFF"
+    ],
+    "onboardHmi": [
+      "HANDOFF_ONLY_ON_AUTHORIZED_COMMAND",
+      "REPORT_HANDOFF_OUTCOME"
+    ]
+  },
   "finalState": {
     "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
     "business": "NO_DUPLICATE_COMMIT",

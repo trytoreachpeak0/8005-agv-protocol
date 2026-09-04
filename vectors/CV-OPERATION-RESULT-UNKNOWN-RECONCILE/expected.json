@@ -21,6 +21,16 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "NEVER_TREAT_UNKNOWN_AS_SUCCESS",
+      "RECONCILE_FROM_REPORTED_JOURNAL"
+    ],
+    "onboardHmi": [
+      "REPORT_UNKNOWN_AS_UNKNOWN",
+      "REPLAY_RESULT_ON_RECONNECT"
+    ]
+  },
   "finalState": {
     "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
     "business": "NO_DUPLICATE_COMMIT",

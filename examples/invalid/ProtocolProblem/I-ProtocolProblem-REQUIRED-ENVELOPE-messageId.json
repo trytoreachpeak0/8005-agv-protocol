@@ -1,9 +1,9 @@
 {
   "vectorId": "I-ProtocolProblem-REQUIRED-ENVELOPE-messageId",
   "message": {
-    "protocolVersion": 1,
-    "profileId": "WIRE_TO_GATE_MVP",
-    "protocolReleaseVersion": "0.1.0",
+    "protocolVersion": 2,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "1.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "ProtocolProblem",
     "correlationId": "00000000-0000-4000-8000-000000000108",
@@ -18,8 +18,8 @@
         "fieldPath": "fieldPath-test",
         "displayMessage": "displayMessage-test"
       },
-      "expectedProtocolVersion": 1,
-      "expectedProfileId": "WIRE_TO_GATE_MVP",
+      "expectedProtocolVersion": 2,
+      "expectedProfileId": "AGV_FULL_PRODUCT",
       "expectedProtocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   },

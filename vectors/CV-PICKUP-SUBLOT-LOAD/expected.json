@@ -21,6 +21,16 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "BIND_SUBLOT_TO_OPERATION_SESSION",
+      "AUTHORIZE_SLOT_SET_ONCE"
+    ],
+    "onboardHmi": [
+      "SUBMIT_SCANNED_SUBLOT",
+      "LOAD_ONLY_AUTHORIZED_SLOTS"
+    ]
+  },
   "finalState": {
     "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
     "business": "NO_DUPLICATE_COMMIT",

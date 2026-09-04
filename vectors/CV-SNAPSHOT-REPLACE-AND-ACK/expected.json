@@ -20,6 +20,15 @@
     "ready-before-reconciliation",
     "unknown-as-success"
   ],
+  "productAssertions": {
+    "controlServer": [
+      "ADVANCE_REVISION_MONOTONICALLY"
+    ],
+    "onboardHmi": [
+      "REPLACE_NOT_MERGE_SNAPSHOT",
+      "ACK_APPLIED_REVISION"
+    ]
+  },
   "finalState": {
     "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
     "business": "NO_DUPLICATE_COMMIT",
