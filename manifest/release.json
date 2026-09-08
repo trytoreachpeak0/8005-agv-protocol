@@ -7,10 +7,10 @@
   "generatedAt": "2026-08-26T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "b630057f3d7c75e97f418e63de12e59cbb3382f947f86badf852eedf4eea6019",
+  "fileTableSha256": "e5d0d9cf27eb673133073f1be5875b4a0728377c0c878307956333204edc7086",
   "schemaBundleSha256": "e04296e9bcf48c341bc91fef5731f6f465a5ecdbb9adedc17f3bac58e193d30c",
   "examplesSha256": "6dd8f086eec01f3c18c77158f84bbc5c9498cf88d2c84c06cf7482b98b07a669",
-  "vectorsSha256": "fc5902b71d1b276c674f8a21c738d27193ddcbaf9b352951deffbaf1488d356e",
+  "vectorsSha256": "bd272b63a1d0663d61c4a38d6e8633d7e7d4f7b561a7915c3df51c7a93bd4576",
   "errorRegistrySha256": "11eb056c4db188335414483d107e57a1fd7748e99584a7562abbf289a2536f5d",
   "runnerContractsSha256": "3575a7b15821579cced6b90f519971c8e212e9258b79611445233fdeeb03f50b",
   "messages": {
@@ -9298,8 +9298,8 @@
     {
       "path": "integration-slices/index.json",
       "role": "integration-slices",
-      "bytes": 4551,
-      "sha256": "718da0b3bdaf696f4604fd3c17b4c62df9cf8e519a2abedc701b71a3c1d74c79"
+      "bytes": 4595,
+      "sha256": "5fe92822ef0d7f881a8ea93dd1a28c997da03a16b4cabefe9986cb503fe8b9f9"
     },
     {
       "path": "package.json",
@@ -9694,8 +9694,8 @@
     {
       "path": "tools/g1-validate.mjs",
       "role": "tools",
-      "bytes": 12428,
-      "sha256": "e1238ff1076a0ada6d933a3dcf6a192ebe7fac1efa7e56c87d29ceeef1307aa8"
+      "bytes": 12463,
+      "sha256": "57deef27cb9240316e0f4e108303a223cb7d79f8cdec7d4cf195d7c6a9a547b5"
     },
     {
       "path": "vectors/CV-CONNECTION-LOSS-SAFE-FINISH/expected.json",
@@ -9792,6 +9792,18 @@
       "role": "vectors",
       "bytes": 407,
       "sha256": "1604c5727afe5405f284fc5a3641011c3fe323896d47c0dcde89c61ebeb953a0"
+    },
+    {
+      "path": "vectors/CV-LOAD-CANCELLATION-BEFORE-LOAD/expected.json",
+      "role": "vectors",
+      "bytes": 612,
+      "sha256": "beee61a1e7f7ed3c97d75c879a70464ae84c4861e5fda8968b1c2a34727bba5c"
+    },
+    {
+      "path": "vectors/CV-LOAD-CANCELLATION-BEFORE-LOAD/input.ndjson",
+      "role": "vectors",
+      "bytes": 215,
+      "sha256": "ba4d64c59ca26881eb4fe39cb1247a646fd92b3a9f708b2802c3995be6248618"
     },
     {
       "path": "vectors/CV-LOAD-CORRECTION/expected.json",
