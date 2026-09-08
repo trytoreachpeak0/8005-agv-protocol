@@ -58,7 +58,9 @@ could not carry over.
 So **batch protocol changes** rather than shipping them one at a time — each
 small release costs both sides a full gate re-run.
 
-Releases need **two distinct product owners** in the approval attestation. The
+Releases need **the product owner** in the approval attestation — exactly one,
+since 2026-09-08. It was two until then; the second signature belonged to the
+counterpart maintainer, and that role ended when the project was taken over. The
 completed attestation stays out of git and is uploaded as a GitHub Release
 asset, so that it changes neither the manifest hash nor the commit it approves.
 **AI and CI cannot approve.** The order is fixed: freeze and push the content

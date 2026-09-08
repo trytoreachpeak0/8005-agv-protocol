@@ -7,8 +7,8 @@
   "generatedAt": "2026-08-26T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "95bedc64cb095ede4bff7499f15c892ed138a8c8801a74e69bca8f934b2f90ff",
-  "schemaBundleSha256": "f4c39f55ed8a3319259ee277df06359f1e51c8b9997271baf61d071e70e15984",
+  "fileTableSha256": "a4c227ce420d54a495257e57bbd478bd3989644cd62b5c852bd89fb284128309",
+  "schemaBundleSha256": "bc069d6ab5db55c658d67c2457fcb12812582a94febaa5d2d2a9921aaaca5616",
   "examplesSha256": "c9ae961ceb2ab2f8e472df7e51293d5949ecd1eb1c6d261bb6de68217c84ed1d",
   "vectorsSha256": "bd272b63a1d0663d61c4a38d6e8633d7e7d4f7b561a7915c3df51c7a93bd4576",
   "errorRegistrySha256": "11eb056c4db188335414483d107e57a1fd7748e99584a7562abbf289a2536f5d",
@@ -874,8 +874,8 @@
     {
       "path": "CLAUDE.md",
       "role": "CLAUDE.md",
-      "bytes": 6182,
-      "sha256": "9a54fbdf1a302fb2b76584b2714d64bc28eab2c1c7d10eb531e2a8b9ef942a47"
+      "bytes": 6343,
+      "sha256": "1bf9eabe2f6535c26e2027c0b2426f4b095ca0db6fc4cfd9d06cc6f96b4b05e6"
     },
     {
       "path": "README.md",
@@ -916,8 +916,8 @@
     {
       "path": "docs/release-governance.md",
       "role": "docs",
-      "bytes": 2531,
-      "sha256": "e920d54263674c9c2f64f8c755b55e7276b8f5e7f623d45a07488979421ce4d6"
+      "bytes": 3026,
+      "sha256": "10bf867e9375a60cb16cd77541af52e98918ca49a06f8c17bb1f4f34b22183f9"
     },
     {
       "path": "errors/error-codes.json",
@@ -9359,7 +9359,7 @@
       "path": "schemas/governance/release-approval-attestation.schema.json",
       "role": "schemas",
       "bytes": 2059,
-      "sha256": "7bafe1ca81b5d67b7998140b121121cc54c6f01e2befcca36d535235dec42d43"
+      "sha256": "77d4bfcb93f732b89cf60c602836c7e0dc25764eacbf64cef884318012893073"
     },
     {
       "path": "schemas/messages/CapabilitySnapshot.schema.json",
@@ -9694,8 +9694,8 @@
     {
       "path": "tools/g1-validate.mjs",
       "role": "tools",
-      "bytes": 12492,
-      "sha256": "3291f0107a41df096e1f1c057d57cd8cfd03103434190164eee106151cfeab22"
+      "bytes": 12497,
+      "sha256": "31e3b01309c029cc5fa2dc2ea12c98a633a6c004a3a7ee16adbdff50707d3080"
     },
     {
       "path": "vectors/CV-CONNECTION-LOSS-SAFE-FINISH/expected.json",

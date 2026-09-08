@@ -52,7 +52,7 @@
         "properties": {
           "protocolCommit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
           "contentManifestSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
-          "approvals": { "minItems": 2, "maxItems": 2 }
+          "approvals": { "minItems": 1, "maxItems": 1 }
         }
       }
     }
