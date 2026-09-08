@@ -1,7 +1,7 @@
 {
   "vectorId": "I-RecoveryStateReport-REQUIRED-ENVELOPE-payload",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "WIRE_TO_GATE_MVP",
     "protocolReleaseVersion": "0.1.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",

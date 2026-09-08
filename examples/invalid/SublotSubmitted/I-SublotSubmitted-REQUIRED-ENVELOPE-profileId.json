@@ -1,7 +1,7 @@
 {
   "vectorId": "I-SublotSubmitted-REQUIRED-ENVELOPE-profileId",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "protocolReleaseVersion": "0.1.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "SublotSubmitted",

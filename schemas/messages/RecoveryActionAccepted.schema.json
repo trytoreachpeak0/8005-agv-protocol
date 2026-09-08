@@ -6,7 +6,7 @@
   "properties": {
     "protocolVersion": {
       "type": "integer",
-      "const": 2
+      "const": 3
     },
     "profileId": {
       "type": "string",
@@ -57,6 +57,16 @@
         "exceptionRecoverySessionId": {
           "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
         },
+        "slotOperationAttemptId": {
+          "anyOf": [
+            {
+              "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Id"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "acceptedAction": {
           "type": "string",
           "enum": [
@@ -76,6 +86,7 @@
       "required": [
         "recoveryActionId",
         "exceptionRecoverySessionId",
+        "slotOperationAttemptId",
         "acceptedAction",
         "recoverySessionRevision",
         "acceptedAt"

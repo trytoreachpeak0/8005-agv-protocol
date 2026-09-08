@@ -1,7 +1,7 @@
 {
   "vectorId": "I-SessionHello-REQUIRED-ENVELOPE-sessionGeneration",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "WIRE_TO_GATE_MVP",
     "protocolReleaseVersion": "0.1.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
@@ -13,14 +13,14 @@
     "payload": {
       "onboardInstanceId": "00000000-0000-4000-8000-000000000001",
       "onboardBuildCommit": "0000000000000000000000000000000000000000",
-      "supportedProtocolVersion": 2,
+      "supportedProtocolVersion": 3,
       "profileId": "WIRE_TO_GATE_MVP",
       "protocolReleaseIdentity": {
         "repository": "8005-agv-protocol",
         "releaseVersion": "0.1.0",
         "tag": "protocol-v0.1.0",
         "commit": "0000000000000000000000000000000000000000",
-        "protocolVersion": 2,
+        "protocolVersion": 3,
         "profileId": "WIRE_TO_GATE_MVP",
         "manifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "schemaBundleSha256": "0000000000000000000000000000000000000000000000000000000000000000",

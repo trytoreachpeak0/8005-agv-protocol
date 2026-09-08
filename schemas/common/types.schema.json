@@ -103,7 +103,8 @@
         "RECOVERY_SCOPE_MISMATCH",
         "RECOVERY_CHECKPOINT_NOT_UNIQUE",
         "RECOVERY_AUTHENTICATION_FAILED",
-        "FORCED_RECOVERY_GENERATION_STALE"
+        "FORCED_RECOVERY_GENERATION_STALE",
+        "OPERATOR_TIMEOUT"
       ],
       "examples": [
         "ACTION_NOT_ALLOWED_IN_STATE"
@@ -138,7 +139,7 @@
         },
         "protocolVersion": {
           "type": "integer",
-          "const": 2
+          "const": 3
         },
         "profileId": {
           "type": "string",

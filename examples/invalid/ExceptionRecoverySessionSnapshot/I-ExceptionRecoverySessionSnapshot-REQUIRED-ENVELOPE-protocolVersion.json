@@ -18,6 +18,7 @@
       "administratorRole": "MAINTENANCE_ADMINISTRATOR",
       "eventId": "00000000-0000-4000-8000-000000000001",
       "demandId": "00000000-0000-4000-8000-000000000001",
+      "slotOperationAttemptId": "00000000-0000-4000-8000-000000000091",
       "slots": [
         1
       ],

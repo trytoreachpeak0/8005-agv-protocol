@@ -6,7 +6,7 @@
   "properties": {
     "protocolVersion": {
       "type": "integer",
-      "const": 2
+      "const": 3
     },
     "profileId": {
       "type": "string",
@@ -56,7 +56,7 @@
         },
         "expectedProtocolVersion": {
           "type": "integer",
-          "const": 2
+          "const": 3
         },
         "expectedProtocolReleaseIdentity": {
           "anyOf": [

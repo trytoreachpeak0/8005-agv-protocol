@@ -1,7 +1,7 @@
 {
   "vectorId": "I-RecoveryActionAccepted-REQUIRED-ENVELOPE-protocolReleaseManifestSha256",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "WIRE_TO_GATE_MVP",
     "protocolReleaseVersion": "0.1.0",
     "messageType": "RecoveryActionAccepted",
@@ -13,6 +13,7 @@
     "payload": {
       "recoveryActionId": "00000000-0000-4000-8000-000000000001",
       "exceptionRecoverySessionId": "00000000-0000-4000-8000-000000000001",
+      "slotOperationAttemptId": "00000000-0000-4000-8000-000000000091",
       "acceptedAction": "RESUME_AFTER_REPAIR",
       "recoverySessionRevision": 1,
       "acceptedAt": "2026-08-25T09:00:00Z"
