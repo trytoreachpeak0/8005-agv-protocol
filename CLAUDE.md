@@ -70,8 +70,12 @@ same attestation as a release asset.
 ## What counts as breaking
 
 Changes to required/type/enum/meaning/direction/delivery/dedup/persistence/
-recovery/error/side-effect are breaking and require a ProtocolVersion and
-release-major increase.
+recovery/error/side-effect are breaking and require a ProtocolVersion increase
+and, while the release version is still `0.x`, a release-minor increase — under
+SemVer a `0.x` minor **is** the breaking bump, and going to `1.0.0` would signal
+a finished protocol rather than a breaking one. `protocol-v0.2.0` was cut this
+way: ProtocolVersion 1 to 2, release 0.1.1 to 0.2.0. Once the release version
+reaches `1.0.0`, breaking changes take a release-major increase instead.
 
 A conformance-index or trajectory correction may take a patch release **only**
 when it restores an already approved responsibility boundary, changes no message

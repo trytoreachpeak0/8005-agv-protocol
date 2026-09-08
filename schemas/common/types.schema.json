@@ -138,7 +138,7 @@
         },
         "protocolVersion": {
           "type": "integer",
-          "const": 1
+          "const": 2
         },
         "profileId": {
           "type": "string",

@@ -18,7 +18,7 @@
         "fieldPath": "fieldPath-test",
         "displayMessage": "displayMessage-test"
       },
-      "expectedProtocolVersion": 1,
+      "expectedProtocolVersion": 2,
       "expectedProfileId": "WIRE_TO_GATE_MVP",
       "expectedProtocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000"
     }

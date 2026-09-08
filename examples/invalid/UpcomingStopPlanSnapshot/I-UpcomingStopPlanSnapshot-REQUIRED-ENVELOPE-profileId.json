@@ -1,7 +1,7 @@
 {
   "vectorId": "I-UpcomingStopPlanSnapshot-REQUIRED-ENVELOPE-profileId",
   "message": {
-    "protocolVersion": 1,
+    "protocolVersion": 2,
     "protocolReleaseVersion": "0.1.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "UpcomingStopPlanSnapshot",

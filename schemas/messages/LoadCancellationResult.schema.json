@@ -6,7 +6,7 @@
   "properties": {
     "protocolVersion": {
       "type": "integer",
-      "const": 1
+      "const": 2
     },
     "profileId": {
       "type": "string",
@@ -80,7 +80,7 @@
           "items": {
             "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/SlotResult"
           },
-          "minItems": 1,
+          "minItems": 0,
           "maxItems": 8,
           "uniqueItems": true
         },

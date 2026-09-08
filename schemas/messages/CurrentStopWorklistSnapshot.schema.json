@@ -6,7 +6,7 @@
   "properties": {
     "protocolVersion": {
       "type": "integer",
-      "const": 1
+      "const": 2
     },
     "profileId": {
       "type": "string",
@@ -112,7 +112,8 @@
             ],
             "additionalProperties": false
           },
-          "maxItems": 1
+          "maxItems": 8,
+          "minItems": 0
         }
       },
       "required": [

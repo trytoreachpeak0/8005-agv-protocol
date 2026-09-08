@@ -6,7 +6,7 @@
   "properties": {
     "protocolVersion": {
       "type": "integer",
-      "const": 1
+      "const": 2
     },
     "profileId": {
       "type": "string",
@@ -64,10 +64,6 @@
         "worklistRevision": {
           "$ref": "https://schemas.8005-agv.local/wire-to-gate/v1/common/types.schema.json#/$defs/Revision"
         },
-        "expectedSublot": {
-          "type": "string",
-          "minLength": 1
-        },
         "entryMethods": {
           "type": "array",
           "items": {
@@ -82,6 +78,16 @@
         "expiresOnRevisionChange": {
           "type": "boolean",
           "const": true
+        },
+        "expectedSublots": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true
         }
       },
       "required": [
@@ -89,7 +95,7 @@
         "operationSessionId",
         "stationId",
         "worklistRevision",
-        "expectedSublot",
+        "expectedSublots",
         "entryMethods",
         "expiresOnRevisionChange"
       ],
