@@ -7,9 +7,9 @@
   "generatedAt": "2026-08-26T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "32bafdf26ccf9d99c79900754c78fbf574c7e3f895910ea994ae290a5136b4ac",
-  "schemaBundleSha256": "73410ccebb5347429a659fcfff8a8d8c63d343a276c48c2b46d6ff02d45ff6df",
-  "examplesSha256": "c688747dfc6d1b639699b255375b5d6855baa27c686c48d1b8e1ce1b242ab8c7",
+  "fileTableSha256": "27a89594ce3d49c54d224db26a12a873051e7907c359c841d114806e009bd0f3",
+  "schemaBundleSha256": "68bfd531c4b9c08bc80f6d9c5a67264891efa200acdb154eb18e1d083bf4ed98",
+  "examplesSha256": "73d8ee4347aa4f1187cbad2231ac932a90e4e75d346a4b2dc7afd595ddb27724",
   "vectorsSha256": "bd272b63a1d0663d61c4a38d6e8633d7e7d4f7b561a7915c3df51c7a93bd4576",
   "errorRegistrySha256": "b3d2da55f2d3c1330b0011b8ccdb11e014137df745cd6a07d5ccf2b118c82cb9",
   "runnerContractsSha256": "3575a7b15821579cced6b90f519971c8e212e9258b79611445233fdeeb03f50b",
@@ -880,8 +880,8 @@
     {
       "path": "README.md",
       "role": "README.md",
-      "bytes": 1686,
-      "sha256": "b13497dd634137bc781c3d83131ef253436677299c82254ebf3f520fa1eab42e"
+      "bytes": 1790,
+      "sha256": "e56aabe4b8fee33b4acb032391c1134c0785ca4947323b4b107e2d7dca86679c"
     },
     {
       "path": "THIRD-PARTY-NOTICES.md",
@@ -898,8 +898,8 @@
     {
       "path": "compatibility/report.json",
       "role": "compatibility",
-      "bytes": 1395,
-      "sha256": "4124dba8e158de5b0671690df974b1627010aa0b868657b3413fcc483ae4d124"
+      "bytes": 1814,
+      "sha256": "53437f4bbebaa624a188c2290e7f22ad146eac16f9603721c1eed0d2733c370d"
     },
     {
       "path": "docs/README.md",
@@ -910,8 +910,8 @@
     {
       "path": "docs/candidate-limitations.md",
       "role": "docs",
-      "bytes": 2899,
-      "sha256": "acafdf1b2c42c071edfa6024f950beeb78e61fdcab8288f18a3e24fe3e544efd"
+      "bytes": 3939,
+      "sha256": "d1ea11d4688a1c6dcf66f8e22405ea40d7f0c2e8d8efcce99b1fa07ec99c8385"
     },
     {
       "path": "docs/release-governance.md",
@@ -1192,32 +1192,32 @@
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-CORRELATION-001.json",
       "role": "examples",
-      "bytes": 1145,
-      "sha256": "3d69c13fa97b91a04bc054418bdb214ef26a9c3107fdaa82f351e2285ef029be"
+      "bytes": 1205,
+      "sha256": "2743fe1e886482e80fa59aa6d40f30ea42bd7636e64fa3d691daf801ac76ee42"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-agvId.json",
       "role": "examples",
-      "bytes": 1075,
-      "sha256": "f7a9991948d7af146085c41d885424a605582edc654dbb9d1a9e67f9a6cff5e0"
+      "bytes": 1135,
+      "sha256": "39dc0da7733c4ea6e673d87e03052129becb4ceb24607d9f249a8f4ab729356d"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-correlationId.json",
       "role": "examples",
-      "bytes": 1092,
-      "sha256": "5407d57abe0f959a0eb84ce7cd0d5f4b7cc20d86fe4d0111b89ffebd7a4051d7"
+      "bytes": 1152,
+      "sha256": "adddff41ef1ddd8e208ccdfcb797aebaff29837b7d3deca4e9414e23243fbf7e"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-messageId.json",
       "role": "examples",
-      "bytes": 1054,
-      "sha256": "a1dfe31b7a1b0fb05b1b527beb91c4f041e4051398831d526ff46cafe80630e6"
+      "bytes": 1114,
+      "sha256": "572ad42dbc0f9ec556b7502ddea8462690296ea8e3fae71be8d8c183194a88b3"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-messageType.json",
       "role": "examples",
-      "bytes": 1065,
-      "sha256": "9900dd685f2f52c1bbc877077746eb1be6b5738ba414e40a7fcefaee40f3e419"
+      "bytes": 1125,
+      "sha256": "e0bfe293059f8ebc0227fcdeb93d77848f2c8bab7b05c4f7ffba50318af35612"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-payload.json",
@@ -1228,86 +1228,98 @@
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-profileId.json",
       "role": "examples",
-      "bytes": 1074,
-      "sha256": "11c59c28df2921c0dcda5148d8a1715fec4cb1c652c8f45e1c512266b2b4dff2"
+      "bytes": 1134,
+      "sha256": "fdbb340f9c76da5eae88a8ece6eb8b0ef8948c30dc0f72d270377efbb1744c8c"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-protocolReleaseManifestSha256.json",
       "role": "examples",
-      "bytes": 1046,
-      "sha256": "d0edc44b06f5b266040e168de7c6b2d97546f471483ffbbaa330158efa8e2f29"
+      "bytes": 1106,
+      "sha256": "655e1549fda14728942c1a4834733925bb25f60bb6ed4f259cbcb73f801fbbca"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-protocolReleaseVersion.json",
       "role": "examples",
-      "bytes": 1098,
-      "sha256": "ade47ea26ba1490fba17e73d59bcd0b36e4f0845d8b05620aece5e0f53c47c8f"
+      "bytes": 1158,
+      "sha256": "ea808d538d6ffd60f87ff7f5f3451863f6b27c8d0187baff71dd96386bbf4744"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-protocolVersion.json",
       "role": "examples",
-      "bytes": 1097,
-      "sha256": "a02d04104cd8a981c25f26a047100ba1992fc79af5d273c4459f54092ab305f3"
+      "bytes": 1157,
+      "sha256": "060e5a421fd4c882ebaaefbac580556130e550da07bc82fb6a06601819d3a7d7"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-sentAt.json",
       "role": "examples",
-      "bytes": 1067,
-      "sha256": "266b0e9ab7da58cf66cd051b22243516b6f7aeea70ab461f84777168e915d4b1"
+      "bytes": 1127,
+      "sha256": "94b67179709fefce586d939b76fd5ba8ac6c97f7bcd4d40927e121841cab641e"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-sessionGeneration.json",
       "role": "examples",
-      "bytes": 1099,
-      "sha256": "00a0b1eaa5931b3ccc71b9b04f90acaf355fc95a2c3a378ee60ab3dbfc96de79"
+      "bytes": 1159,
+      "sha256": "f8e061774efc5ee5f4a3048a5bf3af4723d6a2d58b52f05d17c3d1b06fda55a1"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-PAYLOAD-items.json",
       "role": "examples",
-      "bytes": 799,
-      "sha256": "74d37173c39dd825ebae7873a3fd960077b66be811e65a206ce64e036019df7d"
+      "bytes": 859,
+      "sha256": "d3ef9aa522fe494c699dab7e54a0ed2c2069219969b6c29f64e2224e1da1466b"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-PAYLOAD-operationSessionId.json",
       "role": "examples",
-      "bytes": 1068,
-      "sha256": "c1a48a40be23788d1b2ab959676e4a71874845e342428136ba7986475701f1e8"
+      "bytes": 1128,
+      "sha256": "5f2a39e2ac15b1c2000253adc0f3651e0ea6d39302d82cb7605f3734900c98e0"
+    },
+    {
+      "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-PAYLOAD-stationDepartureDeadlineAt.json",
+      "role": "examples",
+      "bytes": 1152,
+      "sha256": "b7cb7be02ad2c9bcff6b718c9c5f2631053ccc4d63d4d877afd76b9f596c3361"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-PAYLOAD-stationId.json",
       "role": "examples",
-      "bytes": 1084,
-      "sha256": "5924f73f8311f564bfb9c284d21f7b46bc51306b1dedbd24694aefa0c5677b54"
+      "bytes": 1144,
+      "sha256": "2482206a011109a8b40540e79fd766618fc63357658411e06f8c7a92673d9000"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-REQUIRED-PAYLOAD-worklistRevision.json",
       "role": "examples",
-      "bytes": 1103,
-      "sha256": "48e70b81e5c6b1443d2ef764efcafe11104097a104732a0e68a1504467c7a9ee"
+      "bytes": 1163,
+      "sha256": "4108e30634c6b4a76a45bad6ee4b93e2bbd3290518726ba296f151a9c69a5983"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-TYPE-items.json",
       "role": "examples",
-      "bytes": 802,
-      "sha256": "ae79b4e0dea6238be246c5327e6012a5e740ee22a4e5e4c8e327e2374fe058ca"
+      "bytes": 862,
+      "sha256": "4123f49e46c09775e625a0c83d2fd63787a0569a2b765ecea31fc3baf45152b5"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-TYPE-operationSessionId.json",
       "role": "examples",
-      "bytes": 1123,
-      "sha256": "812f9c4229f48e71eb4f2fa114fb4f6c4ec26ff4efa619be9594421a00332397"
+      "bytes": 1183,
+      "sha256": "a1ce4af9d252085c6407060b1e9deb95b978f49287c61733ad2ffda79efcac60"
+    },
+    {
+      "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-TYPE-stationDepartureDeadlineAt.json",
+      "role": "examples",
+      "bytes": 1215,
+      "sha256": "8961bcd086d6d3b7c6e113293e6d1bb9ec25606eec309f1fadc72530993a25b2"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-TYPE-stationId.json",
       "role": "examples",
-      "bytes": 1092,
-      "sha256": "ffe24c7a6838041f76a1be8154ce0beae0d2a040d1bd0282f41c46f7980a5c6e"
+      "bytes": 1152,
+      "sha256": "e8b2bb77c5e84df3e4a929a0330bf022424813fd47d3ef6e6d5032f7f011c094"
     },
     {
       "path": "examples/invalid/CurrentStopWorklistSnapshot/I-CurrentStopWorklistSnapshot-TYPE-worklistRevision.json",
       "role": "examples",
-      "bytes": 1129,
-      "sha256": "e3073850ef18d4ba1b2c05acfd6ae8fee5c924353145ff4ffc8d023a6d787543"
+      "bytes": 1189,
+      "sha256": "9a9454c273d0485f17cdbd0f2b744c9572821c7ce8f2c1a6bf27593232c296a2"
     },
     {
       "path": "examples/invalid/DurableAck/I-DurableAck-CORRELATION-001.json",
@@ -9022,8 +9034,8 @@
     {
       "path": "examples/valid/CurrentStopWorklistSnapshot/V-CurrentStopWorklistSnapshot-MIN-001.json",
       "role": "examples",
-      "bytes": 853,
-      "sha256": "8c2662c2e3825bc33dbd7cdee5059cc20b79f3c8fc2bd8f131e0068a6e60bc98"
+      "bytes": 911,
+      "sha256": "f8b4b014cc2c5079707609b3881f5b8bfd8cbf02348183c4b9731055c05569d8"
     },
     {
       "path": "examples/valid/DurableAck/V-DurableAck-MIN-001.json",
@@ -9412,8 +9424,8 @@
     {
       "path": "schemas/messages/CurrentStopWorklistSnapshot.schema.json",
       "role": "schemas",
-      "bytes": 3791,
-      "sha256": "50a0b245fb1589297909d6ca02fabdedf857b4c0d35cba2cf8665a25ac44cb1f"
+      "bytes": 4110,
+      "sha256": "dfbf0a7e6505ac0d09444a198e4a4d6bc0f15afc7df4ad5b23af67e4721b293b"
     },
     {
       "path": "schemas/messages/DurableAck.schema.json",

@@ -15,6 +15,7 @@
       "stationId": "STATION-001",
       "worklistRevision": 1,
       "operationSessionId": "00000000-0000-4000-8000-000000000001",
+      "stationDepartureDeadlineAt": "2026-08-25T09:05:00Z",
       "items": {}
     }
   },
