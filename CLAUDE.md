@@ -3,27 +3,30 @@
 The shared executable protocol contract for the WIRE_TO_GATE MVP. This file is
 the agent's instructions for working here.
 
-## Changing this repository: no advance approval, but a mandatory announcement
+## Changing this repository: no advance approval, no announcement
 
 **Zhengyu Shao decides this repository's content alone.** The earlier gate
 requiring approval from both Zhengyu Shao and Kun Wang before any write was
 removed on 2026-09-02.
 
-What replaces it is an announcement after the fact. This protocol is the
-contract Kun Wang's side implements against, and a change can void his gate
-evidence, so he has to learn about every one:
+An announcement duty replaced it, and **that is gone too, as of 2026-09-08**.
+Until then every push had to be followed — in the same task — by an issue here
+that `@SocialKKKK`, because this protocol was the contract his side implemented
+against and a change could void his gate evidence. The user took over his project
+outright, so neither premise holds: nobody else implements against this contract,
+and there is no evidence of his left to void. **Do not open announcement issues,
+and do not `@SocialKKKK` anything.**
 
-- **After every push, open an issue here that `@SocialKKKK`**, stating three
-  things: what changed, which `W2G-IS-*` slices it touches, and whether his
-  `ONBOARD_HMI_G2` evidence is now void.
-- **Announce in the same task as the push**, not later. This is the only hard
-  process requirement in this repository.
+What the rule was really tracking still matters: **a change here voids gate
+evidence — ours now.** State which `W2G-IS-*` slices a change touches and which
+evidence it invalidates, in the commit message. The audience moved; the
+accounting did not.
 
 `main` is protected against force pushes and deletion, but does **not** require
 a pull request — direct pushes are fine.
 
-**Tagging a release is the exception and still needs two signatures** — see
-"Releases are expensive" below.
+**Tagging a release is the exception and still needs a signature** — one product
+owner since 2026-09-08, two before that. See "Releases are expensive" below.
 
 ## Collaboration workflow
 
