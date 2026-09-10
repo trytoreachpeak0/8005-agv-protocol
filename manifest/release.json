@@ -7,7 +7,7 @@
   "generatedAt": "2026-08-26T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "27a89594ce3d49c54d224db26a12a873051e7907c359c841d114806e009bd0f3",
+  "fileTableSha256": "7687950883f1f7b220db24092f827ed999dafbb751005b367106a0f056536486",
   "schemaBundleSha256": "68bfd531c4b9c08bc80f6d9c5a67264891efa200acdb154eb18e1d083bf4ed98",
   "examplesSha256": "73d8ee4347aa4f1187cbad2231ac932a90e4e75d346a4b2dc7afd595ddb27724",
   "vectorsSha256": "bd272b63a1d0663d61c4a38d6e8633d7e7d4f7b561a7915c3df51c7a93bd4576",
@@ -893,7 +893,7 @@
       "path": "compatibility/implementation-version-matrix.json",
       "role": "compatibility",
       "bytes": 2017,
-      "sha256": "1ea68c536a4ee62191e37b665c05c20dbf0194f38eef3db10875916f5e95e6c6"
+      "sha256": "0d94db191ced92129caab444c25bb747fdf772835aef3a390bb1e960054780e5"
     },
     {
       "path": "compatibility/report.json",
@@ -9742,8 +9742,8 @@
     {
       "path": "tools/g1-validate.mjs",
       "role": "tools",
-      "bytes": 12700,
-      "sha256": "e0ed54f2570da083bc9ec3f576aae9519f7b32075ef755550c15b75bbc045ecc"
+      "bytes": 12873,
+      "sha256": "4e4c3056f2a6eb85c0b7fe5c47ba5187c0767bbcd7fe0332036e304ad0cef78b"
     },
     {
       "path": "vectors/CV-CONNECTION-LOSS-SAFE-FINISH/expected.json",
