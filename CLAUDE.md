@@ -22,7 +22,7 @@ evidence, so he has to learn about every one:
 `main` is protected against force pushes and deletion, but does **not** require
 a pull request — direct pushes are fine.
 
-**Tagging a release is the exception and still needs a signature** — the product owner's, see
+**Tagging a release is the exception and still needs an approval** — the product owner's, or an AI agent's that the owner authorized, see
 "Releases are expensive" below.
 
 ## Collaboration workflow
@@ -58,12 +58,13 @@ could not carry over.
 So **batch protocol changes** rather than shipping them one at a time — each
 small release costs both sides a full gate re-run.
 
-Releases need **the product owner** in the approval attestation — exactly one,
-since 2026-09-08. It was two until then; the second signature belonged to the
-counterpart maintainer, and that role ended when the project was taken over. The
+Releases need **exactly one approval** in the attestation: the product owner, or
+— since 2026-09-12 — an AI agent the product owner authorized, recorded as
+`approverKind: AI_AGENT` together with `authorizedBy`. It was two product owners
+until 2026-09-08 and the product owner alone until 2026-09-12. The
 completed attestation stays out of git and is uploaded as a GitHub Release
 asset, so that it changes neither the manifest hash nor the commit it approves.
-**AI and CI cannot approve.** The order is fixed: freeze and push the content
+**CI cannot approve.** The order is fixed: freeze and push the content
 commit, generate the external attestation against that commit and manifest, run
 G1 with `PROTOCOL_APPROVAL_ATTESTATION`, create the annotated
 `protocol-v<SemVer>` tag carrying both hashes in its message, then publish the
@@ -77,7 +78,7 @@ release-major increase.
 
 A conformance-index or trajectory correction may take a patch release **only**
 when it restores an already approved responsibility boundary, changes no message
-schema or wire semantics, and both product owners approve that compatibility
+schema or wire semantics, and the release approver approves that compatibility
 classification. Even then it changes the manifest and vector identity and voids
 the affected G1/G2/G3 evidence.
 

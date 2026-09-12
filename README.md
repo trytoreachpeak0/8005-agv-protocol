@@ -8,8 +8,9 @@ The repository currently contains an **unapproved `0.1.1` superseding content
 snapshot** for `ProtocolVersion = 1` and profile `WIRE_TO_GATE_MVP`.
 `protocol-v0.1.0` remains immutable. This candidate corrects the W2G-IS-01
 conformance mapping without changing message Schema or wire semantics; it is
-not a formal `ProtocolRelease` until both product owners approve its exact
-commit, manifest, vectors hash and compatibility classification.
+not a formal `ProtocolRelease` until its release approval (the product owner, or
+an AI agent the product owner authorized) covers its exact commit, manifest,
+vectors hash and compatibility classification.
 
 Machine-readable JSON Schema, the message manifest, error registry, valid and
 invalid examples, deterministic trajectories, runner/result contracts, and the
