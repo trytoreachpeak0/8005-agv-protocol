@@ -1,12 +1,20 @@
 {
-  "candidateVersion": "1.0.0",
-  "protocolVersion": 2,
+  "candidateVersion": "2.0.0",
+  "protocolVersion": 3,
   "profileId": "AGV_FULL_PRODUCT",
   "status": "SUPERSEDING_CANDIDATE",
-  "baseRelease": "protocol-v0.1.1",
+  "baseRelease": "protocol-v1.0.0",
   "classification": "BREAKING_PROTOCOL_VERSION_INCREASE",
   "wireCompatibility": "INCOMPATIBLE_EXACT_IDENTITY_REQUIRED",
-  "changeSummary": "Freeze the AGV_FULL_PRODUCT protocol surface: ProtocolVersion 2, profile AGV_FULL_PRODUCT, release 1.0.0. Payload, delivery-class, error-registry and conformance-index changes against protocol-v0.1.1 are breaking; no negotiation and no downgrade path exist.",
+  "changeSummary": [
+    "CurrentStopWorklistSnapshot gains a required, nullable stationDepartureDeadlineAt carrying the server-owned station departure deadline (ADR-cross-0055, ADR-cross-0058), and OPERATOR_TIMEOUT joins the error registry so the server can record its defensive determinate-failure settlement; the v2 onboard HMI does not emit that code.",
+    "Sublot entry is scoped to the dispatch rather than to one demand: SublotEntryRequested replaces demandId and the single expectedSublot with a required expectedSublots list, SublotSubmitted no longer carries demandId because the server resolves the demand, and SublotRejected carries a nullable demandId and the rejectedSublot.",
+    "LoadCancellationResult.slotResults may be empty, so a cancellation authorized before any slot operation reports ALL_EMPTY with no slots; vector CV-LOAD-CANCELLATION-BEFORE-LOAD covers it.",
+    "SublotRejected gains vector CV-SUBLOT-REJECTED-AFTER-ENTRY and three rejection reason codes, SUBLOT_NOT_IN_DISPATCH_SCOPE, SUBLOT_BOX_COUNT_UNAVAILABLE and PACKAGE_CAPACITY_UNRESOLVED, so a rejection after entry states its real cause.",
+    "VehicleBusinessStateSnapshot restores the charging fields settled in full-product ticket 06: batteryState gains MANDATORY_CHARGE and a required chargingCycleState reports where the charging cycle stands.",
+    "VehicleBusinessStateSnapshot gains a required, nullable loadingPhase object carrying the loading state, the cargo holding deadline and the reason loading closed, including a waiting-station yield.",
+    "ExceptionRecoverySessionOpened, ExceptionRecoverySessionSnapshot and RecoveryActionAccepted each gain a required, nullable slotOperationAttemptId, so a vehicle whose own attempt record is gone can still assemble LoadCompensationRequested."
+  ],
   "runtimeRule": "Exact ProtocolVersion and exact materialized ProtocolReleaseIdentity required; no negotiation.",
   "optionalFieldPolicy": "No optional payload fields exist in this candidate. Future optional fields require proof that omission and ignore preserve safety and business conclusions.",
   "historyPolicy": "Published tags, commits, manifests, schemas, vectors and approvals are immutable; defects require a superseding release."

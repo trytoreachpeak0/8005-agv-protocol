@@ -1,9 +1,9 @@
 {
   "vectorId": "I-ManualChargingReturnToServiceResult-REQUIRED-ENVELOPE-protocolReleaseManifestSha256",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "AGV_FULL_PRODUCT",
-    "protocolReleaseVersion": "1.0.0",
+    "protocolReleaseVersion": "2.0.0",
     "messageType": "ManualChargingReturnToServiceResult",
     "messageId": "00000000-0000-4000-8000-000000000051",
     "correlationId": "00000000-0000-4000-8000-000000000052",

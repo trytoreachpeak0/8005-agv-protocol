@@ -1,8 +1,8 @@
 {
   "vectorId": "I-SessionHello-REQUIRED-ENVELOPE-profileId",
   "message": {
-    "protocolVersion": 2,
-    "protocolReleaseVersion": "1.0.0",
+    "protocolVersion": 3,
+    "protocolReleaseVersion": "2.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "SessionHello",
     "messageId": "00000000-0000-4000-8000-000000000001",
@@ -13,14 +13,14 @@
     "payload": {
       "onboardInstanceId": "00000000-0000-4000-8000-000000000001",
       "onboardBuildCommit": "0000000000000000000000000000000000000000",
-      "supportedProtocolVersion": 2,
+      "supportedProtocolVersion": 3,
       "profileId": "AGV_FULL_PRODUCT",
       "protocolReleaseIdentity": {
         "repository": "8005-agv-protocol",
-        "releaseVersion": "1.0.0",
-        "tag": "protocol-v1.0.0",
+        "releaseVersion": "2.0.0",
+        "tag": "protocol-v2.0.0",
         "commit": "0000000000000000000000000000000000000000",
-        "protocolVersion": 2,
+        "protocolVersion": 3,
         "profileId": "AGV_FULL_PRODUCT",
         "manifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "schemaBundleSha256": "0000000000000000000000000000000000000000000000000000000000000000",

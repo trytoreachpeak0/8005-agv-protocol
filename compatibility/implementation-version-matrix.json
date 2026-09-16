@@ -1,8 +1,8 @@
 {
   "status": "CANDIDATE",
   "sharedDevelopmentBaseline": {
-    "dotnetSdk": "8.0.424",
-    "dotnetRuntime": "8.0.30",
+    "dotnetSdk": "8.0.425",
+    "dotnetRuntime": "8.0.31",
     "targetFrameworks": {
       "controlServer": "net8.0",
       "onboardHmi": "net8.0-windows"
@@ -75,5 +75,5 @@
       ]
     }
   ],
-  "requiredAction": "Install or pin SDK 8.0.424 before reproducible product builds; do not treat the observed 8.0.29 runtime as equivalent evidence."
+  "requiredAction": "Install or pin SDK 8.0.425 before reproducible product builds; do not treat the observed 8.0.29 runtime as equivalent evidence."
 }

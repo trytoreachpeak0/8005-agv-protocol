@@ -1,0 +1,38 @@
+{
+  "vectorId": "I-CurrentStopWorklistSnapshot-TYPE-stationDepartureDeadlineAt",
+  "message": {
+    "protocolVersion": 3,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "2.0.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "CurrentStopWorklistSnapshot",
+    "messageId": "00000000-0000-4000-8000-000000000031",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "stationId": "STATION-001",
+      "worklistRevision": 1,
+      "operationSessionId": "00000000-0000-4000-8000-000000000001",
+      "stationDepartureDeadlineAt": {
+        "definitely": "invalid"
+      },
+      "items": [
+        {
+          "demandId": "00000000-0000-4000-8000-000000000001",
+          "transportDemandKey": "transportDemandKey-test",
+          "sublot": "TEST-SUBLOT-001",
+          "workType": "DIE_TO_WIRE_STAGING",
+          "stopRole": "PICKUP",
+          "expectedBasketCount": 1
+        }
+      ]
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/payload/stationDepartureDeadlineAt",
+    "rule": "type"
+  }
+}

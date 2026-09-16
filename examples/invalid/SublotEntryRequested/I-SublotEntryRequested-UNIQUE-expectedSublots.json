@@ -1,9 +1,9 @@
 {
-  "vectorId": "I-SublotEntryRequested-TYPE-demandId",
+  "vectorId": "I-SublotEntryRequested-UNIQUE-expectedSublots",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "AGV_FULL_PRODUCT",
-    "protocolReleaseVersion": "1.0.0",
+    "protocolReleaseVersion": "2.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "SublotEntryRequested",
     "messageId": "00000000-0000-4000-8000-000000000035",
@@ -12,11 +12,13 @@
     "sessionGeneration": 1,
     "sentAt": "2026-08-25T09:00:00Z",
     "payload": {
-      "demandId": 123,
       "operationSessionId": "00000000-0000-4000-8000-000000000001",
       "stationId": "STATION-001",
       "worklistRevision": 1,
-      "expectedSublot": "TEST-SUBLOT-001",
+      "expectedSublots": [
+        "TEST-SUBLOT-001",
+        "TEST-SUBLOT-001"
+      ],
       "entryMethods": [
         "SCANNER",
         "KEYBOARD"
@@ -26,7 +28,7 @@
   },
   "expected": {
     "code": "PROTOCOL_SCHEMA_INVALID",
-    "fieldPath": "/payload/demandId",
-    "rule": "type"
+    "fieldPath": "/payload/expectedSublots",
+    "rule": "uniqueItems"
   }
 }

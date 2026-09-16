@@ -1,0 +1,3 @@
+{"action":"send","atMs":0,"messageType":"SublotEntryRequested","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"SublotSubmitted","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"SublotRejected","step":3,"virtualTimeOnly":true}

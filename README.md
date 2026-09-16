@@ -1,16 +1,29 @@
 # 8005-agv-protocol
 
-Shared executable protocol contracts for the 8005 AGV WIRE_TO_GATE MVP.
+Shared executable protocol contracts for the 8005 AGV full product
+(`AGV_FULL_PRODUCT`).
 
 ## Current state
 
-The repository currently contains an **unapproved `0.1.1` superseding content
-snapshot** for `ProtocolVersion = 1` and profile `WIRE_TO_GATE_MVP`.
-`protocol-v0.1.0` remains immutable. This candidate corrects the W2G-IS-01
-conformance mapping without changing message Schema or wire semantics; it is
-not a formal `ProtocolRelease` until its release approval (the product owner, or
-an AI agent the product owner authorized) covers its exact commit, manifest,
-vectors hash and compatibility classification.
+The repository currently contains an **unapproved `2.0.0` superseding content
+snapshot** for `ProtocolVersion = 3` and profile `AGV_FULL_PRODUCT`.
+`protocol-v1.0.0` remains immutable, and `protocol-v2.0.0` does not exist yet.
+
+This candidate is **breaking** against `protocol-v1.0.0`
+(`BREAKING_PROTOCOL_VERSION_INCREASE`, `INCOMPATIBLE_EXACT_IDENTITY_REQUIRED`):
+seven changes, each of them a `required`, `type` or meaning change — the station
+departure deadline and `OPERATOR_TIMEOUT`, dispatch-scoped sublot entry, an
+empty `slotResults` on a cancellation authorized before loading, sublot
+rejection reason codes, the restored charging fields, the loading phase, and a
+`slotOperationAttemptId` on the three recovery messages. See
+[`compatibility/report.json`](compatibility/report.json) for the full list.
+
+It is not a formal `ProtocolRelease` until a release approval (the product
+owner, or an AI agent the product owner authorized) covers its exact commit,
+manifest, vectors hash and compatibility classification. Both sides consume it
+as a candidate: `ApprovalStatus = SUPERSEDING_CANDIDATE`, and gate evidence
+produced on it is `UNRELEASED_CANDIDATE` and does not count towards a batch
+exit.
 
 Machine-readable JSON Schema, the message manifest, error registry, valid and
 invalid examples, deterministic trajectories, runner/result contracts, and the
@@ -29,6 +42,7 @@ See:
 - [`docs/README.md`](docs/README.md)
 - [`docs/release-governance.md`](docs/release-governance.md)
 - [`docs/candidate-limitations.md`](docs/candidate-limitations.md)
+- [`compatibility/report.json`](compatibility/report.json)
 - [`compatibility/implementation-version-matrix.json`](compatibility/implementation-version-matrix.json)
 - [`evidence/g1-result.json`](evidence/g1-result.json)
 

@@ -1,7 +1,7 @@
 {
   "vectorId": "I-SessionAccepted-REQUIRED-ENVELOPE-protocolReleaseVersion",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "SessionAccepted",
@@ -16,10 +16,10 @@
       "serverBuildCommit": "0000000000000000000000000000000000000000",
       "acceptedProtocolReleaseIdentity": {
         "repository": "8005-agv-protocol",
-        "releaseVersion": "1.0.0",
-        "tag": "protocol-v1.0.0",
+        "releaseVersion": "2.0.0",
+        "tag": "protocol-v2.0.0",
         "commit": "0000000000000000000000000000000000000000",
-        "protocolVersion": 2,
+        "protocolVersion": 3,
         "profileId": "AGV_FULL_PRODUCT",
         "manifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "schemaBundleSha256": "0000000000000000000000000000000000000000000000000000000000000000",

@@ -1,0 +1,41 @@
+{
+  "vectorId": "I-VehicleBusinessStateSnapshot-TYPE-loadingPhase-state",
+  "message": {
+    "protocolVersion": 3,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "2.0.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "VehicleBusinessStateSnapshot",
+    "messageId": "00000000-0000-4000-8000-000000000029",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "vehicleBusinessStateRevision": 1,
+      "readiness": "READY",
+      "activePurpose": "TRANSPORT",
+      "manualChargingHold": false,
+      "batteryState": "SUFFICIENT",
+      "chargingCycleState": "NOT_CHARGING",
+      "loadingPhase": {
+        "state": 123,
+        "cargoHoldingDeadlineAt": "2026-08-25T09:00:00Z",
+        "closedReason": null
+      },
+      "blockingFacts": [
+        {
+          "reasonCode": "ACTION_NOT_ALLOWED_IN_STATE",
+          "subjectType": "subjectType-test",
+          "subjectId": "subjectId-test"
+        }
+      ],
+      "observedAt": "2026-08-25T09:00:00Z"
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/payload/loadingPhase/state",
+    "rule": "type"
+  }
+}

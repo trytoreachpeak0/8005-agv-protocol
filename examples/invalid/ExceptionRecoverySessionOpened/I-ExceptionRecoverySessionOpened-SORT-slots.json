@@ -1,9 +1,9 @@
 {
   "vectorId": "I-ExceptionRecoverySessionOpened-SORT-slots",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "AGV_FULL_PRODUCT",
-    "protocolReleaseVersion": "1.0.0",
+    "protocolReleaseVersion": "2.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "ExceptionRecoverySessionOpened",
     "messageId": "00000000-0000-4000-8000-000000000077",
@@ -17,6 +17,7 @@
       "openedAt": "2026-08-25T09:00:00Z",
       "eventId": "00000000-0000-4000-8000-000000000001",
       "demandId": "00000000-0000-4000-8000-000000000001",
+      "slotOperationAttemptId": "00000000-0000-4000-8000-000000000001",
       "slots": [
         2,
         1

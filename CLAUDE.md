@@ -1,23 +1,26 @@
 # 8005-agv-protocol
 
-The shared executable protocol contract for the WIRE_TO_GATE MVP. This file is
-the agent's instructions for working here.
+The shared executable protocol contract for the `AGV_FULL_PRODUCT` profile. This
+file is the agent's instructions for working here.
 
-## Changing this repository: no advance approval, but a mandatory announcement
+## Changing this repository: no advance approval, no announcement
 
 **Zhengyu Shao decides this repository's content alone.** The earlier gate
 requiring approval from both Zhengyu Shao and Kun Wang before any write was
 removed on 2026-09-02.
 
-What replaces it is an announcement after the fact. This protocol is the
-contract Kun Wang's side implements against, and a change can void his gate
-evidence, so he has to learn about every one:
+An announcement duty replaced it, and **that is gone too, as of 2026-09-08**.
+Until then every push had to be followed — in the same task — by an issue here
+that `@SocialKKKK`, because this protocol was the contract his side implemented
+against and a change could void his gate evidence. The user took over his project
+outright, so neither premise holds: nobody else implements against this contract,
+and there is no evidence of his left to void. **Do not open announcement issues,
+and do not `@SocialKKKK` anything.**
 
-- **After every push, open an issue here that `@SocialKKKK`**, stating three
-  things: what changed, which `W2G-IS-*` slices it touches, and whether his
-  `ONBOARD_HMI_G2` evidence is now void.
-- **Announce in the same task as the push**, not later. This is the only hard
-  process requirement in this repository.
+What the rule was really tracking still matters: **a change here voids gate
+evidence — ours now.** State which `FP-IS-*` slices a change touches and which
+evidence it invalidates, in the commit message. The audience moved; the
+accounting did not.
 
 `main` is protected against force pushes and deletion, but does **not** require
 a pull request — direct pushes are fine.
@@ -27,19 +30,14 @@ a pull request — direct pushes are fine.
 
 ## Collaboration workflow
 
-Two people drive this project. Kun Wang (GitHub `SocialKKKK`) owns
-`8005-agv-onboard-hmi` and `slots-simulator`; Zhengyu Shao owns
-`8005-agv-control-server`; this repository is jointly maintained. The full
-account, written for humans and in Chinese, lives at
-`8005-agv-program/docs/collaboration-workflow.md` in Zhengyu Shao's governance
-repository.
+`integration-slices/index.json` is the centre of the collaboration. It defines
+`FP-IS-00` through `FP-IS-15`, each with a `sequence`, `prerequisites` and a
+`definition`; each slice's `gates` array *is* the division of labour — `G1`
+shared, `CONTROL_SERVER_G2` for `8005-agv-control-server`, `ONBOARD_HMI_G2` for
+`8005-agv-onboard-hmi`, `G3` across both. The full account, written for humans
+and in Chinese, lives at `8005-agv-program/docs/collaboration-workflow.md` in the
+governance repository.
 
-- **This repository is the centre of the collaboration.**
-  `integration-slices/index.json` defines `W2G-IS-00` through `W2G-IS-07`, each
-  with a `sequence` and `prerequisites`; each slice's `gates` array *is* the
-  division of labour — `G1` shared, `CONTROL_SERVER_G2` Zhengyu Shao,
-  `ONBOARD_HMI_G2` Kun Wang, `G3` together. The progress board lives here too,
-  as the issue labelled `wayfinder:map`.
 - **Contract ambiguities and errors are raised here** as issues carrying the
   `vectorId` that triggered them, plus each side's reading. An implementation
   that fails the contract is **not** raised here — it goes to that side's
@@ -90,8 +88,8 @@ trajectories, the runner and result contracts, and the integration-slice index.
 **Markdown is explanatory only.**
 
 `manifest/release.json` is an approval-neutral content snapshot. It hashes all
-governed content except itself, `attestations/`, `.git/`, `node_modules/` and
-generated `evidence/`.
+governed content except itself, `attestations/`, `.git/`, `node_modules/`,
+`.github/` and generated `evidence/`.
 
 Historical red evidence and released identities are immutable.
 
@@ -105,18 +103,23 @@ prose, issue and pull-request titles and bodies, and commit message bodies.
 
 Stay English inside Chinese text: conventional commit prefixes (`feat:`, `fix:`,
 `docs:`, `chore:`), identifiers, paths, commands, environment variables, gate and
-slice names (`G1`, `W2G-IS-00`), and — most importantly — **protocol message
+slice names (`G1`, `FP-IS-00`), and — most importantly — **protocol message
 names, schema fields, `vectorId` values and error codes, which are the contract
 itself and must never be translated.** Quote an error or a test result in its
 original English first, then explain it in Chinese. Do not rewrite existing text
 to match; this governs new writing.
 
-This repository is private. It was public until 2026-09-02 and was switched
-because the workspace now runs a self-hosted GitHub Actions runner on the
-factory server, and a public repository would let anyone execute code on that
-machine through a pull request. **Do not switch it back to public.** If the
-protocol ever has to be presented externally, export the relevant documents
-rather than opening the repository.
+## Repository visibility
+
+This repository is **public**, and has been since 2026-09-14, when the product
+owner made all eight component repositories public to stop private-repository
+Actions artifacts from exhausting the account's storage quota. It was private
+from 2026-09-02 until then, because a self-hosted GitHub Actions runner
+(`win11-01-protocol`) executes jobs for this repository on the factory server and
+a public repository lets anyone reach that machine through a pull request. **The
+product owner accepted that cost knowingly.** Visibility is the product owner's
+call alone: **do not switch this repository back to private, and do not add fork
+pull-request approval or similar guards on your own initiative.**
 
 ## Scripting baseline
 

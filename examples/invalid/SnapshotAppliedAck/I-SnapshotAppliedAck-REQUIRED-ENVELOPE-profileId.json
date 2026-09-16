@@ -1,8 +1,8 @@
 {
   "vectorId": "I-SnapshotAppliedAck-REQUIRED-ENVELOPE-profileId",
   "message": {
-    "protocolVersion": 2,
-    "protocolReleaseVersion": "1.0.0",
+    "protocolVersion": 3,
+    "protocolReleaseVersion": "2.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "SnapshotAppliedAck",
     "messageId": "00000000-0000-4000-8000-000000000105",

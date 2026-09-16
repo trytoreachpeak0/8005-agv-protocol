@@ -1,7 +1,7 @@
 {
   "vectorId": "I-DurableAck-REQUIRED-ENVELOPE-protocolReleaseVersion",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "DurableAck",

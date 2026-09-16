@@ -1,7 +1,7 @@
 {
   "vectorId": "I-VehicleBusinessStateSnapshot-REQUIRED-ENVELOPE-protocolReleaseVersion",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "VehicleBusinessStateSnapshot",
@@ -16,6 +16,12 @@
       "activePurpose": "TRANSPORT",
       "manualChargingHold": false,
       "batteryState": "SUFFICIENT",
+      "chargingCycleState": "NOT_CHARGING",
+      "loadingPhase": {
+        "state": "LOADING",
+        "cargoHoldingDeadlineAt": "2026-08-25T09:00:00Z",
+        "closedReason": null
+      },
       "blockingFacts": [
         {
           "reasonCode": "ACTION_NOT_ALLOWED_IN_STATE",

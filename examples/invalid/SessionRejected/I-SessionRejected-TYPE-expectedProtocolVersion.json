@@ -1,9 +1,9 @@
 {
   "vectorId": "I-SessionRejected-TYPE-expectedProtocolVersion",
   "message": {
-    "protocolVersion": 2,
+    "protocolVersion": 3,
     "profileId": "AGV_FULL_PRODUCT",
-    "protocolReleaseVersion": "1.0.0",
+    "protocolReleaseVersion": "2.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "SessionRejected",
     "messageId": "00000000-0000-4000-8000-000000000005",
@@ -20,10 +20,10 @@
       "expectedProtocolVersion": "not-a-number",
       "expectedProtocolReleaseIdentity": {
         "repository": "8005-agv-protocol",
-        "releaseVersion": "1.0.0",
-        "tag": "protocol-v1.0.0",
+        "releaseVersion": "2.0.0",
+        "tag": "protocol-v2.0.0",
         "commit": "0000000000000000000000000000000000000000",
-        "protocolVersion": 2,
+        "protocolVersion": 3,
         "profileId": "AGV_FULL_PRODUCT",
         "manifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
         "schemaBundleSha256": "0000000000000000000000000000000000000000000000000000000000000000",
