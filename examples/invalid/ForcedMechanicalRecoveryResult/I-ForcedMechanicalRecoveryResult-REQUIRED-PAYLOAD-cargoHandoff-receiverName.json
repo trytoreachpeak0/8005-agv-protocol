@@ -1,0 +1,42 @@
+{
+  "vectorId": "I-ForcedMechanicalRecoveryResult-REQUIRED-PAYLOAD-cargoHandoff-receiverName",
+  "message": {
+    "protocolVersion": 4,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "3.0.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "ForcedMechanicalRecoveryResult",
+    "messageId": "00000000-0000-4000-8000-000000000101",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "exceptionRecoverySessionId": "00000000-0000-4000-8000-000000000001",
+      "recoveryActionId": "00000000-0000-4000-8000-000000000001",
+      "forcedRecoveryGeneration": 1,
+      "outcome": "MECHANICALLY_ISOLATED",
+      "slots": [
+        1
+      ],
+      "operator": {
+        "operatorId": "operatorId-test",
+        "verificationMethod": "BADGE",
+        "verifiedAt": "2026-08-25T09:00:00Z"
+      },
+      "observedAt": "2026-08-25T09:00:00Z",
+      "electronicEmptyProven": false,
+      "vehicleReadyProven": false,
+      "demandId": "00000000-0000-4000-8000-000000000001",
+      "cargoHandoff": {
+        "sublot": "TEST-SUBLOT-001",
+        "handedOverAt": "2026-08-25T09:00:00Z"
+      }
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/payload/cargoHandoff/receiverName",
+    "rule": "required"
+  }
+}

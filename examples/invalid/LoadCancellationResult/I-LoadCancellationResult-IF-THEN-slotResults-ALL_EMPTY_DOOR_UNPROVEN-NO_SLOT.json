@@ -1,0 +1,28 @@
+{
+  "vectorId": "I-LoadCancellationResult-IF-THEN-slotResults-ALL_EMPTY_DOOR_UNPROVEN-NO_SLOT",
+  "message": {
+    "protocolVersion": 4,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "3.0.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "LoadCancellationResult",
+    "messageId": "00000000-0000-4000-8000-000000000065",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "cancellationId": "00000000-0000-4000-8000-000000000001",
+      "demandId": "00000000-0000-4000-8000-000000000001",
+      "slotOperationAttemptId": "00000000-0000-4000-8000-000000000001",
+      "overallOutcome": "ALL_EMPTY_DOOR_UNPROVEN",
+      "slotResults": [],
+      "observedAt": "2026-08-25T09:00:00Z"
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/payload/slotResults",
+    "rule": "if-then"
+  }
+}

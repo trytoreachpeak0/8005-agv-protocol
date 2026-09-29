@@ -1,12 +1,12 @@
 {
   "vectorId": "I-ENVELOPE-RELEASE-IDENTITY-001",
   "message": {
-    "protocolVersion": 3,
+    "protocolVersion": 4,
     "profileId": "AGV_FULL_PRODUCT",
-    "protocolReleaseVersion": "2.0.0",
+    "protocolReleaseVersion": "3.0.0",
     "protocolReleaseManifestSha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
     "messageType": "SessionReadiness",
-    "messageId": "00000000-0000-4000-8000-000000000152",
+    "messageId": "00000000-0000-4000-8000-000000000156",
     "correlationId": null,
     "agvId": "AGV-8005-01",
     "sessionGeneration": 1,

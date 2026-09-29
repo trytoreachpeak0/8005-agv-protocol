@@ -5,17 +5,24 @@ Shared executable protocol contracts for the 8005 AGV full product
 
 ## Current state
 
-The repository currently contains an **unapproved `2.0.0` superseding content
-snapshot** for `ProtocolVersion = 3` and profile `AGV_FULL_PRODUCT`.
-`protocol-v1.0.0` remains immutable, and `protocol-v2.0.0` does not exist yet.
+The repository currently contains an **unapproved `3.0.0` superseding content
+snapshot** for `ProtocolVersion = 4` and profile `AGV_FULL_PRODUCT`.
+`protocol-v2.0.0` remains immutable, and `protocol-v3.0.0` does not exist yet.
 
-This candidate is **breaking** against `protocol-v1.0.0`
+This candidate is **breaking** against `protocol-v2.0.0`
 (`BREAKING_PROTOCOL_VERSION_INCREASE`, `INCOMPATIBLE_EXACT_IDENTITY_REQUIRED`):
-seven changes, each of them a `required`, `type` or meaning change — the station
-departure deadline and `OPERATOR_TIMEOUT`, dispatch-scoped sublot entry, an
-empty `slotResults` on a cancellation authorized before loading, sublot
-rejection reason codes, the restored charging fields, the loading phase, and a
-`slotOperationAttemptId` on the three recovery messages. See
+ten changes — slot fault declaration (`SlotFaultDeclarationCommand` /
+`SlotFaultDeclarationResult`, `SLOT_FAULT_DECLARED`), `supportsBatchUnlock`
+removed from `CapabilitySnapshot`, a named cargo handoff on
+`ForcedMechanicalRecoveryResult`, a `closedReason` on
+`ExceptionRecoverySessionSnapshot` (`RECOVERY_ACTION_RESULT_NOT_RECONCILED`),
+the onboard assertion `DISPLAY_ADMISSION_BLOCK_REASON` dropped from `FP-IS-10`,
+`ONBOARD_FATAL_FAULT_LATCHED`, a `stopEndedReason` on
+`CurrentStopWorklistSnapshot`, a description for
+`SublotEntryRequested.expiresOnRevisionChange`, the `ALL_EMPTY_DOOR_UNPROVEN`
+outcome with `SLOT_DOOR_LOCK_UNPROVEN_AFTER_EMPTY` and the
+`HARDWARE_REPAIR_RELEASE` recovery action, and a required `checkPurpose` on
+`PreDepartureSafetyCheck` / `PreDepartureSafetyCheckResult`. See
 [`compatibility/report.json`](compatibility/report.json) for the full list.
 
 It is not a formal `ProtocolRelease` until a release approval (the product

@@ -1,9 +1,9 @@
 {
   "vectorId": "I-ForcedMechanicalRecoveryResult-TYPE-slots",
   "message": {
-    "protocolVersion": 3,
+    "protocolVersion": 4,
     "profileId": "AGV_FULL_PRODUCT",
-    "protocolReleaseVersion": "2.0.0",
+    "protocolReleaseVersion": "3.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "ForcedMechanicalRecoveryResult",
     "messageId": "00000000-0000-4000-8000-000000000101",
@@ -24,7 +24,13 @@
       },
       "observedAt": "2026-08-25T09:00:00Z",
       "electronicEmptyProven": false,
-      "vehicleReadyProven": false
+      "vehicleReadyProven": false,
+      "demandId": "00000000-0000-4000-8000-000000000001",
+      "cargoHandoff": {
+        "sublot": "TEST-SUBLOT-001",
+        "receiverName": "receiverName-test",
+        "handedOverAt": "2026-08-25T09:00:00Z"
+      }
     }
   },
   "expected": {

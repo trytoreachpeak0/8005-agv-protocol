@@ -26,8 +26,7 @@
       "FAIL_CLOSED_ON_MISSING_BINDING"
     ],
     "onboardHmi": [
-      "NEVER_INFER_UNBOUND_TASK_TYPE",
-      "DISPLAY_ADMISSION_BLOCK_REASON"
+      "NEVER_INFER_UNBOUND_TASK_TYPE"
     ]
   },
   "finalState": {

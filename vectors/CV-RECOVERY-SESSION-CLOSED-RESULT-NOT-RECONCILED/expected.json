@@ -1,0 +1,49 @@
+{
+  "vectorId": "CV-RECOVERY-SESSION-CLOSED-RESULT-NOT-RECONCILED",
+  "orderedExpectedMessages": [
+    "RecoveryActionSubmitted",
+    "RecoveryActionAccepted",
+    "LoadCompensationRequested",
+    "LoadCompensationCommand",
+    "LoadCompensationResult",
+    "DurableAck",
+    "ExceptionRecoverySessionSnapshot",
+    "SnapshotAppliedAck"
+  ],
+  "persistenceCheckpoints": [
+    "durable-before-send",
+    "durable-before-ack",
+    "journal-before-irreversible-io",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "unreconciled-result-settles-demand",
+    "session-left-open-after-final-result",
+    "new-session-refused-after-unreconciled-close"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "CLOSE_SESSION_WITH_REASON_ON_UNRECONCILED_RESULT",
+      "KEEP_DEMAND_BLOCKED_AFTER_UNRECONCILED_CLOSE",
+      "ACCEPT_NEW_SESSION_AFTER_UNRECONCILED_CLOSE",
+      "RESEND_CLOSED_REASON_AFTER_RECONNECT"
+    ],
+    "onboardHmi": [
+      "DISPLAY_SESSION_CLOSED_REASON",
+      "ALLOW_REOPENING_AFTER_SESSION_CLOSED",
+      "NEVER_TREAT_UNRECONCILED_CLOSE_AS_RECOVERED"
+    ]
+  },
+  "finalState": {
+    "readiness": "RECOVERY_REQUIRED",
+    "business": "DEMAND_BLOCKED_SESSION_CLOSED_NEW_SESSION_ALLOWED",
+    "physical": "AS_REPORTED_BY_UNRECONCILED_RESULT"
+  },
+  "stableErrorCode": "RECOVERY_ACTION_RESULT_NOT_RECONCILED"
+}

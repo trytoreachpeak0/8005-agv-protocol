@@ -1,7 +1,7 @@
 {
   "vectorId": "I-ProtocolProblem-REQUIRED-ENVELOPE-protocolReleaseVersion",
   "message": {
-    "protocolVersion": 3,
+    "protocolVersion": 4,
     "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "ProtocolProblem",
@@ -18,7 +18,7 @@
         "fieldPath": "fieldPath-test",
         "displayMessage": "displayMessage-test"
       },
-      "expectedProtocolVersion": 3,
+      "expectedProtocolVersion": 4,
       "expectedProfileId": "AGV_FULL_PRODUCT",
       "expectedProtocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000"
     }

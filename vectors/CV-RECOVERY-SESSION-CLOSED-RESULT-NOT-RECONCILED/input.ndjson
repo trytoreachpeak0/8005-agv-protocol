@@ -1,0 +1,8 @@
+{"action":"send","atMs":0,"messageType":"RecoveryActionSubmitted","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"RecoveryActionAccepted","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"LoadCompensationRequested","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"LoadCompensationCommand","step":4,"virtualTimeOnly":true}
+{"action":"expect","atMs":400,"messageType":"LoadCompensationResult","step":5,"virtualTimeOnly":true}
+{"action":"expect","atMs":500,"messageType":"DurableAck","step":6,"virtualTimeOnly":true}
+{"action":"expect","atMs":600,"messageType":"ExceptionRecoverySessionSnapshot","step":7,"virtualTimeOnly":true}
+{"action":"expect","atMs":700,"messageType":"SnapshotAppliedAck","step":8,"virtualTimeOnly":true}

@@ -1,9 +1,9 @@
 {
   "vectorId": "I-PreDepartureSafetyCheckResult-TYPE-preDepartureSafetyCheckId",
   "message": {
-    "protocolVersion": 3,
+    "protocolVersion": 4,
     "profileId": "AGV_FULL_PRODUCT",
-    "protocolReleaseVersion": "2.0.0",
+    "protocolReleaseVersion": "3.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "PreDepartureSafetyCheckResult",
     "messageId": "00000000-0000-4000-8000-000000000027",
@@ -13,6 +13,7 @@
     "sentAt": "2026-08-25T09:00:00Z",
     "payload": {
       "preDepartureSafetyCheckId": 123,
+      "checkPurpose": "DEPARTURE",
       "outcome": "SAFE",
       "observedAt": "2026-08-25T09:00:00Z",
       "safetyStateVersion": 1,

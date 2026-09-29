@@ -1,7 +1,7 @@
 {
   "vectorId": "I-CurrentStopWorklistSnapshot-REQUIRED-ENVELOPE-protocolReleaseVersion",
   "message": {
-    "protocolVersion": 3,
+    "protocolVersion": 4,
     "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "CurrentStopWorklistSnapshot",
@@ -24,7 +24,8 @@
           "stopRole": "PICKUP",
           "expectedBasketCount": 1
         }
-      ]
+      ],
+      "stopEndedReason": null
     }
   },
   "expected": {

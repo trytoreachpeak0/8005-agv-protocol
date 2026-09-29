@@ -1,0 +1,59 @@
+{
+  "vectorId": "CV-LOAD-COMPENSATION-EMPTY-DOOR-UNPROVEN",
+  "orderedExpectedMessages": [
+    "ExceptionRecoverySessionRequested",
+    "ExceptionRecoverySessionOpened",
+    "RecoveryActionSubmitted",
+    "RecoveryActionAccepted",
+    "LoadCompensationRequested",
+    "LoadCompensationCommand",
+    "LoadCompensationResult",
+    "DurableAck",
+    "VehicleBusinessStateSnapshot",
+    "SnapshotAppliedAck"
+  ],
+  "persistenceCheckpoints": [
+    "durable-before-send",
+    "durable-before-ack",
+    "journal-before-irreversible-io",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "door-unproven-reported-as-all-empty",
+    "slot-opened-after-door-unproven",
+    "door-unproven-settles-with-a-slot-not-proven-empty",
+    "vehicle-released-without-fresh-lock-proof",
+    "demand-left-blocked-after-door-unproven-empty",
+    "vehicle-held-without-a-repair-release-path"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "SETTLE_DEMAND_AS_ALL_EMPTY_COMPENSATION",
+      "SETTLE_DOOR_UNPROVEN_ONLY_ON_THE_EXACT_TARGET_SLOTS_ALL_EMPTY",
+      "HOLD_VEHICLE_UNTIL_HARDWARE_RECORD_AND_FRESH_LOCK_PROOF",
+      "PUBLISH_HOLD_IN_VEHICLE_BUSINESS_STATE",
+      "NEVER_RELEASE_ON_HARDWARE_RECORD_ALONE",
+      "RELEASE_ONLY_THROUGH_HARDWARE_REPAIR_RELEASE",
+      "NEVER_TAKE_DOOR_UNPROVEN_FOR_DOORS_PROVEN_LOCKED"
+    ],
+    "onboardHmi": [
+      "REPORT_LOCK_AND_OUTPUT_STATE_AS_READ",
+      "NEVER_OPEN_ANY_SLOT_AFTER_DOOR_UNPROVEN",
+      "DISPLAY_REPAIR_REQUIRED_NOTICE",
+      "JOURNAL_DOOR_UNPROVEN_RESULT_BEFORE_SENDING",
+      "REPLAY_SAME_DOOR_UNPROVEN_RESULT_AFTER_RESTART"
+    ]
+  },
+  "finalState": {
+    "readiness": "RECOVERY_REQUIRED",
+    "business": "DEMAND_TERMINATED_AS_ALL_EMPTY_VEHICLE_HELD_FOR_REPAIR",
+    "physical": "SLOTS_EMPTY_DOOR_UNPROVEN_VEHICLE_HELD"
+  },
+  "stableErrorCode": "SLOT_DOOR_LOCK_UNPROVEN_AFTER_EMPTY"
+}

@@ -1,0 +1,69 @@
+{
+  "vectorId": "CV-VEHICLE-HOLD-DOOR-REPAIR-RELEASE",
+  "orderedExpectedMessages": [
+    "ExceptionRecoverySessionRequested",
+    "ExceptionRecoverySessionOpened",
+    "RecoveryActionSubmitted",
+    "RecoveryActionAccepted",
+    "HardwareRecoveryRecordSubmitted",
+    "HardwareRecoveryRecordResult",
+    "ExceptionRecoverySessionSnapshot",
+    "SnapshotAppliedAck",
+    "SafetyStateSnapshotRequested",
+    "SafetyStateSnapshot",
+    "SnapshotAppliedAck",
+    "PreDepartureSafetyCheck",
+    "PreDepartureSafetyCheckResult",
+    "VehicleBusinessStateSnapshot",
+    "SnapshotAppliedAck"
+  ],
+  "persistenceCheckpoints": [
+    "durable-before-send",
+    "durable-before-ack",
+    "journal-before-irreversible-io",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "slot-opened-for-repair-release",
+    "vehicle-released-on-record-alone",
+    "vehicle-released-on-readings-received-before-record",
+    "repair-release-offered-without-door-hold",
+    "hardware-record-on-a-non-release-action-lifts-door-hold",
+    "release-session-stuck-after-onboard-restart",
+    "vehicle-held-without-a-repair-release-path"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "OFFER_REPAIR_RELEASE_ONLY_WHILE_HELD_FOR_UNPROVEN_DOOR",
+      "LIFT_DOOR_HOLD_ONLY_ON_A_RECORD_OF_THE_RELEASE_ACTION",
+      "CLOSE_RELEASE_SESSION_ON_RECORDED",
+      "REQUEST_SAFETY_SNAPSHOT_ON_RECORD_AND_AFTER_RECONNECT",
+      "RELEASE_ONLY_ON_READINGS_RECEIVED_AFTER_RECORD_AND_A_SAFE_HOLD_RELEASE_CHECK",
+      "NEVER_RELEASE_ON_HARDWARE_RECORD_ALONE",
+      "VOID_RECORD_AND_ACCEPT_NEW_SESSION_WHEN_FIRST_READINGS_UNPROVEN",
+      "PUBLISH_RELEASE_IN_VEHICLE_BUSINESS_STATE"
+    ],
+    "onboardHmi": [
+      "NEVER_SLOT_IO_FOR_REPAIR_RELEASE",
+      "OPEN_RELEASE_SESSION_OVER_HELD_SLOTS_WITHOUT_DEMAND",
+      "JOURNAL_RELEASE_ACTION_BEFORE_SUBMITTING",
+      "RESTORE_REPAIR_RECORD_FORM_AFTER_RESTART",
+      "SUBMIT_HARDWARE_RECORD_ON_RELEASE_ACTION",
+      "REPORT_FRESH_SLOT_READINGS_ON_REQUEST",
+      "ANSWER_HOLD_RELEASE_CHECK_WITHOUT_DEMAND_OR_LEG",
+      "DISPLAY_HOLD_FROM_BLOCKING_FACTS"
+    ]
+  },
+  "finalState": {
+    "readiness": "READY",
+    "business": "DOOR_HOLD_LIFTED_RELEASE_SESSION_CLOSED",
+    "physical": "HELD_SLOTS_LOCKED_RESET_EMPTY"
+  },
+  "stableErrorCode": null
+}

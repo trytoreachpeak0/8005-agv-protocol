@@ -1,7 +1,7 @@
 {
   "vectorId": "I-ExceptionRecoverySessionSnapshot-REQUIRED-ENVELOPE-protocolReleaseVersion",
   "message": {
-    "protocolVersion": 3,
+    "protocolVersion": 4,
     "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "ExceptionRecoverySessionSnapshot",
@@ -32,7 +32,8 @@
           "subjectType": "subjectType-test",
           "subjectId": "subjectId-test"
         }
-      ]
+      ],
+      "closedReason": null
     }
   },
   "expected": {

@@ -1,0 +1,15 @@
+{"action":"send","atMs":0,"messageType":"ExceptionRecoverySessionRequested","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"ExceptionRecoverySessionOpened","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"RecoveryActionSubmitted","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"RecoveryActionAccepted","step":4,"virtualTimeOnly":true}
+{"action":"expect","atMs":400,"messageType":"HardwareRecoveryRecordSubmitted","step":5,"virtualTimeOnly":true}
+{"action":"expect","atMs":500,"messageType":"HardwareRecoveryRecordResult","step":6,"virtualTimeOnly":true}
+{"action":"expect","atMs":600,"messageType":"ExceptionRecoverySessionSnapshot","step":7,"virtualTimeOnly":true}
+{"action":"expect","atMs":700,"messageType":"SnapshotAppliedAck","step":8,"virtualTimeOnly":true}
+{"action":"expect","atMs":800,"messageType":"SafetyStateSnapshotRequested","step":9,"virtualTimeOnly":true}
+{"action":"expect","atMs":900,"messageType":"SafetyStateSnapshot","step":10,"virtualTimeOnly":true}
+{"action":"expect","atMs":1000,"messageType":"SnapshotAppliedAck","step":11,"virtualTimeOnly":true}
+{"action":"expect","atMs":1100,"messageType":"PreDepartureSafetyCheck","step":12,"virtualTimeOnly":true}
+{"action":"expect","atMs":1200,"messageType":"PreDepartureSafetyCheckResult","step":13,"virtualTimeOnly":true}
+{"action":"expect","atMs":1300,"messageType":"VehicleBusinessStateSnapshot","step":14,"virtualTimeOnly":true}
+{"action":"expect","atMs":1400,"messageType":"SnapshotAppliedAck","step":15,"virtualTimeOnly":true}

@@ -1,0 +1,26 @@
+{
+  "vectorId": "I-SlotFaultDeclarationResult-CORRELATION-001",
+  "message": {
+    "protocolVersion": 4,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "3.0.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "SlotFaultDeclarationResult",
+    "messageId": "00000000-0000-4000-8000-000000000129",
+    "correlationId": "00000000-0000-4000-8000-000000000130",
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "declarationId": "00000000-0000-4000-8000-000000000001",
+      "slotOperationAttemptId": "00000000-0000-4000-8000-000000000001",
+      "outcome": "APPLIED",
+      "problem": null
+    }
+  },
+  "expected": {
+    "code": "CORRELATION_INVALID",
+    "fieldPath": "/correlationId",
+    "rule": "semantic-correlation"
+  }
+}

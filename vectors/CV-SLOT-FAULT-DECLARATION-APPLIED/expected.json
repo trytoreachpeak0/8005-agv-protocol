@@ -1,0 +1,49 @@
+{
+  "vectorId": "CV-SLOT-FAULT-DECLARATION-APPLIED",
+  "orderedExpectedMessages": [
+    "SlotFaultDeclarationCommand",
+    "SlotFaultDeclarationResult",
+    "DurableAck",
+    "OperationResult",
+    "DurableAck"
+  ],
+  "persistenceCheckpoints": [
+    "durable-before-send",
+    "durable-before-ack",
+    "journal-before-irreversible-io",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "unlock-after-declaration",
+    "declaration-settles-business-or-cancels-demand",
+    "declaration-marks-slot-inoperable"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "DECLARE_ONLY_ON_OVERDUE_SLOT_AWAITING_OPERATOR",
+      "AUDIT_DECLARATION_AND_VEHICLE_RESULT",
+      "BLOCK_JOURNEY_ON_DECLARED_UNKNOWN"
+    ],
+    "onboardHmi": [
+      "APPLY_ONLY_TO_SAME_ATTEMPT_AND_SLOT_STILL_AWAITING",
+      "JOURNAL_DECLARATION_BEFORE_APPLIED_RESULT",
+      "KEEP_DECLARED_SLOT_UNKNOWN_ACROSS_RESTART",
+      "NEVER_UNLOCK_AFTER_DECLARATION_APPLIED",
+      "REPORT_DECLARED_SLOT_UNKNOWN_LATER_SLOTS_NOT_STARTED",
+      "REPORT_COMPLETED_SLOTS_FROM_LIVE_READINGS",
+      "SEND_DECLARATION_RESULT_BEFORE_OPERATION_RESULT"
+    ]
+  },
+  "finalState": {
+    "readiness": "RECOVERY_REQUIRED",
+    "business": "JOURNEY_BLOCKED_DEMAND_NOT_SETTLED",
+    "physical": "DECLARED_SLOT_UNKNOWN_LATER_SLOTS_NOT_STARTED"
+  },
+  "stableErrorCode": "SLOT_FAULT_DECLARED"
+}

@@ -18,15 +18,29 @@
     "expanded-active-unlock-set",
     "duplicate-business-commit",
     "ready-before-reconciliation",
-    "unknown-as-success"
+    "unknown-as-success",
+    "isolation-on-a-demand-without-handoff-record",
+    "handoff-record-proves-empty-slot-or-ready-vehicle",
+    "demand-left-blocked-after-acknowledged-isolation",
+    "recovery-context-cleared-on-failed-or-unknown-forced-recovery"
   ],
   "productAssertions": {
     "controlServer": [
-      "FENCE_FORCED_RECOVERY_BY_GENERATION"
+      "FENCE_FORCED_RECOVERY_BY_GENERATION",
+      "SETTLE_DEMAND_ONLY_ON_NAMED_HANDOFF",
+      "NEVER_REFUSE_AN_ISOLATION_RESULT_OVER_ITS_RECORD",
+      "KEEP_DEMAND_BLOCKED_AND_ACCEPT_NEW_SESSION_ON_FAILED_OR_UNKNOWN",
+      "NEVER_TREAT_HANDOFF_AS_EMPTY_SLOT_OR_READY_VEHICLE"
     ],
     "onboardHmi": [
       "REFUSE_STALE_FORCED_RECOVERY_GENERATION",
-      "REPORT_FORCED_RECOVERY_OUTCOME"
+      "REPORT_FORCED_RECOVERY_OUTCOME",
+      "REPORT_CARGO_HANDOFF_RECORD_IN_RESULT",
+      "COPY_COMMAND_DEMAND_INTO_RESULT",
+      "CONFIRM_SUBLOT_AGAINST_DEMAND_BEFORE_SENDING",
+      "REPLAY_SAME_HANDOFF_RECORD_AFTER_RESTART",
+      "KEEP_RECOVERY_CONTEXT_UNLESS_ISOLATION_ACKNOWLEDGED",
+      "ANSWER_FORCED_RECOVERY_COMMAND_WITHOUT_DEMAND"
     ]
   },
   "finalState": {

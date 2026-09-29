@@ -1,12 +1,12 @@
 {
   "vectorId": "I-ENVELOPE-STALE-SESSION-001",
   "message": {
-    "protocolVersion": 3,
+    "protocolVersion": 4,
     "profileId": "AGV_FULL_PRODUCT",
-    "protocolReleaseVersion": "2.0.0",
+    "protocolReleaseVersion": "3.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "SessionReadiness",
-    "messageId": "00000000-0000-4000-8000-000000000153",
+    "messageId": "00000000-0000-4000-8000-000000000157",
     "correlationId": null,
     "agvId": "AGV-8005-01",
     "sessionGeneration": 0,
