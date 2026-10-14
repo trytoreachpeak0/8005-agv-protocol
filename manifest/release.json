@@ -7,10 +7,10 @@
   "generatedAt": "2026-10-14T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "98d4b3957063a50cd2ec197951ea05df7accf7f3b3b90f6a6c0fde069c1f7de4",
+  "fileTableSha256": "7842336f7e71fc1213e1a86ec9fbcc94f8ae68338af63f7b0109bc7c6c776852",
   "schemaBundleSha256": "dad44a5e93203eb0b7ade50b23d12f2aaffc0e2abb3c8e5dcdd3de62d931d628",
   "examplesSha256": "b0da007ca9712e6b390677ce62679875f195ceb76c080332f4d49ab5fc6cf923",
-  "vectorsSha256": "662676557d189ee9e92bc0596d09a94fc79de54c1ca3340ff003d07ad988bc82",
+  "vectorsSha256": "c59c4594094455bafdbb631644e65e7a32e092f049520d0bc753650c04f95552",
   "errorRegistrySha256": "3386154ca06bef1803e08c0b0bc5fc6e498146e3736aa1ab6a4ca604ccf01499",
   "messages": {
     "SessionHello": {
@@ -1083,8 +1083,8 @@
     {
       "path": "compatibility/report.json",
       "role": "compatibility",
-      "bytes": 2112,
-      "sha256": "08112cb667a6ea3bfad100a9bbc685d01558511a499a8ad5b0bb79d91a03d4ab"
+      "bytes": 2214,
+      "sha256": "b92efc39eda2d5d4e6f27eb44b5f44564789cd4200e1cecd35aa60e2352f56ad"
     },
     {
       "path": "docs/README.md",
@@ -1095,8 +1095,8 @@
     {
       "path": "docs/candidate-limitations.md",
       "role": "docs",
-      "bytes": 1912,
-      "sha256": "deb1b5e2cdfd72562643c4ad3d1381325fefb56d8b3c4360d24e43662f53f7ae"
+      "bytes": 1939,
+      "sha256": "a7d673fb83c0271d05fe90b5ca5aee1336eca92fdc9f80b1ef105e084428cf83"
     },
     {
       "path": "docs/release-governance.md",
@@ -1107,8 +1107,8 @@
     {
       "path": "docs/wire-notes.md",
       "role": "docs",
-      "bytes": 5744,
-      "sha256": "c0d065d0207b002987e5575930fc3cf439136a2f39e93ea20b4316d71f9f5038"
+      "bytes": 8088,
+      "sha256": "492ac0af8b8c66c9893f28509286f9a47d183bd44994dd51811fc1a5860b3e28"
     },
     {
       "path": "errors/error-codes.json",
@@ -11787,8 +11787,8 @@
     {
       "path": "integration-slices/index.json",
       "role": "integration-slices",
-      "bytes": 21854,
-      "sha256": "3762381a499a05873aba5e854b51efe95d1a4dc53c6e5a0344ff002dd9197d53"
+      "bytes": 21908,
+      "sha256": "1e2cfb1f6a38eab8490102c360b1cf679dfe130665d364824ad8ee914fe35ce9"
     },
     {
       "path": "package.json",
@@ -12249,8 +12249,8 @@
     {
       "path": "tools/g1-validate.mjs",
       "role": "tools",
-      "bytes": 14546,
-      "sha256": "c51ebc0ee792a2572b5f1a8bf4dc4c53eab4134a3ef0934ac4344ecca652c86d"
+      "bytes": 14591,
+      "sha256": "e5b2e069ba189d70cc12b3f423369aa1091f211bb753f9f045ab8653c555c94c"
     },
     {
       "path": "vectors/CV-AUTOMATIC-CHARGING-CYCLE/expected.json",
@@ -12320,6 +12320,18 @@
     },
     {
       "path": "vectors/CV-CURRENT-STOP-DEPARTURE-STALE-REVISION/input.ndjson",
+      "role": "vectors",
+      "bytes": 391,
+      "sha256": "da593dd541f64592aec7b4902ca3e65e9ef64f4ae1ba5256a552506c1bc90739"
+    },
+    {
+      "path": "vectors/CV-CURRENT-STOP-DEPARTURE-STATION-MISMATCH/expected.json",
+      "role": "vectors",
+      "bytes": 1157,
+      "sha256": "11d64a37d443d62617008c8489814da9d0eaeb3c2d2f8e74b7364b749ca7e3dd"
+    },
+    {
+      "path": "vectors/CV-CURRENT-STOP-DEPARTURE-STATION-MISMATCH/input.ndjson",
       "role": "vectors",
       "bytes": 391,
       "sha256": "da593dd541f64592aec7b4902ca3e65e9ef64f4ae1ba5256a552506c1bc90739"
