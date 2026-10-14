@@ -1,0 +1,62 @@
+{
+  "vectorId": "CV-CURRENT-STOP-DEPARTURE-ACCEPTED",
+  "orderedExpectedMessages": [
+    "CurrentStopDepartureRequested",
+    "DurableAck",
+    "CurrentStopDepartureResult",
+    "DurableAck",
+    "VehicleBusinessStateSnapshot",
+    "SnapshotAppliedAck",
+    "CurrentStopWorklistSnapshot",
+    "SnapshotAppliedAck",
+    "UpcomingStopPlanSnapshot",
+    "SnapshotAppliedAck",
+    "PreDepartureSafetyCheck",
+    "PreDepartureSafetyCheckResult"
+  ],
+  "persistenceCheckpoints": [
+    "departure-request-journaled-before-send",
+    "departure-request-durable-before-ack",
+    "departure-decision-and-releases-durable-before-result",
+    "result-before-replay",
+    "snapshot-before-ack"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "departure-cancels-or-suppresses-unloaded-demand",
+    "departure-counts-against-station-timeout-release-limit",
+    "departure-bypasses-correction-gate-or-safety-check",
+    "departure-accepted-at-a-machine-pickup-stop",
+    "vehicle-moved-after-departure-with-nothing-loaded"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "ACCEPT_DEPARTURE_ONLY_AT_STAGING_PICKUP_STOP",
+      "RELEASE_UNLOADED_DEMANDS_WITHOUT_CANCEL_OR_SUPPRESSION",
+      "KEEP_LOADED_DEMANDS_ON_JOURNEY",
+      "CLOSE_LOADING_PHASE_WITH_OPERATOR_DEPARTED",
+      "CLOSE_JOURNEY_IN_PLACE_WHEN_NOTHING_LOADED",
+      "DEPART_THROUGH_CORRECTION_GATE_AND_SAFETY_CHECK",
+      "AUDIT_DEPARTURE_OPERATOR"
+    ],
+    "onboardHmi": [
+      "OFFER_DEPART_ONLY_AT_STAGING_PICKUP_STOP",
+      "NEVER_OFFER_DEPART_DURING_SLOT_OPERATION_OR_CORRECTION",
+      "JOURNAL_DEPARTURE_REQUEST_BEFORE_SENDING",
+      "ECHO_DISPLAYED_WORKLIST_IN_REQUEST",
+      "DISPLAY_DEPARTURE_FROM_SNAPSHOTS",
+      "NEVER_DEPART_LOCALLY"
+    ]
+  },
+  "finalState": {
+    "readiness": "READY",
+    "business": "LOADING_PHASE_CLOSED_OPERATOR_DEPARTED_UNLOADED_DEMANDS_RELEASED",
+    "physical": "LOADED_SLOTS_OCCUPIED_LOCKED_RESET"
+  },
+  "stableErrorCode": null
+}
