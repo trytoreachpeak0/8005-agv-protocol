@@ -1,0 +1,55 @@
+{
+  "vectorId": "CV-STAGING-CHARGING-REQUIRED-DEPARTURE-WITH-CARGO",
+  "orderedExpectedMessages": [
+    "VehicleBusinessStateSnapshot",
+    "SnapshotAppliedAck",
+    "CurrentStopWorklistSnapshot",
+    "SnapshotAppliedAck",
+    "UpcomingStopPlanSnapshot",
+    "SnapshotAppliedAck",
+    "PreDepartureSafetyCheck",
+    "PreDepartureSafetyCheckResult"
+  ],
+  "persistenceCheckpoints": [
+    "charging-required-decision-and-releases-durable-before-snapshot",
+    "projection-revision-before-send",
+    "snapshot-before-ack"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "charger-stop-in-transport-journey",
+    "transport-purpose-replaced-by-charging",
+    "loaded-demand-released-for-charging",
+    "departure-cancels-or-suppresses-unloaded-demand",
+    "departure-counts-against-station-timeout-release-limit",
+    "departure-bypasses-correction-gate-or-safety-check",
+    "return-to-staging-before-dropoff",
+    "charging-required-departure-at-a-machine-pickup-stop"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "DEPART_WITH_CARGO_WHEN_CHARGING_REQUIRED_AT_STAGING",
+      "CLOSE_LOADING_PHASE_WITH_CHARGING_REQUIRED",
+      "RELEASE_UNLOADED_DEMANDS_WITHOUT_CANCEL_OR_SUPPRESSION",
+      "KEEP_LOADED_DEMANDS_ON_JOURNEY",
+      "INSERT_NO_CHARGER_STOP_IN_TRANSPORT_JOURNEY",
+      "DEPART_THROUGH_CORRECTION_GATE_AND_SAFETY_CHECK",
+      "CHARGE_THROUGH_CHARGING_ALLOCATION_AFTER_JOURNEY_ENDS"
+    ],
+    "onboardHmi": [
+      "DISPLAY_CHARGING_REQUIRED_DEPARTURE_FROM_SNAPSHOTS",
+      "NEVER_DEPART_LOCALLY"
+    ]
+  },
+  "finalState": {
+    "readiness": "READY",
+    "business": "LOADING_PHASE_CLOSED_CHARGING_REQUIRED_EN_ROUTE_TO_DROPOFF",
+    "physical": "LOADED_SLOTS_OCCUPIED_LOCKED_RESET"
+  },
+  "stableErrorCode": null
+}
