@@ -1,0 +1,47 @@
+{
+  "vectorId": "CV-STAGING-CARGO-HOLDING-DEADLINE-MOVED",
+  "orderedExpectedMessages": [
+    "VehicleBusinessStateSnapshot",
+    "SnapshotAppliedAck",
+    "UpcomingStopPlanSnapshot",
+    "SnapshotAppliedAck",
+    "VehicleBusinessStateSnapshot",
+    "SnapshotAppliedAck"
+  ],
+  "persistenceCheckpoints": [
+    "cargo-holding-deadline-durable-before-snapshot",
+    "projection-revision-before-send",
+    "snapshot-before-ack"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "cargo-holding-deadline-set-with-nothing-loaded",
+    "cargo-holding-deadline-not-moved-on-append",
+    "cargo-holding-deadline-moved-by-release-cancellation-or-other-worklist-change",
+    "station-departure-deadline-at-staging-pickup-stop"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "SET_STAGING_CARGO_HOLDING_DEADLINE_ON_FIRST_LOADED_BASKET",
+      "MOVE_STAGING_CARGO_HOLDING_DEADLINE_ON_DEMAND_APPENDED_FOR_THE_STATION",
+      "KEEP_STAGING_CARGO_HOLDING_DEADLINE_ON_RELEASE_CANCELLATION_OR_OTHER_WORKLIST_CHANGE",
+      "CLEAR_STAGING_CARGO_HOLDING_DEADLINE_WHEN_NO_CARGO_REMAINS"
+    ],
+    "onboardHmi": [
+      "DISPLAY_CARGO_HOLDING_COUNTDOWN_AT_STAGING_PICKUP_STOP",
+      "ADOPT_MOVED_CARGO_HOLDING_DEADLINE",
+      "NEVER_RUN_COUNTDOWN_LOCALLY"
+    ]
+  },
+  "finalState": {
+    "readiness": "READY",
+    "business": "STAGING_CARGO_HOLDING_WAIT_DEADLINE_MOVED_TO_APPEND",
+    "physical": "LOADED_SLOTS_OCCUPIED_LOCKED_RESET"
+  },
+  "stableErrorCode": null
+}

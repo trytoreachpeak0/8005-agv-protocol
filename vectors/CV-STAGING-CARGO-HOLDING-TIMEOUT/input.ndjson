@@ -1,0 +1,8 @@
+{"action":"send","atMs":0,"messageType":"VehicleBusinessStateSnapshot","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"SnapshotAppliedAck","step":2,"virtualTimeOnly":true}
+{"action":"expect","atMs":200,"messageType":"CurrentStopWorklistSnapshot","step":3,"virtualTimeOnly":true}
+{"action":"expect","atMs":300,"messageType":"SnapshotAppliedAck","step":4,"virtualTimeOnly":true}
+{"action":"expect","atMs":400,"messageType":"UpcomingStopPlanSnapshot","step":5,"virtualTimeOnly":true}
+{"action":"expect","atMs":500,"messageType":"SnapshotAppliedAck","step":6,"virtualTimeOnly":true}
+{"action":"expect","atMs":600,"messageType":"PreDepartureSafetyCheck","step":7,"virtualTimeOnly":true}
+{"action":"expect","atMs":700,"messageType":"PreDepartureSafetyCheckResult","step":8,"virtualTimeOnly":true}

@@ -18,13 +18,13 @@
     "duplicate-business-commit",
     "ready-before-reconciliation",
     "unknown-as-success",
-    "departure-accepted-at-a-machine-pickup-stop",
+    "departure-accepted-at-a-stop-that-is-not-a-pickup-stop",
     "departure-during-slot-operation-or-correction",
     "business-state-changed-by-rejected-departure"
   ],
   "productAssertions": {
     "controlServer": [
-      "REJECT_DEPARTURE_OUTSIDE_STAGING_PICKUP_STOP",
+      "REJECT_DEPARTURE_AT_A_STOP_THAT_IS_NOT_A_PICKUP_STOP",
       "REJECT_DEPARTURE_DURING_SLOT_OPERATION_OR_CORRECTION",
       "CHANGE_NOTHING_ON_REJECTED_DEPARTURE"
     ],

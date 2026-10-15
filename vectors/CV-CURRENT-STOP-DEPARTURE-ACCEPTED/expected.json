@@ -31,12 +31,11 @@
     "departure-cancels-or-suppresses-unloaded-demand",
     "departure-counts-against-station-timeout-release-limit",
     "departure-bypasses-correction-gate-or-safety-check",
-    "departure-accepted-at-a-machine-pickup-stop",
     "vehicle-moved-after-departure-with-nothing-loaded"
   ],
   "productAssertions": {
     "controlServer": [
-      "ACCEPT_DEPARTURE_ONLY_AT_STAGING_PICKUP_STOP",
+      "ACCEPT_DEPARTURE_AT_STAGING_PICKUP_STOP",
       "RELEASE_UNLOADED_DEMANDS_WITHOUT_CANCEL_OR_SUPPRESSION",
       "KEEP_LOADED_DEMANDS_ON_JOURNEY",
       "CLOSE_LOADING_PHASE_WITH_OPERATOR_DEPARTED",
@@ -45,7 +44,7 @@
       "AUDIT_DEPARTURE_OPERATOR"
     ],
     "onboardHmi": [
-      "OFFER_DEPART_ONLY_AT_STAGING_PICKUP_STOP",
+      "OFFER_DEPART_AT_STAGING_PICKUP_STOP",
       "NEVER_OFFER_DEPART_DURING_SLOT_OPERATION_OR_CORRECTION",
       "JOURNAL_DEPARTURE_REQUEST_BEFORE_SENDING",
       "ECHO_DISPLAYED_WORKLIST_IN_REQUEST",
