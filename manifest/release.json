@@ -7,10 +7,10 @@
   "generatedAt": "2026-10-14T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "be33b690209f11981aa83c3d519407ddcbf6b5c90a8767eec301c991deed8973",
+  "fileTableSha256": "5b2cbdc0a9ee294da157bd827cddfb9548f0320f3da5b7feaa78540f2e25a2af",
   "schemaBundleSha256": "dad44a5e93203eb0b7ade50b23d12f2aaffc0e2abb3c8e5dcdd3de62d931d628",
   "examplesSha256": "b0da007ca9712e6b390677ce62679875f195ceb76c080332f4d49ab5fc6cf923",
-  "vectorsSha256": "f58093e8ca3aab9b222da4f75fa9d89564ac69fad023b23b945289ca363d23c3",
+  "vectorsSha256": "caae2bb7366598b769bddcaa317b799b756eae1aa33f6d71e3ad917bf78b86e8",
   "errorRegistrySha256": "3386154ca06bef1803e08c0b0bc5fc6e498146e3736aa1ab6a4ca604ccf01499",
   "messages": {
     "SessionHello": {
@@ -1107,8 +1107,8 @@
     {
       "path": "docs/wire-notes.md",
       "role": "docs",
-      "bytes": 10544,
-      "sha256": "d539bf2df6905652a71da7690929b7bffd75107faefc9d5bb379f5740a5430b5"
+      "bytes": 10793,
+      "sha256": "90fc7a27914927714910e6ec3468703811374b4aa2fdc9ce22beefa2031c1150"
     },
     {
       "path": "errors/error-codes.json",
@@ -12735,14 +12735,14 @@
     {
       "path": "vectors/CV-STAGING-CARGO-HOLDING-DEADLINE-MOVED/expected.json",
       "role": "vectors",
-      "bytes": 1635,
-      "sha256": "e06441b560294e72b63b1da8ea0611217d3d503590a0d74fc5ce13f1ca7abe10"
+      "bytes": 1632,
+      "sha256": "c79d87fafa44436be332c9138b480ace71afabcbc6352e83adec01fb4c0b317f"
     },
     {
       "path": "vectors/CV-STAGING-CARGO-HOLDING-DEADLINE-MOVED/input.ndjson",
       "role": "vectors",
-      "bytes": 613,
-      "sha256": "c72aeb5cfd863284a25b6c81d3b0b2bdc30528ee0fa7894a80053a9d934eb9f4"
+      "bytes": 610,
+      "sha256": "2dbd4cd926ed60b1b5385c876be04ab98e66e6dff9ec6d71975f757b454a01a4"
     },
     {
       "path": "vectors/CV-STAGING-CARGO-HOLDING-TIMEOUT/expected.json",

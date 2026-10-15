@@ -3,7 +3,7 @@
   "orderedExpectedMessages": [
     "VehicleBusinessStateSnapshot",
     "SnapshotAppliedAck",
-    "CurrentStopWorklistSnapshot",
+    "UpcomingStopPlanSnapshot",
     "SnapshotAppliedAck",
     "VehicleBusinessStateSnapshot",
     "SnapshotAppliedAck"
