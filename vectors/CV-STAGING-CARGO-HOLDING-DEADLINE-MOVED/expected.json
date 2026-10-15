@@ -23,6 +23,7 @@
     "cargo-holding-deadline-set-with-nothing-loaded",
     "cargo-holding-deadline-not-moved-on-append",
     "cargo-holding-deadline-moved-by-release-cancellation-or-other-worklist-change",
+    "cargo-holding-wait-sent-while-a-demand-remains-to-load",
     "station-departure-deadline-at-staging-pickup-stop"
   ],
   "productAssertions": {
@@ -30,17 +31,20 @@
       "SET_STAGING_CARGO_HOLDING_DEADLINE_ON_FIRST_LOADED_BASKET",
       "MOVE_STAGING_CARGO_HOLDING_DEADLINE_ON_DEMAND_APPENDED_FOR_THE_STATION",
       "KEEP_STAGING_CARGO_HOLDING_DEADLINE_ON_RELEASE_CANCELLATION_OR_OTHER_WORKLIST_CHANGE",
-      "CLEAR_STAGING_CARGO_HOLDING_DEADLINE_WHEN_NO_CARGO_REMAINS"
+      "CLEAR_STAGING_CARGO_HOLDING_DEADLINE_WHEN_NO_CARGO_REMAINS",
+      "SEND_LOADING_WHILE_A_DEMAND_REMAINS_TO_LOAD_AT_THE_STATION",
+      "SEND_CARGO_HOLDING_DEADLINE_IN_LOADING_AND_CARGO_HOLDING_WAIT"
     ],
     "onboardHmi": [
       "DISPLAY_CARGO_HOLDING_COUNTDOWN_AT_STAGING_PICKUP_STOP",
       "ADOPT_MOVED_CARGO_HOLDING_DEADLINE",
+      "DISPLAY_CARGO_HOLDING_COUNTDOWN_FROM_DEADLINE_NOT_FROM_STATE",
       "NEVER_RUN_COUNTDOWN_LOCALLY"
     ]
   },
   "finalState": {
     "readiness": "READY",
-    "business": "STAGING_CARGO_HOLDING_WAIT_DEADLINE_MOVED_TO_APPEND",
+    "business": "STAGING_LOADING_WITH_CARGO_HOLDING_DEADLINE_MOVED_TO_APPEND",
     "physical": "LOADED_SLOTS_OCCUPIED_LOCKED_RESET"
   },
   "stableErrorCode": null
