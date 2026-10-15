@@ -1,0 +1,49 @@
+{
+  "vectorId": "CV-CURRENT-STOP-DEPARTURE-MACHINE-STATION-WAIT",
+  "orderedExpectedMessages": [
+    "CurrentStopDepartureRequested",
+    "DurableAck",
+    "CurrentStopDepartureResult",
+    "DurableAck",
+    "PreDepartureSafetyCheck",
+    "PreDepartureSafetyCheckResult"
+  ],
+  "persistenceCheckpoints": [
+    "departure-request-journaled-before-send",
+    "departure-request-durable-before-ack",
+    "departure-decision-durable-before-result",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "closed-reason-rewritten-by-departure",
+    "departure-waits-out-station-departure-deadline",
+    "departure-bypasses-correction-gate-or-safety-check"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "ACCEPT_DEPARTURE_AT_MACHINE_PICKUP_STOP_ONCE_COMMITTED_LOADS_COMPLETE",
+      "KEEP_LOADING_PHASE_AND_CLOSED_REASON_ON_DEPARTURE",
+      "END_STOP_WITHOUT_WAITING_OUT_STATION_DEPARTURE_DEADLINE",
+      "DEPART_THROUGH_CORRECTION_GATE_AND_SAFETY_CHECK",
+      "AUDIT_DEPARTURE_OPERATOR"
+    ],
+    "onboardHmi": [
+      "OFFER_DEPART_AT_MACHINE_PICKUP_STOP_ONCE_COMMITTED_LOADS_COMPLETE",
+      "OFFER_DEPART_WHILE_ONLY_STATION_DEPARTURE_WAIT_REMAINS",
+      "JOURNAL_DEPARTURE_REQUEST_BEFORE_SENDING",
+      "NEVER_DEPART_LOCALLY"
+    ]
+  },
+  "finalState": {
+    "readiness": "READY",
+    "business": "STATION_DEPARTURE_WAIT_ENDED_CLOSED_REASON_UNCHANGED_EN_ROUTE_TO_DROPOFF",
+    "physical": "LOADED_SLOTS_OCCUPIED_LOCKED_RESET"
+  },
+  "stableErrorCode": null
+}
