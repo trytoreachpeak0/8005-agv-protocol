@@ -1,7 +1,7 @@
 {
   "gate": "G1",
   "status": "PASS",
-  "candidateManifestSha256": "90ebffdbb273f60bbbf9a3bddfe5edcbee5eb32d8f05370f9c2e6d77d8386598",
+  "candidateManifestSha256": "743b886d99194038b893e98aed2a1dd01409cd7f80d39c734e02d860e0e5827c",
   "approvalAttestationStatus": "PENDING",
   "approvalAttestationSha256": "71ca8a502db4153ff219e6269f799eef0d01039ff6d825c8e40be1fe80fe3bd7",
   "approvalAttestationSource": "TRACKED_TEMPLATE",
