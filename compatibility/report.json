@@ -1,16 +1,13 @@
 {
-  "candidateVersion": "4.0.0",
-  "protocolVersion": 5,
+  "candidateVersion": "5.0.0",
+  "protocolVersion": 6,
   "profileId": "AGV_FULL_PRODUCT",
   "status": "SUPERSEDING_CANDIDATE",
-  "baseRelease": "protocol-v3.0.0",
+  "baseRelease": "protocol-v4.0.0",
   "classification": "BREAKING_PROTOCOL_VERSION_INCREASE",
   "wireCompatibility": "INCOMPATIBLE_EXACT_IDENTITY_REQUIRED",
   "changeSummary": [
-    "CurrentStopDepartureRequested lets the operator ask to leave the current pickup stop now, at the STAGING_TO_WIRE staging pickup stop or at a machine pickup stop once its committed loads are complete with a basket on board, carrying departureRequestId, a nullable operationSessionId echoing the worklist shown, that worklist's stationId and worklistRevision and the OperatorContext, the control server answers with CurrentStopDepartureResult, ACCEPTED or REJECTED with WORKLIST_REVISION_STALE, STATION_MISMATCH or ACTION_NOT_ALLOWED_IN_STATE, both are RELIABLE so the press and its answer survive a disconnect, and eight vectors bound to FP-IS-02 cover acceptance, a stale revision, a state that does not allow it, another stop, a duplicate departureRequestId and a machine pickup stop in cargo-holding wait, with only its station departure wait left and with its loads not yet complete.",
-    "VehicleBusinessStateSnapshot.loadingPhase.closedReason and CurrentStopWorklistSnapshot.stopEndedReason both gain OPERATOR_DEPARTED, for an operator who departed a pickup stop, and CHARGING_REQUIRED, for a vehicle that left it below the mandatory charge line to deliver its cargo before charging.",
-    "A vehicle below the mandatory charge line at a staging pickup stop with cargo on board departs as for a departure, closing loadingPhase with CHARGING_REQUIRED and releasing the demands not yet loaded, delivers its cargo with no CHARGER stop in the TRANSPORT journey and is taken by the existing charging allocation once the journey ends, docs/wire-notes.md states these semantics without a schema change, and vector CV-STAGING-CHARGING-REQUIRED-DEPARTURE-WITH-CARGO bound to FP-IS-13 covers it.",
-    "At a staging pickup stop cargoHoldingDeadlineAt stays null until a basket is loaded, is then set with the machine duration and moved by each demand appended for that station, and its expiry closes loadingPhase with CARGO_HOLDING_TIMEOUT and ends the worklist with DEMAND_RELEASED, docs/wire-notes.md states these semantics without a schema change, and vectors CV-STAGING-CARGO-HOLDING-DEADLINE-MOVED and CV-STAGING-CARGO-HOLDING-TIMEOUT bound to FP-IS-02 cover it."
+    "TransportTaskType, the closed enum of CurrentStopWorklistSnapshot.items[].workType, gains WIRE_TO_FULL_INSPECTION after its six released values for transport from wire bonding machines to the full-inspection area while PublicStationFunction stays unchanged, a 4.0.0 implementation rejects a message carrying the new value as schema-invalid, so both implementations move to 5.0.0 together, and a valid CurrentStopWorklistSnapshot example carries the new value while a misspelled and a lowercase spelling of it are refused."
   ],
   "runtimeRule": "Exact ProtocolVersion and exact materialized ProtocolReleaseIdentity required; no negotiation.",
   "optionalFieldPolicy": "No optional payload fields exist in this candidate. Future optional fields require proof that omission and ignore preserve safety and business conclusions.",
