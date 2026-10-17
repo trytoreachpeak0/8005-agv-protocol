@@ -1,0 +1,56 @@
+{
+  "vectorId": "CV-CURRENT-STOP-DEPARTURE-STALE-REVISION-ACCEPTED",
+  "orderedExpectedMessages": [
+    "CurrentStopDepartureRequested",
+    "DurableAck",
+    "CurrentStopDepartureResult",
+    "DurableAck",
+    "PreDepartureSafetyCheck",
+    "PreDepartureSafetyCheckResult"
+  ],
+  "persistenceCheckpoints": [
+    "departure-request-journaled-before-send",
+    "departure-request-durable-before-ack",
+    "departure-decision-durable-before-result",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "departure-refused-on-stale-revision-without-material-change",
+    "stale-revision-exception-skips-remaining-checks",
+    "stale-revision-exception-at-staging-pickup-stop",
+    "departure-bypasses-correction-gate-or-safety-check"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "ACCEPT_STALE_REVISION_WITHOUT_MATERIAL_CHANGE_AT_MACHINE_PICKUP_STOP",
+      "DECIDE_STALE_REVISION_WITHOUT_MATERIAL_CHANGE_BY_REMAINING_CHECKS",
+      "REQUIRE_REQUESTED_REVISION_LOWER_WITHIN_CURRENT_STOP_AT_CURRENT_STATION",
+      "REQUIRE_OPERATION_SESSION_MATCH_WHEN_REQUEST_CARRIES_ONE",
+      "REQUIRE_EMPTY_ITEMS_IN_EVERY_WORKLIST_FROM_REQUESTED_TO_CURRENT_REVISION",
+      "REQUIRE_NO_LOAD_SETTLED_NO_LOADED_BASKET_LEFT_AND_NO_CORRECTION_SINCE_REQUESTED_REVISION",
+      "TIME_LOAD_SETTLEMENT_AND_CORRECTION_BY_SERVER_RECEIPT",
+      "NEVER_APPLY_STALE_REVISION_EXCEPTION_AT_STAGING_PICKUP_STOP",
+      "RETURN_CURRENT_WORKLIST_REVISION",
+      "DEPART_THROUGH_CORRECTION_GATE_AND_SAFETY_CHECK",
+      "AUDIT_DEPARTURE_OPERATOR"
+    ],
+    "onboardHmi": [
+      "ECHO_DISPLAYED_WORKLIST_IN_REQUEST",
+      "JOURNAL_DEPARTURE_REQUEST_BEFORE_SENDING",
+      "ADOPT_ACCEPTED_DEPARTURE_ON_STALE_REVISION",
+      "NEVER_DEPART_LOCALLY"
+    ]
+  },
+  "finalState": {
+    "readiness": "READY",
+    "business": "STALE_REVISION_WITHOUT_MATERIAL_CHANGE_DEPARTURE_ACCEPTED_EN_ROUTE_TO_DROPOFF",
+    "physical": "LOADED_SLOTS_OCCUPIED_LOCKED_RESET"
+  },
+  "stableErrorCode": null
+}
