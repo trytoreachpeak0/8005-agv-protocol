@@ -56,3 +56,13 @@ Source: CP-0013 (program#188) section 3, protocol#15. It replaces the charging s
 - The journey goes on to its existing dropoff stops and carries no charging stop: `UpcomingStopPlanSnapshot` gains no `CHARGER` leg, `activePurpose` stays `TRANSPORT` and `chargingCycleState` stays `NOT_CHARGING` while the journey lasts. `batteryState` may read `MANDATORY_CHARGE` meanwhile; the journey is not interrupted to charge. Every departure on it is a `PreDepartureSafetyCheck` with `checkPurpose` `DEPARTURE`, as on any transport journey.
 - Once the journey ends the existing charging allocation takes the vehicle, as it takes any vehicle without a purpose below the mandatory charge line: `activePurpose` becomes `CHARGING`, its moves are `NON_BUSINESS_MOVE` checks, and `chargingCycleState` runs from there. The vehicle does not return to the staging station before it charges.
 - Without cargo the journey closes instead, `loadingPhase` is `null`, and the existing charging allocation takes the vehicle, so `closedReason` `CHARGING_REQUIRED` appears only with cargo on board.
+
+## `TransportTaskType` `WIRE_TO_FULL_INSPECTION`
+
+Source: the user's decisions 6 and 7 of 2026-10-16 in program#195, protocol#21.
+
+- `WIRE_TO_FULL_INSPECTION` is the seventh transport task type: lots go from wire bonding machines to the full-inspection area. Its destination is the area, a public station, not a machine in it. The full-inspection area is a different place from the `WIRE_TO_GATE` quality gate.
+- It is appended to `TransportTaskType`, the closed enum of `CurrentStopWorklistSnapshot.items[].workType`, the one message field that carries a task type. The six released values keep their order and meaning.
+- Appending a value to a closed enum is breaking (`docs/release-governance.md`): a 4.0.0 implementation rejects a message carrying `WIRE_TO_FULL_INSPECTION` as `PROTOCOL_SCHEMA_INVALID`, so both implementations move to 5.0.0 together, in one package, and no 4.0.0 peer is ever connected to a 5.0.0 one. The exact `ProtocolReleaseIdentity` check already refuses such a pair at the handshake.
+- `PublicStationFunction` is unchanged: it gains no `FULL_INSPECTION`. Specification 5.3 no longer maintains that field: the control server sends `publicStationFunction` as `null` on every leg except a staging pickup leg, where it sends `WIRE_STAGING` (control-server#713), and nothing sends `FULL_INSPECTION`. The user decided on 2026-10-16 not to add it.
+- The value is spelled exactly `WIRE_TO_FULL_INSPECTION`, as the MES `TASK_TYPE` literal; a misspelled or lowercase spelling is schema-invalid, like any value outside the enum.
