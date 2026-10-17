@@ -7,7 +7,8 @@
   "classification": "BREAKING_PROTOCOL_VERSION_INCREASE",
   "wireCompatibility": "INCOMPATIBLE_EXACT_IDENTITY_REQUIRED",
   "changeSummary": [
-    "TransportTaskType, the closed enum of CurrentStopWorklistSnapshot.items[].workType, gains WIRE_TO_FULL_INSPECTION after its six released values for transport from wire bonding machines to the full-inspection area while PublicStationFunction stays unchanged, a 4.0.0 implementation rejects a message carrying the new value as schema-invalid, so both implementations move to 5.0.0 together, and a valid CurrentStopWorklistSnapshot example carries the new value while a misspelled and a lowercase spelling of it are refused."
+    "TransportTaskType, the closed enum of CurrentStopWorklistSnapshot.items[].workType, gains WIRE_TO_FULL_INSPECTION after its six released values for transport from wire bonding machines to the full-inspection area while PublicStationFunction stays unchanged, a 4.0.0 implementation rejects a message carrying the new value as schema-invalid, so both implementations move to 5.0.0 together, and a valid CurrentStopWorklistSnapshot example carries the new value while a misspelled and a lowercase spelling of it are refused.",
+    "A departure request at a machine pickup stop with a stale worklistRevision but no material change since that revision is no longer refused as WORKLIST_REVISION_STALE but decided by the remaining checks, a new vector shows it ACCEPTED while the stale-revision vector is confined to a material change, and the journey plan vector and its slice now speak of the remaining plan of at most nine legs, with no schema, message or error code changed."
   ],
   "runtimeRule": "Exact ProtocolVersion and exact materialized ProtocolReleaseIdentity required; no negotiation.",
   "optionalFieldPolicy": "No optional payload fields exist in this candidate. Future optional fields require proof that omission and ignore preserve safety and business conclusions.",

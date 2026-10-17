@@ -18,12 +18,12 @@
     "duplicate-business-commit",
     "ready-before-reconciliation",
     "unknown-as-success",
-    "departure-on-stale-worklist-revision",
+    "departure-on-stale-worklist-revision-with-material-change",
     "business-state-changed-by-rejected-departure"
   ],
   "productAssertions": {
     "controlServer": [
-      "REJECT_DEPARTURE_ON_STALE_WORKLIST_REVISION",
+      "REJECT_DEPARTURE_ON_STALE_WORKLIST_REVISION_WITH_MATERIAL_CHANGE",
       "RETURN_CURRENT_WORKLIST_REVISION",
       "CHANGE_NOTHING_ON_REJECTED_DEPARTURE"
     ],

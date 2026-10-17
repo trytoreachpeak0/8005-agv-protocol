@@ -27,7 +27,7 @@
       "CATEGORISE_EVERY_STOP_PURPOSE"
     ],
     "onboardHmi": [
-      "DISPLAY_FULL_JOURNEY_PLAN",
+      "DISPLAY_REMAINING_JOURNEY_PLAN",
       "NEVER_REORDER_LEGS_LOCALLY"
     ]
   },
