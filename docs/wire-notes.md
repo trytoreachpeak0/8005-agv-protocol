@@ -72,6 +72,6 @@ Source: the user's decisions 6 and 7 of 2026-10-16 in program#195, protocol#21.
 
 Source: the user's decision of 2026-10-17, CP-0015 (program#201) revision of REQ-0196, protocol#23. No schema changes.
 
-- The plan holds the vehicle's current stop and the stops after it that are not yet complete. Stops already passed are not sent, and the onboard HMI shows none; this holds for the plan of a transport journey.
-- The one exception is a clearance move off a charger: while the vehicle drives from the suspended charger to a waiting point, the plan keeps the `CHARGER` leg it left, as `COMPLETED`, ahead of the waiting point leg. The onboard HMI names the charger of the clearance from that leg (control-server#406), and the clearance goes on after the vehicle has left the charger.
+- The plan holds the vehicle's current stop and the stops after it that are not yet complete. Stops already passed are not sent, and the onboard HMI shows none. This holds for every plan except one, the clearance move below.
+- The one exception is a clearance move off a charger, the plan sent while `activePurpose` is `CLEARING_MAINTENANCE`: while the vehicle drives from the suspended charger to a waiting point, the plan keeps the `CHARGER` leg it left, as `COMPLETED`, ahead of the waiting point leg. The onboard HMI names the charger of the clearance from that leg (control-server#406), and the clearance goes on after the vehicle has left the charger. No other plan sends a stop already passed.
 - At most nine legs remain, as `legs` `maxItems` 9 has always allowed.
