@@ -1,0 +1,57 @@
+{
+  "vectorId": "CV-REMAINING-BASKETS-SKIP-AUTHORIZED",
+  "orderedExpectedMessages": [
+    "RemainingBasketsSkipRequested",
+    "DurableAck",
+    "RemainingBasketsSkipResult",
+    "DurableAck",
+    "OperationResult",
+    "DurableAck"
+  ],
+  "persistenceCheckpoints": [
+    "skip-request-journaled-before-send",
+    "skip-request-durable-before-ack",
+    "skip-decision-durable-before-result",
+    "skip-result-journaled-before-ending-the-operation",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "remaining-baskets-skipped-without-authorization",
+    "slot-opened-while-skip-pending",
+    "skip-settled-as-cancellation-or-suppression",
+    "manual-transport-alarm-on-skip",
+    "skipped-slots-kept-reserved",
+    "loaded-slot-cleared-on-skip"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "AUTHORIZE_SKIP_ONLY_WITH_AT_LEAST_ONE_LOADED_AND_ONE_REMAINING_SLOT",
+      "AUTHORIZE_SKIP_ONLY_WITH_ALL_DOORS_LOCKED_OUTPUTS_RESET_AND_NO_UNKNOWN",
+      "COMMIT_AUTHORIZED_LOADED_SLOTS_AS_ONE_LOAD_BATCH",
+      "RELEASE_REMAINING_SLOTS_AND_RESERVATION_ON_SETTLEMENT",
+      "UNLOAD_ONLY_THE_AUTHORIZED_LOADED_SLOTS",
+      "COMPLETE_DEMAND_AS_NORMAL_DELIVERY_WITHOUT_SUPPRESSION_OR_ALARM",
+      "AUDIT_SKIP_N_TO_K_WITH_OPERATOR_WHEN_KNOWN"
+    ],
+    "onboardHmi": [
+      "OFFER_SKIP_ONLY_WHILE_ITS_CONDITIONS_HOLD",
+      "JOURNAL_SKIP_REQUEST_BEFORE_SENDING",
+      "NEVER_OPEN_A_SLOT_WHILE_SKIP_PENDING",
+      "END_OPERATION_ONLY_ON_AUTHORIZED_SKIP",
+      "REPORT_AUTHORIZED_SLOTS_COMPLETED_AND_REMAINING_SLOTS_SKIPPED",
+      "NEVER_ACT_ON_AN_AUTHORIZATION_AFTER_THE_OPERATION_ENDED_ANOTHER_WAY"
+    ]
+  },
+  "finalState": {
+    "readiness": "READY",
+    "business": "DEMAND_LOADED_WITH_AUTHORIZED_BASKETS_REMAINING_SLOTS_RELEASED",
+    "physical": "LOADED_SLOTS_OCCUPIED_REMAINING_SLOTS_EMPTY_ALL_LOCKED_RESET"
+  },
+  "stableErrorCode": "REMAINING_BASKETS_SKIPPED"
+}

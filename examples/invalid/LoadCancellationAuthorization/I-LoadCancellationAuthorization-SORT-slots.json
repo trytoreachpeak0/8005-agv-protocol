@@ -1,9 +1,9 @@
 {
   "vectorId": "I-LoadCancellationAuthorization-SORT-slots",
   "message": {
-    "protocolVersion": 6,
+    "protocolVersion": 7,
     "profileId": "AGV_FULL_PRODUCT",
-    "protocolReleaseVersion": "5.0.0",
+    "protocolReleaseVersion": "6.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "LoadCancellationAuthorization",
     "messageId": "00000000-0000-4000-8000-000000000063",
@@ -20,11 +20,7 @@
         2,
         1
       ],
-      "problem": {
-        "reasonCode": "ACTION_NOT_ALLOWED_IN_STATE",
-        "fieldPath": "fieldPath-test",
-        "displayMessage": "displayMessage-test"
-      }
+      "problem": null
     }
   },
   "expected": {

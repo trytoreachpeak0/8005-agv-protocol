@@ -18,15 +18,20 @@
     "expanded-active-unlock-set",
     "duplicate-business-commit",
     "ready-before-reconciliation",
-    "unknown-as-success"
+    "unknown-as-success",
+    "business-cancellation-opened-a-slot",
+    "cancellation-authorized-after-a-basket-is-loaded"
   ],
   "productAssertions": {
     "controlServer": [
       "AUTHORIZE_CANCELLATION_EXPLICITLY",
+      "AUTHORIZE_ONLY_WITH_EVERY_TARGET_SLOT_EMPTY_LOCKED_AND_RESET",
+      "AUTHORIZE_WITH_AN_EMPTY_SLOT_SCOPE",
       "RECONCILE_EMPTY_FINAL_STATE"
     ],
     "onboardHmi": [
-      "PROVE_ALL_SLOTS_EMPTY",
+      "NEVER_OPEN_A_SLOT_FOR_A_CANCELLATION",
+      "REPORT_ALL_EMPTY_WITHOUT_SLOT_IO",
       "NEVER_CANCEL_UNILATERALLY"
     ]
   },

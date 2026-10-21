@@ -1,0 +1,39 @@
+{
+  "vectorId": "CV-LOAD-CANCELLATION-BASKET-LOADED",
+  "orderedExpectedMessages": [
+    "LoadCancellationStartRequested",
+    "LoadCancellationAuthorization"
+  ],
+  "persistenceCheckpoints": [
+    "cancellation-decision-durable-before-authorization"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "cancellation-authorized-after-a-basket-is-loaded",
+    "loaded-slot-cleared-by-business-cancellation",
+    "business-state-changed-by-rejected-cancellation"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "REJECT_CANCELLATION_ONCE_A_BASKET_IS_LOADED",
+      "REJECT_CANCELLATION_WITH_A_DOOR_NOT_PROVEN_LOCKED_OR_OUTPUT_NOT_RESET",
+      "CHANGE_NOTHING_ON_REJECTED_CANCELLATION"
+    ],
+    "onboardHmi": [
+      "NEVER_OFFER_CANCELLATION_ONCE_A_BASKET_IS_LOADED",
+      "DISPLAY_CANCELLATION_REJECTION_REASON",
+      "OFFER_REMAINING_BASKETS_SKIP_INSTEAD"
+    ]
+  },
+  "finalState": {
+    "readiness": "UNCHANGED",
+    "business": "UNCHANGED_CANCELLATION_REJECTED",
+    "physical": "UNCHANGED"
+  },
+  "stableErrorCode": "LOAD_CANCELLATION_BASKET_LOADED"
+}

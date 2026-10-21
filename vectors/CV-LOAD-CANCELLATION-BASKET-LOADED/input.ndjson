@@ -1,0 +1,2 @@
+{"action":"send","atMs":0,"messageType":"LoadCancellationStartRequested","step":1,"virtualTimeOnly":true}
+{"action":"expect","atMs":100,"messageType":"LoadCancellationAuthorization","step":2,"virtualTimeOnly":true}
