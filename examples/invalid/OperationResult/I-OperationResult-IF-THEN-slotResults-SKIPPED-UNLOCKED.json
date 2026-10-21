@@ -32,14 +32,13 @@
           "lockState": "UNLOCKED",
           "unlockOutputState": "RESET",
           "reasonCodes": [
-            "REMAINING_BASKET_SKIPPED"
+            "REMAINING_BASKETS_SKIPPED"
           ]
         }
       ],
       "observedAt": "2026-08-25T09:00:00Z",
       "journalCheckpoint": "RESULT_RECORDED",
-      "resultContentSha256": "0000000000000000000000000000000000000000000000000000000000000000",
-      "remainingBasketsSkipRequestId": "00000000-0000-4000-8000-000000000048"
+      "resultContentSha256": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   },
   "expected": {

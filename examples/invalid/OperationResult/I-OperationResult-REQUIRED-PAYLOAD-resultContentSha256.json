@@ -29,8 +29,7 @@
         }
       ],
       "observedAt": "2026-08-25T09:00:00Z",
-      "journalCheckpoint": "RESULT_RECORDED",
-      "remainingBasketsSkipRequestId": null
+      "journalCheckpoint": "RESULT_RECORDED"
     }
   },
   "expected": {

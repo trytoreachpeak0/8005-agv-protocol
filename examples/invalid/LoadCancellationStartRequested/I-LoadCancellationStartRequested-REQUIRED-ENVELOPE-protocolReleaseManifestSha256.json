@@ -5,7 +5,7 @@
     "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseVersion": "6.0.0",
     "messageType": "LoadCancellationStartRequested",
-    "messageId": "00000000-0000-4000-8000-000000000062",
+    "messageId": "00000000-0000-4000-8000-000000000061",
     "correlationId": null,
     "agvId": "AGV-8005-01",
     "sessionGeneration": 1,

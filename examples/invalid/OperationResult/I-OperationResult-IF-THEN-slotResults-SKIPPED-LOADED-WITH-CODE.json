@@ -1,5 +1,5 @@
 {
-  "vectorId": "I-OperationResult-IF-THEN-remainingBasketsSkipRequestId-COMPLETED",
+  "vectorId": "I-OperationResult-IF-THEN-slotResults-SKIPPED-LOADED-WITH-CODE",
   "message": {
     "protocolVersion": 7,
     "profileId": "AGV_FULL_PRODUCT",
@@ -15,28 +15,37 @@
       "demandId": "00000000-0000-4000-8000-000000000001",
       "slotOperationAttemptId": "00000000-0000-4000-8000-000000000001",
       "operationType": "LOAD",
-      "overallOutcome": "COMPLETED",
+      "overallOutcome": "COMPLETED_REMAINING_SKIPPED",
       "slotResults": [
         {
           "slotNo": 1,
           "outcome": "COMPLETED",
+          "finalPhysicalState": "OCCUPIED",
+          "lockState": "LOCKED",
+          "unlockOutputState": "RESET",
+          "reasonCodes": [
+            "REMAINING_BASKETS_SKIPPED"
+          ]
+        },
+        {
+          "slotNo": 2,
+          "outcome": "NOT_STARTED",
           "finalPhysicalState": "EMPTY",
           "lockState": "LOCKED",
           "unlockOutputState": "RESET",
           "reasonCodes": [
-            "ACTION_NOT_ALLOWED_IN_STATE"
+            "REMAINING_BASKETS_SKIPPED"
           ]
         }
       ],
       "observedAt": "2026-08-25T09:00:00Z",
       "journalCheckpoint": "RESULT_RECORDED",
-      "resultContentSha256": "0000000000000000000000000000000000000000000000000000000000000000",
-      "remainingBasketsSkipRequestId": "00000000-0000-4000-8000-000000000048"
+      "resultContentSha256": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   },
   "expected": {
     "code": "PROTOCOL_SCHEMA_INVALID",
-    "fieldPath": "/payload/remainingBasketsSkipRequestId",
+    "fieldPath": "/payload/slotResults",
     "rule": "if-then"
   }
 }

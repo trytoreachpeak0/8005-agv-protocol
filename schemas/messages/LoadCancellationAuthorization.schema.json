@@ -102,7 +102,31 @@
         "slots",
         "problem"
       ],
-      "additionalProperties": false
+      "additionalProperties": false,
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "REJECTED"
+          }
+        },
+        "required": [
+          "decision"
+        ]
+      },
+      "then": {
+        "properties": {
+          "problem": {
+            "type": "object"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "slots": {
+            "maxItems": 0
+          }
+        }
+      }
     }
   },
   "required": [

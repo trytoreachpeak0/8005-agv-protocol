@@ -5,7 +5,7 @@
     "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseVersion": "6.0.0",
     "messageType": "FaultCargoRecoveryCommand",
-    "messageId": "00000000-0000-4000-8000-000000000096",
+    "messageId": "00000000-0000-4000-8000-000000000095",
     "correlationId": null,
     "agvId": "AGV-8005-01",
     "sessionGeneration": 1,

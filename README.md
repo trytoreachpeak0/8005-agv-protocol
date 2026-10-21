@@ -16,9 +16,9 @@ The operator may ask to leave the remaining baskets of a multi-basket load
 with the new RELIABLE pair `RemainingBasketsSkipRequested` and
 `RemainingBasketsSkipResult`, and only the control server's authorization lets
 the vehicle end the load short; `OperationResult` gains the outcome
-`COMPLETED_REMAINING_SKIPPED` and the field `remainingBasketsSkipRequestId`
-that names the authorization, and three error codes are appended, one of them
-refusing a load cancellation once a basket is loaded. A `5.0.0`
+`COMPLETED_REMAINING_SKIPPED`, `LoadCancellationAuthorization` authorizes
+only an empty scope, and three error codes are appended, one of them refusing
+a load cancellation once a basket is loaded. A `5.0.0`
 implementation rejects all of this, so both implementations move to `6.0.0`
 together. The semantics are stated in [`docs/wire-notes.md`](docs/wire-notes.md).
 See [`compatibility/report.json`](compatibility/report.json) for the full list.

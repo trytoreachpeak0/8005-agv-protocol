@@ -7,7 +7,7 @@
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "OperationResult",
     "messageId": "00000000-0000-4000-8000-000000000047",
-    "correlationId": "00000000-0000-4000-8000-000000000049",
+    "correlationId": "00000000-0000-4000-8000-000000000048",
     "agvId": "AGV-8005-01",
     "sessionGeneration": 1,
     "sentAt": "2026-08-25T09:00:00Z",
@@ -30,8 +30,7 @@
       ],
       "observedAt": "2026-08-25T09:00:00Z",
       "journalCheckpoint": "RESULT_RECORDED",
-      "resultContentSha256": "0000000000000000000000000000000000000000000000000000000000000000",
-      "remainingBasketsSkipRequestId": null
+      "resultContentSha256": "0000000000000000000000000000000000000000000000000000000000000000"
     }
   },
   "expected": {

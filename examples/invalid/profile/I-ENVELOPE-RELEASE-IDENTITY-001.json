@@ -6,7 +6,7 @@
     "protocolReleaseVersion": "6.0.0",
     "protocolReleaseManifestSha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
     "messageType": "SessionReadiness",
-    "messageId": "00000000-0000-4000-8000-000000000165",
+    "messageId": "00000000-0000-4000-8000-000000000164",
     "correlationId": null,
     "agvId": "AGV-8005-01",
     "sessionGeneration": 1,

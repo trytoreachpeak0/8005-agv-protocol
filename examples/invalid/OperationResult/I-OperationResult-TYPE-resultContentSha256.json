@@ -30,8 +30,7 @@
       ],
       "observedAt": "2026-08-25T09:00:00Z",
       "journalCheckpoint": "RESULT_RECORDED",
-      "resultContentSha256": 123,
-      "remainingBasketsSkipRequestId": null
+      "resultContentSha256": 123
     }
   },
   "expected": {

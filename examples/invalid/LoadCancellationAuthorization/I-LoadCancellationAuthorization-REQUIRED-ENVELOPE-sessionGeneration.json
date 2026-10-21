@@ -6,8 +6,8 @@
     "protocolReleaseVersion": "6.0.0",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "LoadCancellationAuthorization",
-    "messageId": "00000000-0000-4000-8000-000000000064",
-    "correlationId": "00000000-0000-4000-8000-000000000065",
+    "messageId": "00000000-0000-4000-8000-000000000063",
+    "correlationId": "00000000-0000-4000-8000-000000000064",
     "agvId": "AGV-8005-01",
     "sentAt": "2026-08-25T09:00:00Z",
     "payload": {
@@ -15,14 +15,8 @@
       "decision": "AUTHORIZED",
       "demandId": "00000000-0000-4000-8000-000000000001",
       "slotOperationAttemptId": "00000000-0000-4000-8000-000000000001",
-      "slots": [
-        1
-      ],
-      "problem": {
-        "reasonCode": "ACTION_NOT_ALLOWED_IN_STATE",
-        "fieldPath": "fieldPath-test",
-        "displayMessage": "displayMessage-test"
-      }
+      "slots": [],
+      "problem": null
     }
   },
   "expected": {
