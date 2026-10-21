@@ -98,6 +98,25 @@
         "observedAt"
       ],
       "additionalProperties": false,
+      "allOf": [
+        {
+          "properties": {
+            "slotResults": {
+              "items": {
+                "properties": {
+                  "reasonCodes": {
+                    "not": {
+                      "contains": {
+                        "const": "REMAINING_BASKETS_SKIPPED"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
       "if": {
         "properties": {
           "overallOutcome": {

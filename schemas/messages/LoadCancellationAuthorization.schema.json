@@ -80,7 +80,6 @@
             "$ref": "https://schemas.8005-agv.local/agv-full-product/v7/common/types.schema.json#/$defs/SlotNo"
           },
           "maxItems": 8,
-          "uniqueItems": true,
           "x-sortedAscending": true
         },
         "problem": {
@@ -117,11 +116,17 @@
         "properties": {
           "problem": {
             "type": "object"
+          },
+          "slots": {
+            "maxItems": 0
           }
         }
       },
       "else": {
         "properties": {
+          "problem": {
+            "type": "null"
+          },
           "slots": {
             "maxItems": 0
           }

@@ -1,5 +1,5 @@
 {
-  "vectorId": "I-LoadCancellationAuthorization-UNIQUE-slots",
+  "vectorId": "I-LoadCancellationAuthorization-IF-THEN-slots-REJECTED",
   "message": {
     "protocolVersion": 7,
     "profileId": "AGV_FULL_PRODUCT",
@@ -13,19 +13,22 @@
     "sentAt": "2026-08-25T09:00:00Z",
     "payload": {
       "cancellationId": "00000000-0000-4000-8000-000000000001",
-      "decision": "AUTHORIZED",
+      "decision": "REJECTED",
       "demandId": "00000000-0000-4000-8000-000000000001",
       "slotOperationAttemptId": "00000000-0000-4000-8000-000000000001",
       "slots": [
-        1,
         1
       ],
-      "problem": null
+      "problem": {
+        "reasonCode": "LOAD_CANCELLATION_BASKET_LOADED",
+        "fieldPath": null,
+        "displayMessage": null
+      }
     }
   },
   "expected": {
     "code": "PROTOCOL_SCHEMA_INVALID",
     "fieldPath": "/payload/slots",
-    "rule": "uniqueItems"
+    "rule": "if-then"
   }
 }

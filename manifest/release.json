@@ -7,9 +7,9 @@
   "generatedAt": "2026-10-21T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "ad4b00043311e43f1ad94afa221e681bf9774ec6fedc38e11aba97fad8f7cd5f",
-  "schemaBundleSha256": "876ddd3d6ceaadc14f892a9b12ec9e98179e1191e6acc7d478d3977659eaa290",
-  "examplesSha256": "226e3094f24e95bf7dc5dffd922d8d76b80d3c626f6d136b5d59c2923039c602",
+  "fileTableSha256": "f2ce2ff411dd2f1d62eaec1a0a443e1014b6493c81b371c74c14393bb7913c01",
+  "schemaBundleSha256": "0dab682174e2d3e4f931b3c0e87c7fa55bd2cb3395356d7845e595d8bfb1c795",
+  "examplesSha256": "e6545814eada4eb787f2a6f311c655b33b541034eb01169369a2c846d41d3823",
   "vectorsSha256": "e06ca9ea1d4445cd7d70fc190b0cf606a8e33cb7760d848c0270df24e2594c91",
   "errorRegistrySha256": "fdbc3ccead691bdfc2acfdef323c9e60042be746fcd5e1e7242b8e89db09123b",
   "messages": {
@@ -1125,8 +1125,8 @@
     {
       "path": "docs/candidate-limitations.md",
       "role": "docs",
-      "bytes": 2482,
-      "sha256": "edda05fcb81bcf07e6efe65083cd2ed42b770df7d573d361717e9aace381f8cf"
+      "bytes": 2678,
+      "sha256": "015c7500ac26d83e79a8cdd06056fcf8be594f28b5258fa796b6c9a167d78113"
     },
     {
       "path": "docs/release-governance.md",
@@ -1137,8 +1137,8 @@
     {
       "path": "docs/wire-notes.md",
       "role": "docs",
-      "bytes": 24608,
-      "sha256": "4bbb3e82b04012b1e0d61b9f3e32efc59f44adee777339e87533132f492453e6"
+      "bytes": 24715,
+      "sha256": "91012d9dd259b2545aac79b35fd63555a914ae5b2274b54ecc020dc4d06f1833"
     },
     {
       "path": "errors/error-codes.json",
@@ -3163,6 +3163,12 @@
       "sha256": "eb23c02cc7bf18ac4744fe53bcfa33ac2723a5857868b8c1e7f7d3499d689a09"
     },
     {
+      "path": "examples/invalid/FaultCargoRecoveryResult/I-FaultCargoRecoveryResult-NOT-slotResults-REMAINING_BASKETS_SKIPPED.json",
+      "role": "examples",
+      "bytes": 1479,
+      "sha256": "9eebbdd51e2274f2006f14e0f7009d06cedaee2d3cfb8947def736406028c79a"
+    },
+    {
       "path": "examples/invalid/FaultCargoRecoveryResult/I-FaultCargoRecoveryResult-REQUIRED-ENVELOPE-agvId.json",
       "role": "examples",
       "bytes": 1426,
@@ -4339,6 +4345,12 @@
       "sha256": "9c32e8044c2cb6e8cc021cca60d2af8fe9164d5db1d18426ab9a6e15352569d3"
     },
     {
+      "path": "examples/invalid/LoadCancellationAuthorization/I-LoadCancellationAuthorization-IF-THEN-problem-AUTHORIZED.json",
+      "role": "examples",
+      "bytes": 1099,
+      "sha256": "e901313f1c30d0ed170f9532d1b9cfc41baad78bcd4eeefc53a589791d012b6e"
+    },
+    {
       "path": "examples/invalid/LoadCancellationAuthorization/I-LoadCancellationAuthorization-IF-THEN-problem-REJECTED.json",
       "role": "examples",
       "bytes": 975,
@@ -4349,6 +4361,12 @@
       "role": "examples",
       "bytes": 992,
       "sha256": "6cd8decde7a586bf62c7a71634e3a0785022b8315e530cba97cafdbb82e3e083"
+    },
+    {
+      "path": "examples/invalid/LoadCancellationAuthorization/I-LoadCancellationAuthorization-IF-THEN-slots-REJECTED.json",
+      "role": "examples",
+      "bytes": 1108,
+      "sha256": "44961400f14d831f75600794102a02ac03db1208a530a8917dc5c8980626047c"
     },
     {
       "path": "examples/invalid/LoadCancellationAuthorization/I-LoadCancellationAuthorization-REQUIRED-ENVELOPE-agvId.json",
@@ -4495,12 +4513,6 @@
       "sha256": "62abc6771075a8e09c1047f1242c29c6a9729109e6cb595dc1c3e20817b51085"
     },
     {
-      "path": "examples/invalid/LoadCancellationAuthorization/I-LoadCancellationAuthorization-UNIQUE-slots.json",
-      "role": "examples",
-      "bytes": 995,
-      "sha256": "a455c079f15a72e917cc95f9d195ecb5e9afa1816b10bb3d71f9b5f065cec22d"
-    },
-    {
       "path": "examples/invalid/LoadCancellationResult/I-LoadCancellationResult-CORRELATION-001.json",
       "role": "examples",
       "bytes": 1272,
@@ -4523,6 +4535,12 @@
       "role": "examples",
       "bytes": 1289,
       "sha256": "949ddc248974e168fbd9b1e551a9ff1f68de903bfe409a76e5ee5479dbf3da60"
+    },
+    {
+      "path": "examples/invalid/LoadCancellationResult/I-LoadCancellationResult-NOT-slotResults-REMAINING_BASKETS_SKIPPED.json",
+      "role": "examples",
+      "bytes": 1255,
+      "sha256": "6689e8e52cc009394eff0b49b22663d200b697d0b04a06561da1af3208905e44"
     },
     {
       "path": "examples/invalid/LoadCancellationResult/I-LoadCancellationResult-REQUIRED-ENVELOPE-agvId.json",
@@ -5221,6 +5239,12 @@
       "sha256": "7064a7145cb4b48bff88be069f3dfd2cfcc42671a72b354fdc67b57df35e2436"
     },
     {
+      "path": "examples/invalid/LoadCompensationResult/I-LoadCompensationResult-NOT-slotResults-REMAINING_BASKETS_SKIPPED.json",
+      "role": "examples",
+      "bytes": 1257,
+      "sha256": "6591c442dcc037abe408e88d5cc0e1b226b9ac6aa7d13db3e11a6914a09b9d4b"
+    },
+    {
       "path": "examples/invalid/LoadCompensationResult/I-LoadCompensationResult-REQUIRED-ENVELOPE-agvId.json",
       "role": "examples",
       "bytes": 1204,
@@ -5789,6 +5813,12 @@
       "role": "examples",
       "bytes": 1248,
       "sha256": "6526081e358e08d8680bbd479112a2224b03fbe0a05d93e44d4d6f4b8ff8991b"
+    },
+    {
+      "path": "examples/invalid/LoadCorrectionResult/I-LoadCorrectionResult-NOT-slotResults-REMAINING_BASKETS_SKIPPED.json",
+      "role": "examples",
+      "bytes": 1249,
+      "sha256": "45a9842e90a74a28ef2849c48a0aab0884e619ceb665dd4d5473655208241bb8"
     },
     {
       "path": "examples/invalid/LoadCorrectionResult/I-LoadCorrectionResult-REQUIRED-ENVELOPE-agvId.json",
@@ -12429,8 +12459,8 @@
     {
       "path": "schemas/messages/FaultCargoRecoveryResult.schema.json",
       "role": "schemas",
-      "bytes": 3416,
-      "sha256": "03d4622c939e61df1f20651ace11f383fff552c0e95ee871eb2f49fbd0c1ba33"
+      "bytes": 3861,
+      "sha256": "fb54c2fafdd04008bef38e1430d4ee9ca7dbb28be49fc4277ad165657d4db699"
     },
     {
       "path": "schemas/messages/ForcedMechanicalRecoveryCommand.schema.json",
@@ -12471,14 +12501,14 @@
     {
       "path": "schemas/messages/LoadCancellationAuthorization.schema.json",
       "role": "schemas",
-      "bytes": 3790,
-      "sha256": "0606f432d55d42c15df0c094bc31a37b67a9de810bbd46fa689bf69c67e604c0"
+      "bytes": 3882,
+      "sha256": "63156454ed08cb273dab4877b6081051f6a5cc6a18434a1b5a1e02ef5a023215"
     },
     {
       "path": "schemas/messages/LoadCancellationResult.schema.json",
       "role": "schemas",
-      "bytes": 3733,
-      "sha256": "f7bf7405128ec313faa0f3c9b2bf9bc8597ee0bfd92b833a088bea0342b0c5d5"
+      "bytes": 4178,
+      "sha256": "212435e67ceb3b2955434c0e09f1f8c903a282770e1fa2acc9564ddcb77bbf24"
     },
     {
       "path": "schemas/messages/LoadCancellationStartRequested.schema.json",
@@ -12507,8 +12537,8 @@
     {
       "path": "schemas/messages/LoadCompensationResult.schema.json",
       "role": "schemas",
-      "bytes": 3614,
-      "sha256": "c1b88e1bf7d586da22850f8772abc2b8c13c18c90012b1798e2f32c725181156"
+      "bytes": 4059,
+      "sha256": "391c4c4e2da9f432610dbed3e5db8db8b9d560c4a6fa9057b37b2ea29a3f1d81"
     },
     {
       "path": "schemas/messages/LoadCorrectionCommand.schema.json",
@@ -12531,8 +12561,8 @@
     {
       "path": "schemas/messages/LoadCorrectionResult.schema.json",
       "role": "schemas",
-      "bytes": 3054,
-      "sha256": "502a30f2bbb115bf24711b62d4d30774250c1176f136ca7227a51178c6be19ea"
+      "bytes": 3499,
+      "sha256": "549bff154bd06ae1ef8b69072b09b147fc7006778f63376764b53f89ac1081ae"
     },
     {
       "path": "schemas/messages/ManualChargingReturnToServiceRequested.schema.json",
