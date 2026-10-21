@@ -1,0 +1,44 @@
+{
+  "vectorId": "CV-REMAINING-BASKETS-SKIP-REJECTED",
+  "orderedExpectedMessages": [
+    "RemainingBasketsSkipRequested",
+    "DurableAck",
+    "RemainingBasketsSkipResult",
+    "DurableAck"
+  ],
+  "persistenceCheckpoints": [
+    "skip-request-journaled-before-send",
+    "skip-request-durable-before-ack",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "remaining-baskets-skipped-without-authorization",
+    "business-state-changed-by-rejected-skip",
+    "slot-operation-ended-by-rejected-skip"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "REJECT_SKIP_WITH_A_DOOR_NOT_PROVEN_LOCKED_OR_OUTPUT_NOT_RESET",
+      "REJECT_SKIP_WITH_AN_UNKNOWN_SLOT_OR_MANUAL_RECOVERY",
+      "REJECT_SKIP_DURING_CORRECTION_OR_CANCELLATION_OR_AFTER_LOADING_ENDED",
+      "CHANGE_NOTHING_ON_REJECTED_SKIP"
+    ],
+    "onboardHmi": [
+      "DISPLAY_SKIP_REJECTION_REASON",
+      "CONTINUE_LOADING_AFTER_REJECTED_SKIP",
+      "ALLOW_NEW_SKIP_REQUEST_AFTER_REJECTION"
+    ]
+  },
+  "finalState": {
+    "readiness": "UNCHANGED",
+    "business": "UNCHANGED_SKIP_REJECTED_LOADING_CONTINUES",
+    "physical": "UNCHANGED"
+  },
+  "stableErrorCode": "LOCK_NOT_CLOSED"
+}

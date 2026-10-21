@@ -1,11 +1,11 @@
 {
   "vectorId": "I-LoadCorrectionRequested-REQUIRED-ENVELOPE-protocolReleaseVersion",
   "message": {
-    "protocolVersion": 6,
+    "protocolVersion": 7,
     "profileId": "AGV_FULL_PRODUCT",
     "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
     "messageType": "LoadCorrectionRequested",
-    "messageId": "00000000-0000-4000-8000-000000000053",
+    "messageId": "00000000-0000-4000-8000-000000000054",
     "correlationId": null,
     "agvId": "AGV-8005-01",
     "sessionGeneration": 1,

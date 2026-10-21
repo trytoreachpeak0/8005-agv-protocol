@@ -1,0 +1,40 @@
+{
+  "vectorId": "CV-REMAINING-BASKETS-SKIP-UNAUTHORIZED-RESULT",
+  "orderedExpectedMessages": [
+    "OperationResult",
+    "DurableAck"
+  ],
+  "persistenceCheckpoints": [
+    "durable-before-send",
+    "durable-before-ack",
+    "journal-before-irreversible-io",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "remaining-baskets-skipped-without-authorization",
+    "unauthorized-skip-result-settled-as-completed",
+    "skipped-slots-released-without-authorization"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "NEVER_SETTLE_SKIPPED_RESULT_WITHOUT_MATCHING_AUTHORIZATION",
+      "SETTLE_SKIPPED_RESULT_ONLY_ON_THE_AUTHORIZED_LOADED_SLOTS",
+      "BLOCK_JOURNEY_ON_UNRECONCILED_SKIPPED_RESULT"
+    ],
+    "onboardHmi": [
+      "NEVER_REPORT_SKIPPED_RESULT_WITHOUT_AUTHORIZATION"
+    ]
+  },
+  "finalState": {
+    "readiness": "RECOVERY_REQUIRED",
+    "business": "JOURNEY_BLOCKED_DEMAND_NOT_SETTLED",
+    "physical": "AS_REPORTED_BY_UNRECONCILED_RESULT"
+  },
+  "stableErrorCode": null
+}

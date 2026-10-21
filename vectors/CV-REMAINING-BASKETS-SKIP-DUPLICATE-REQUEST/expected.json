@@ -1,0 +1,47 @@
+{
+  "vectorId": "CV-REMAINING-BASKETS-SKIP-DUPLICATE-REQUEST",
+  "orderedExpectedMessages": [
+    "RemainingBasketsSkipRequested",
+    "DurableAck",
+    "RemainingBasketsSkipResult",
+    "DurableAck",
+    "RemainingBasketsSkipRequested",
+    "DurableAck",
+    "RemainingBasketsSkipResult",
+    "DurableAck"
+  ],
+  "persistenceCheckpoints": [
+    "skip-request-journaled-before-send",
+    "skip-request-durable-before-ack",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "second-skip-effect-on-duplicate-request",
+    "conflicting-duplicate-skip-applied",
+    "remaining-baskets-skipped-without-authorization"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "DEDUPLICATE_SKIP_ON_REQUEST_ID",
+      "REPLAY_SAME_SKIP_RESULT",
+      "REJECT_SAME_REQUEST_ID_WITH_DIFFERENT_CONTENT"
+    ],
+    "onboardHmi": [
+      "REUSE_PENDING_SKIP_REQUEST_ID_AFTER_RECONNECT_OR_RESTART",
+      "ADOPT_REPLAYED_SKIP_RESULT",
+      "NEVER_MINT_NEW_REQUEST_ID_FOR_SAME_PRESS"
+    ]
+  },
+  "finalState": {
+    "readiness": "UNCHANGED_OR_SPECIFIED_BY_VECTOR",
+    "business": "AT_MOST_ONE_SKIP_PER_REQUEST_ID",
+    "physical": "NO_UNPROVEN_STATE"
+  },
+  "stableErrorCode": null
+}

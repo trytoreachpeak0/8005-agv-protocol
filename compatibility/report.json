@@ -1,14 +1,13 @@
 {
-  "candidateVersion": "5.0.0",
-  "protocolVersion": 6,
+  "candidateVersion": "6.0.0",
+  "protocolVersion": 7,
   "profileId": "AGV_FULL_PRODUCT",
   "status": "SUPERSEDING_CANDIDATE",
-  "baseRelease": "protocol-v4.0.0",
+  "baseRelease": "protocol-v5.0.0",
   "classification": "BREAKING_PROTOCOL_VERSION_INCREASE",
   "wireCompatibility": "INCOMPATIBLE_EXACT_IDENTITY_REQUIRED",
   "changeSummary": [
-    "TransportTaskType, the closed enum of CurrentStopWorklistSnapshot.items[].workType, gains WIRE_TO_FULL_INSPECTION after its six released values for transport from wire bonding machines to the full-inspection area while PublicStationFunction stays unchanged, a 4.0.0 implementation rejects a message carrying the new value as schema-invalid, so both implementations move to 5.0.0 together, and a valid CurrentStopWorklistSnapshot example carries the new value while a misspelled and a lowercase spelling of it are refused.",
-    "A departure request at a machine pickup stop with a stale worklistRevision but no material change since that revision is no longer refused as WORKLIST_REVISION_STALE but decided by the remaining checks, a new vector shows it ACCEPTED while the stale-revision vector is confined to a material change, and the journey plan vector and its slice now speak of the remaining plan of at most nine legs, with no schema, message or error code changed."
+    "RemainingBasketsSkipRequested and RemainingBasketsSkipResult, a new RELIABLE pair, let the operator ask to leave the remaining baskets of a multi-basket load and let only the control server's authorization end the load short, OperationResult gains the overallOutcome COMPLETED_REMAINING_SKIPPED and the required nullable field remainingBasketsSkipRequestId naming that authorization, the error registry appends REMAINING_BASKET_SKIPPED, REMAINING_BASKETS_SKIP_NOTHING_LOADED and LOAD_CANCELLATION_BASKET_LOADED, the last refusing a load cancellation once a basket is loaded under the revised REQ-0211, six vectors are added, and a 5.0.0 implementation rejects the new messages and every 6.0.0 OperationResult as schema-invalid, so both implementations move to 6.0.0 together."
   ],
   "runtimeRule": "Exact ProtocolVersion and exact materialized ProtocolReleaseIdentity required; no negotiation.",
   "optionalFieldPolicy": "No optional payload fields exist in this candidate. Future optional fields require proof that omission and ignore preserve safety and business conclusions.",

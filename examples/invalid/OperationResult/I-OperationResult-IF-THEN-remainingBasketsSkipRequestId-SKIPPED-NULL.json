@@ -1,0 +1,50 @@
+{
+  "vectorId": "I-OperationResult-IF-THEN-remainingBasketsSkipRequestId-SKIPPED-NULL",
+  "message": {
+    "protocolVersion": 7,
+    "profileId": "AGV_FULL_PRODUCT",
+    "protocolReleaseVersion": "6.0.0",
+    "protocolReleaseManifestSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "messageType": "OperationResult",
+    "messageId": "00000000-0000-4000-8000-000000000047",
+    "correlationId": null,
+    "agvId": "AGV-8005-01",
+    "sessionGeneration": 1,
+    "sentAt": "2026-08-25T09:00:00Z",
+    "payload": {
+      "demandId": "00000000-0000-4000-8000-000000000001",
+      "slotOperationAttemptId": "00000000-0000-4000-8000-000000000001",
+      "operationType": "LOAD",
+      "overallOutcome": "COMPLETED_REMAINING_SKIPPED",
+      "slotResults": [
+        {
+          "slotNo": 1,
+          "outcome": "COMPLETED",
+          "finalPhysicalState": "OCCUPIED",
+          "lockState": "LOCKED",
+          "unlockOutputState": "RESET",
+          "reasonCodes": []
+        },
+        {
+          "slotNo": 2,
+          "outcome": "NOT_STARTED",
+          "finalPhysicalState": "EMPTY",
+          "lockState": "LOCKED",
+          "unlockOutputState": "RESET",
+          "reasonCodes": [
+            "REMAINING_BASKET_SKIPPED"
+          ]
+        }
+      ],
+      "observedAt": "2026-08-25T09:00:00Z",
+      "journalCheckpoint": "RESULT_RECORDED",
+      "resultContentSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "remainingBasketsSkipRequestId": null
+    }
+  },
+  "expected": {
+    "code": "PROTOCOL_SCHEMA_INVALID",
+    "fieldPath": "/payload/remainingBasketsSkipRequestId",
+    "rule": "if-then"
+  }
+}
