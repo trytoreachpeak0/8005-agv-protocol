@@ -1,0 +1,40 @@
+{
+  "vectorId": "CV-WORKLIST-EQP-DISPLAY-ONLY",
+  "orderedExpectedMessages": [
+    "CurrentStopWorklistSnapshot",
+    "SnapshotAppliedAck"
+  ],
+  "persistenceCheckpoints": [
+    "durable-before-send",
+    "durable-before-ack",
+    "journal-before-irreversible-io",
+    "result-before-replay"
+  ],
+  "forbiddenSideEffects": [
+    "duplicate-riot-order",
+    "duplicate-slot-unlock",
+    "expanded-active-unlock-set",
+    "duplicate-business-commit",
+    "ready-before-reconciliation",
+    "unknown-as-success",
+    "decision-taken-on-worklist-eqp"
+  ],
+  "productAssertions": {
+    "controlServer": [
+      "COPY_ACCEPTED_DEMAND_EQP_VERBATIM",
+      "SEND_NULL_EQP_WHEN_THE_DEMAND_HAS_NONE",
+      "NEVER_DECIDE_BY_WORKLIST_EQP"
+    ],
+    "onboardHmi": [
+      "DISPLAY_EQP_BESIDE_SUBLOT_ON_PICKUP_SCAN_AND_UNLOAD_LISTS",
+      "DISPLAY_NULL_EQP_AS_ABSENT_WITHOUT_BLOCKING",
+      "NEVER_DECIDE_BY_WORKLIST_EQP"
+    ]
+  },
+  "finalState": {
+    "readiness": "UNCHANGED",
+    "business": "UNCHANGED_DISPLAY_ONLY",
+    "physical": "UNCHANGED"
+  },
+  "stableErrorCode": null
+}
