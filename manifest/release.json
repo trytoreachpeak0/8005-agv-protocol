@@ -7,7 +7,7 @@
   "generatedAt": "2026-11-16T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "019af608aedf764c6f3c543c02febe86dbb123439573413fbf9bc7d75537f8a0",
+  "fileTableSha256": "888e4761218602eedefba74b91ef6c3c2c0ea156e581f788e8e3ebefdfe938bf",
   "schemaBundleSha256": "6361d734f9b1a4f81178c79c0bc18b8287fd747622e60c99073e7fd5a5cf4c88",
   "examplesSha256": "0bf61e3207152bd29edf3af217ddc9d8ae7ad3d5387d61db38a0097d2aa9f802",
   "vectorsSha256": "6295840ec27422dc024a24f6deae9a7379f9b3047a163e903ac862c8b0274eec",
@@ -1137,8 +1137,8 @@
     {
       "path": "docs/wire-notes.md",
       "role": "docs",
-      "bytes": 27242,
-      "sha256": "52ff98305293213d048524d6f89bff691db9017c5e4e4d9448a1a2a68711bdfd"
+      "bytes": 27616,
+      "sha256": "f6393ad2098140e68fe5a30869e6f68bbdee2fb1988277702b1a8d09ca68c263"
     },
     {
       "path": "errors/error-codes.json",
@@ -12351,8 +12351,8 @@
     {
       "path": "integration-slices/index.json",
       "role": "integration-slices",
-      "bytes": 23056,
-      "sha256": "5c66ba14c9150dcb75b468e7df0cb7da279ca854905b8301d5d370f8aeefb4af"
+      "bytes": 23095,
+      "sha256": "e04b4de2e655c5f3d62e7f5255ef6049a0bc9c5dbbff8e11ed3d180547b07def"
     },
     {
       "path": "package.json",
@@ -12825,8 +12825,8 @@
     {
       "path": "tools/g1-validate.mjs",
       "role": "tools",
-      "bytes": 16971,
-      "sha256": "30065d2228f902338157ee14643f236c4bae6c371c8f36878746cfd4e6a5f174"
+      "bytes": 18048,
+      "sha256": "e8f23e740427ad8aa4322185d3e5dc99ea965a2c6e81206545171c6feb63f431"
     },
     {
       "path": "vectors/CV-AUTOMATIC-CHARGING-CYCLE/expected.json",
