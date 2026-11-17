@@ -490,7 +490,8 @@
       ],
       "vectorIds": [
         "CV-WORKLIST-SELECTION-ACCEPTED",
-        "CV-WORKLIST-SELECTION-STALE-REVISION"
+        "CV-WORKLIST-SELECTION-STALE-REVISION",
+        "CV-WORKLIST-EQP-DISPLAY-ONLY"
       ],
       "gates": [
         "G1",
