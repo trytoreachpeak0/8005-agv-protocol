@@ -7,8 +7,9 @@ name: g1
 # manifest had last been regenerated on 2026-08-26, so the file-count check
 # failed from that moment.
 #
-# This workspace does not use GitHub-hosted runners; see the workspace root
-# CLAUDE.md. The 'headless' label matters — win11-01 also hosts an interactive
+# This workspace does not use GitHub-hosted runners; see the CI section of
+# 8005-agv-program docs/agents/workspace-rules.md (the shared workspace rules,
+# program#228). The 'headless' label matters — win11-01 also hosts an interactive
 # runner for WPF suites.
 on:
   push:
