@@ -6,3 +6,9 @@
 *.yaml text eol=lf
 *.yml text eol=lf
 *.md text eol=lf
+
+# The agent instruction pair is pinned together, so both files have the same
+# bytes on every checkout, Windows clones included. CLAUDE.md imports AGENTS.md;
+# tools/check-agent-instructions.mjs checks both rules.
+AGENTS.md text eol=lf
+CLAUDE.md text eol=lf
