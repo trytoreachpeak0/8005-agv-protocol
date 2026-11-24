@@ -40,6 +40,13 @@ jobs:
           Write-Output "node  $(node --version)"
           Write-Output "pnpm  $(pnpm --version)"
 
+      # CLAUDE.md must import AGENTS.md on its first line, and both files must be
+      # pinned to eol=lf (program#228). Independent of the contract gate, so it
+      # runs before install and needs only git and node.
+      - name: Agent instructions
+        shell: pwsh
+        run: node tools/check-agent-instructions.mjs
+
       # --frozen-lockfile makes a stale pnpm-lock.yaml a failure rather than a
       # silent resolution to different versions.
       - name: Install

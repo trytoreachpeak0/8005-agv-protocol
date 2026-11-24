@@ -7,7 +7,7 @@
   "generatedAt": "2026-11-16T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "888e4761218602eedefba74b91ef6c3c2c0ea156e581f788e8e3ebefdfe938bf",
+  "fileTableSha256": "013ba83b8d3820bdf99639d55e3abd049afabb1fa574e6fc4bd89beb381695db",
   "schemaBundleSha256": "6361d734f9b1a4f81178c79c0bc18b8287fd747622e60c99073e7fd5a5cf4c88",
   "examplesSha256": "0bf61e3207152bd29edf3af217ddc9d8ae7ad3d5387d61db38a0097d2aa9f802",
   "vectorsSha256": "6295840ec27422dc024a24f6deae9a7379f9b3047a163e903ac862c8b0274eec",
@@ -1075,10 +1075,16 @@
   ],
   "files": [
     {
+      "path": ".git",
+      "role": ".git",
+      "bytes": 96,
+      "sha256": "4496b5f2555dca7f42d6195038de9dc43c23e3bce5202c2f6137616393dbe5ce"
+    },
+    {
       "path": ".gitattributes",
       "role": ".gitattributes",
-      "bytes": 132,
-      "sha256": "6594b4a762205595dd3f122fe15f836a75ff326a31f7d03a42119d3c0b2a7275"
+      "bytes": 391,
+      "sha256": "20c3189a84d1de8d936776b25ded26457a35bbbc1640e3b86fea3abb476a5860"
     },
     {
       "path": ".gitignore",
@@ -1087,10 +1093,16 @@
       "sha256": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97"
     },
     {
+      "path": "AGENTS.md",
+      "role": "AGENTS.md",
+      "bytes": 6561,
+      "sha256": "0d91091f8ee7cfee8d6c5cac546d7684c59dcd0a01315b3e2b579d009f229271"
+    },
+    {
       "path": "CLAUDE.md",
       "role": "CLAUDE.md",
-      "bytes": 6413,
-      "sha256": "f7dd563ba76ea8a1de82fe02af0ffd4666bfeb9a09e9db51e8cd8ceb470d9be4"
+      "bytes": 391,
+      "sha256": "a4eb9333645c7b9769b5a0f9928d911af5c04949cf9a7cfe1033e5371cc5201f"
     },
     {
       "path": "README.md",
@@ -12815,6 +12827,12 @@
       "role": "schemas",
       "bytes": 6008,
       "sha256": "839f10980ebed690e25e8022254339c0c097294251d9d477f44151499a9380e6"
+    },
+    {
+      "path": "tools/check-agent-instructions.mjs",
+      "role": "tools",
+      "bytes": 2445,
+      "sha256": "10bcb1da693fc8d6369fd619340e67c5c8109e86f6895bf7cfbcc03a687e2698"
     },
     {
       "path": "tools/finalize-manifest.mjs",
