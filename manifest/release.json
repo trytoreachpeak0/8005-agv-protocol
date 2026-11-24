@@ -7,7 +7,7 @@
   "generatedAt": "2026-11-16T00:00:00Z",
   "hashAlgorithm": "SHA-256",
   "jsonCanonicalization": "RFC8785-compatible sorted-key JCS for semantic collections; raw bytes for file entries",
-  "fileTableSha256": "013ba83b8d3820bdf99639d55e3abd049afabb1fa574e6fc4bd89beb381695db",
+  "fileTableSha256": "b05f763c70b6cc015b9386c8123f36f296ad5e87e8e6d61812bd6f4b03bd5c01",
   "schemaBundleSha256": "6361d734f9b1a4f81178c79c0bc18b8287fd747622e60c99073e7fd5a5cf4c88",
   "examplesSha256": "0bf61e3207152bd29edf3af217ddc9d8ae7ad3d5387d61db38a0097d2aa9f802",
   "vectorsSha256": "6295840ec27422dc024a24f6deae9a7379f9b3047a163e903ac862c8b0274eec",
@@ -1074,12 +1074,6 @@
     "OnboardCapabilitySnapshot"
   ],
   "files": [
-    {
-      "path": ".git",
-      "role": ".git",
-      "bytes": 96,
-      "sha256": "4496b5f2555dca7f42d6195038de9dc43c23e3bce5202c2f6137616393dbe5ce"
-    },
     {
       "path": ".gitattributes",
       "role": ".gitattributes",
